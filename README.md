@@ -5,6 +5,7 @@ This responsive website is designed to be viewed on a variety of screen sizes. I
 ## Contents
 - [User Experience](#User-Experience)
     - [Initial Discussion](#Initial-Discussion)
+    - [User Stories](#User-Stories)
 - [Design](#Design)
     - [Colour Scheme](#Colour-Scheme)
     - [Wireframes](#Wireframes)
@@ -12,6 +13,15 @@ This responsive website is designed to be viewed on a variety of screen sizes. I
 ## User Experience
 ### Initial Discussion
 The purpose of the web application is offer users with medium to large sized gardens a way to preview or prepare for the planting of vegetable crops in a way that best utilises space for maximum harvest yield.
+
+### User Stories
+#### First-time Visitor Goals
+* To understand the purpose of the web application.
+* To interact with the input fields without confusion as to their purpose.
+* To customise the outputs for their specific needs.
+#### Returning Visitor Goals
+* To be able to reproduce previous results
+* To reference specific planting information for certain vegetables.
 
 ## Design
 ### Colour Scheme
