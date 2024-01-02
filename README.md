@@ -10,4 +10,8 @@ The purpose of the web application is offer users with medium to large sized gar
 
 ## Design
 ### Wireframes
-Wireframes were created for this website for mobile, tablet and desktop screen sizes.
+Wireframes were created for this website for mobile, tablet and desktop screen sizes. The original idea was a set of four interactive areas for the user to supply informaition about their garden and preferred vegetables, and for the application to provide guidance on planting of bulbs.
+
+![Balsamiq Wireframe for Mobile](assets/images/readme/wireframe-mobile.png)
+![Balsamiq Wireframe for Tablet](assets/images/readme/wireframe-tablet.png)
+![Balsamiq Wireframe for Desktop](assets/images/readme/wireframe-desktop.png)
