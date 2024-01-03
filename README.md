@@ -50,3 +50,6 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 ![Balsamiq Wireframe 2 for Desktop](assets/images/readme/wireframe-desktop-2.png)
 
 </details>
+
+## Credits
+https://stackoverflow.com/questions/58864049/how-to-get-the-value-of-input-field-in-one-page-and-print-it-in-another-page
