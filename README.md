@@ -46,6 +46,7 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 
 <details><summary>Balsamiq Wireframe for Desktop</summary>
 
-![Balsamiq Wireframe for Desktop](assets/images/readme/wireframe-desktop.png)
+![Balsamiq Wireframe 1 for Desktop](assets/images/readme/wireframe-desktop-1.png)
+![Balsamiq Wireframe 2 for Desktop](assets/images/readme/wireframe-desktop-2.png)
 
 </details>
