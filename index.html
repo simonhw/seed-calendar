@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    <section>
+    <!-- Parent section for gathering the user's choices for the calculations. -->
+    <section id="planner">
         <h1>Seed Planner</h1>
         <!-- Paragraphs to inform the user of the purpose of the site and how to use it. -->
         <div class="instructions">
@@ -48,6 +49,37 @@
         </div>
         <!-- Button to calculate optimal planting layout for user selection. -->
         <button type="button">Calculate!</button>
+    </section>
+
+    <!-- Section for displaying the results of the calculation.-->
+    <section id="planner">
+        <h1>Seed Planner</h1>
+        <!-- Section with specific information on planting the user's chosen vegetables. -->
+        <section>
+            <h2>Suggested Planting</h2>
+            <p>Thanks for submitting those details. Here is what we have calculated that best fits your <span id="area">1</span> square metre vegetable bed:</p>
+            <br>
+            <p>You can plant your <span>onion</span> bulbs in <span>2</span> rows of <span>10</span>. The bulbs should be
+                spaced <span>5</span> cm apart and planted at a depth of <span>5</span> cm.</p>
+            <p>You will need <span>20</span> bulbs for the bed size you specified.</p>
+        </section>
+        <!-- Section with specific information on the vegetable bulb chosen. -->
+        <section>
+            <h2><span>Onion</span> Bulbs</h2>
+            <div>
+                <ul>
+                    <li>Plant in: <span>January</span></li>
+                    <li>Harvest in: <span>January</span></li>
+                    <li>Bulb Spacing: <span>5 cm</span></li>
+                    <li>Bulb Depth: <span>5 cm</span></li>
+                </ul>
+            </div>
+            <div>
+                <img src="" alt="An image of a vegetable bulb before planting.">
+            </div>
+        </section>
+        <!-- Button to return the user to the previous page for a new calculation. -->
+        <button>Recalculate!</button>
     </section>
     <!-- Javascript Link -->
     <script src="assets/js/script.js"></script>
