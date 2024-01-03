@@ -3,7 +3,7 @@ let vegetables = {
         name: 'onion',
         bulbGap: 0.05,
         rowGap: 0.25,
-        depth: 0.02;
+        depth: 0.02,
         plantSeasons: ['March', 'April'],
         harvestSeasons: ['June', 'July', 'August']
     },
@@ -11,7 +11,7 @@ let vegetables = {
         name: 'garlic',
         bulbGap: 0.15,
         rowGap: 0.3,
-        depth: 0.025;
+        depth: 0.025,
         plantSeasons: ['October', 'November', 'December', 'Januray', 'February'],
         harvestSeasons: ['June', 'July', 'August']
     },
@@ -19,7 +19,7 @@ let vegetables = {
         name: 'radish',
         bulbGap: 0.05,
         rowGap: 0.25,
-        depth: 0.02;
+        depth: 0.02,
         plantSeasons: ['March', 'April'],
         harvestSeasons: ['June', 'July', 'August']
     },
@@ -27,7 +27,7 @@ let vegetables = {
         name: 'parsnip',
         bulbGap: 0.05,
         rowGap: 0.25,
-        depth: 0.02;
+        depth: 0.02,
         plantSeasons: ['March', 'April'],
         harvestSeasons: ['June', 'July', 'August']
     },
@@ -48,8 +48,4 @@ function calculateArea(length, width) {
     length = document.getElementById('length').value;
     width = document.getElementById('width').value;
     document.getElementById('area').innerText = length * width;
-}
-
-function calculateRows(area, spacing) {
-
 }
