@@ -30,7 +30,7 @@ A colour scheme was chosen to reflect tones seen in the garden and the make the 
 ![Coolors Palette](assets/images/readme/colour-palette.png)
 
 ### Wireframes
-Wireframes were created for this website for mobile, tablet and desktop screen sizes. The original idea was a set of four interactive areas for the user to supply informaition about their garden and preferred vegetables, and for the application to provide guidance on planting of bulbs.
+Wireframes were created for this website for mobile, tablet and desktop screen sizes. The original idea was a set of four interactive areas for the user to supply information about their garden and preferred vegetables, and for the application to provide guidance on planting of bulbs. The concept was simplified after a discussion with my CI Mentor and revised to deal with one type of vegetable at a time.
 
 <details><summary>Balsamiq Wireframe for Mobile</summary>
 
