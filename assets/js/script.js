@@ -33,8 +33,6 @@ const vegetables = {
     }
 }
 
-
-
 // The Calculate button will execute the calculateArea function and direct the user to the seed-plan page.
 document.getElementsByTagName('button')[0].addEventListener('click', function(){
     
@@ -72,8 +70,18 @@ document.getElementsByTagName('button')[0].addEventListener('click', function(){
             plantSeasons = vegetables.parsnip.plantSeasons;
             harvestSeasons = vegetables.parsnip.harvestSeasons;                        
     }
-    document.getElementById('rows').innerText = calculateRows(width, rowGap);
 
+    document.getElementById('bulb-name').innerText = vegetable;
+    let rows = calculateRows(width, rowGap);
+    document.getElementById('rows').innerText = rows;
+
+    let bulbsInARow = calculateBulbsInRow(length, bulbGap);
+    document.getElementById('bulbs-in-row').innerText = bulbsInARow;
+
+    document.getElementById('bulb-gap').innerText = bulbGap * 100;
+    document.getElementById('bulb-depth').innerText = depth * 100;
+    document.getElementById('row-gap').innerText = rowGap * 100;
+    document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
 })
 
 /**
@@ -83,7 +91,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function(){
  * @returns the area of the bed
  */
 function calculateArea(length, width) {
-    return length * width;
+    return Math.round(length * width * 100) / 100; //This limits the area displayed to a maximum of two decimal places.
 }
 
 /**
@@ -109,4 +117,8 @@ function getVegetable() {
  */
 function calculateRows(width, rowGap) {
     return Math.floor(width / rowGap);
+}
+
+function calculateBulbsInRow(length, bulbGap) {
+    return Math.floor(length / bulbGap);
 }
