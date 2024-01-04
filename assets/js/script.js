@@ -1,4 +1,4 @@
-let vegetables = {
+const vegetables = {
     onion : {
         name: 'onion',
         bulbGap: 0.05,
@@ -12,31 +12,33 @@ let vegetables = {
         bulbGap: 0.15,
         rowGap: 0.3,
         depth: 0.025,
-        plantSeasons: ['October', 'November', 'December', 'Januray', 'February'],
+        plantSeasons: ['October', 'November', 'December', 'January', 'February'],
         harvestSeasons: ['June', 'July', 'August']
     },
     radish : {
         name: 'radish',
-        bulbGap: 0.05,
-        rowGap: 0.25,
-        depth: 0.02,
-        plantSeasons: ['March', 'April'],
-        harvestSeasons: ['June', 'July', 'August']
+        bulbGap: 0.05,//
+        rowGap: 0.25,//
+        depth: 0.02,//
+        plantSeasons: ['March', 'April'],//
+        harvestSeasons: ['June', 'July', 'August']//
     },
     parsnip : {
         name: 'parsnip',
-        bulbGap: 0.05,
-        rowGap: 0.25,
-        depth: 0.02,
-        plantSeasons: ['March', 'April'],
-        harvestSeasons: ['June', 'July', 'August']
-    },
-
+        bulbGap: 0.05,//
+        rowGap: 0.25,//
+        depth: 0.02,//
+        plantSeasons: ['March', 'April'],//
+        harvestSeasons: ['June', 'July', 'August']//
+    }
 }
+
+
 
 // The Calculate button will execute the calculateArea function and direct the user to the seed-plan page.
 document.getElementsByTagName('button')[0].addEventListener('click', function(){
     calculateArea();
+
 })
 
 /**
@@ -49,3 +51,14 @@ function calculateArea(length, width) {
     width = document.getElementById('width').value;
     document.getElementById('area').innerText = length * width;
 }
+
+function getVegetable() {
+    let radios = document.getElementsByTagName('input');
+    for (radio of radios) {
+        if (radio.checked) {
+            console.log(radio.id);
+        }
+    }
+}
+
+
