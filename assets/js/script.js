@@ -1,47 +1,48 @@
 const vegetables = {
-    onion : {
+    onion: {
         name: 'onion',
         bulbGap: 0.05,
         rowGap: 0.25,
         depth: 0.02,
         plantSeasons: ['March', 'April'],
-        harvestSeasons: ['June', 'July', 'August']
+        harvestSeasons: ['June', 'August']
     },
-    garlic : {
+    garlic: {
         name: 'garlic',
         bulbGap: 0.15,
         rowGap: 0.3,
         depth: 0.025,
-        plantSeasons: ['October', 'November', 'December', 'January', 'February'],
-        harvestSeasons: ['June', 'July', 'August']
+        plantSeasons: ['October', 'February'],
+        harvestSeasons: ['June', 'August']
     },
-    radish : {
-        name: 'radish',
-        bulbGap: 0.05,//
-        rowGap: 0.25,//
-        depth: 0.02,//
-        plantSeasons: ['March', 'April'],//
-        harvestSeasons: ['June', 'July', 'August']//
+    turnip: {
+        name: 'turnip',
+        bulbGap: 0.15,//
+        rowGap: 0.3,//
+        depth: 0.01,//
+        plantSeasons: ['July', 'August'],//
+        harvestSeasons: ['August', 'October']//
     },
-    parsnip : {
+    parsnip: {
         name: 'parsnip',
-        bulbGap: 0.05,//
-        rowGap: 0.25,//
-        depth: 0.02,//
-        plantSeasons: ['March', 'April'],//
-        harvestSeasons: ['June', 'July', 'August']//
+        bulbGap: 0.15,//
+        rowGap: 0.3,//
+        depth: 0.01,//
+        plantSeasons: ['March', 'May'],//
+        harvestSeasons: ['September', 'February']//
     }
 }
 
-// The Calculate button will execute the calculateArea function and direct the user to the seed-plan page.
-document.getElementsByTagName('button')[0].addEventListener('click', function(){
-    
+// The Calculate button will execute a number of function to get relvant information for the user, hide the information section and show the results section.
+document.getElementsByTagName('button')[0].addEventListener('click', function () {
+
     let length = document.getElementById('length').value;
     let width = document.getElementById('width').value;
     document.getElementById('area').innerText = calculateArea(length, width);
 
+    // Assign the chosen vegetable's properties to useful variables.
     let vegetable = getVegetable();
-    switch(vegetable){
+    switch (vegetable) {
         case 'onion':
             rowGap = vegetables.onion.rowGap;
             bulbGap = vegetables.onion.bulbGap;
@@ -64,13 +65,14 @@ document.getElementsByTagName('button')[0].addEventListener('click', function(){
             harvestSeasons = vegetables.radish.harvestSeasons;
             break;
         case 'parsnip':
-            rowGap = vegetables.parsnip.rowGap;  
+            rowGap = vegetables.parsnip.rowGap;
             bulbGap = vegetables.parsnip.bulbGap;
             depth = vegetables.parsnip.depth;
             plantSeasons = vegetables.parsnip.plantSeasons;
-            harvestSeasons = vegetables.parsnip.harvestSeasons;                        
+            harvestSeasons = vegetables.parsnip.harvestSeasons;
     }
 
+    // Assign values to the spans in the results section based on the vegetable chosen by the user.
     document.getElementById('bulb-name').innerText = vegetable;
     let rows = calculateRows(width, rowGap);
     document.getElementById('rows').innerText = rows;
@@ -78,9 +80,23 @@ document.getElementsByTagName('button')[0].addEventListener('click', function(){
     let bulbsInARow = calculateBulbsInRow(length, bulbGap);
     document.getElementById('bulbs-in-row').innerText = bulbsInARow;
 
-    document.getElementById('bulb-gap').innerText = bulbGap * 100;
-    document.getElementById('bulb-depth').innerText = depth * 100;
-    document.getElementById('row-gap').innerText = rowGap * 100;
+    let seeds = document.getElementsByClassName('seeds');
+    if (vegetable === 'turnip' || vegetable === 'parsnip') {
+        for (let i = 0; i < seeds.length; i++) {
+            seeds[i].innerText = 'seeds';
+        } 
+    } else {
+        for (let i = 0; i < seeds.length; i++) {
+            seeds[i].innerText = 'bulbs';
+        }
+    }
+
+    document.getElementsByClassName('bulb-gap')[0].innerText = bulbGap * 100; // Convert metres to centimetres.
+    document.getElementsByClassName('bulb-gap')[1].innerText = bulbGap * 100;
+    document.getElementsByClassName('bulb-depth')[0].innerText = depth * 100;
+    document.getElementsByClassName('bulb-depth')[1].innerText = depth * 100;
+    document.getElementsByClassName('row-gap')[0].innerText = rowGap * 100;
+    document.getElementsByClassName('row-gap')[1].innerText = rowGap * 100;
     document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
 })
 
