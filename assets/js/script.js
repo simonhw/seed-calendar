@@ -130,13 +130,19 @@ function getVegetable() {
 /**
  * Calculates the maximum number of row possible for the width of the vegetable bed.
  * @param {Number} width The vegetable bed width in metres.
- * @param {Number} rowGap The reccomended gap between rows of the specified bulb.
- * @returns the numbner of rows
+ * @param {Number} rowGap The recomended gap between rows of the specified bulb.
+ * @returns the number of rows
  */
 function calculateRows(width, rowGap) {
     return Math.floor(width / rowGap);
 }
 
+/**
+ * Calculated the maximum number of bulbs plantable in a given row.
+ * @param {Number} length The vegetable bed length in metres.
+ * @param {Number} bulbGap The recommended gap between bulbs in the same row.
+ * @returns the numbers of bulbs per row
+ */
 function calculateBulbsInRow(length, bulbGap) {
     return Math.floor(length / bulbGap);
 }
