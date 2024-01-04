@@ -98,6 +98,8 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
     document.getElementsByClassName('row-gap')[0].innerText = rowGap * 100;
     document.getElementsByClassName('row-gap')[1].innerText = rowGap * 100;
     document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
+    document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
+    document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
 })
 
 /**
