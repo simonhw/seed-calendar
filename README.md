@@ -51,6 +51,9 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 
 </details>
 
+## Bugs
+rowGap for turnip sometimes didn't work?
+
 ## Credits
 https://stackoverflow.com/questions/58864049/how-to-get-the-value-of-input-field-in-one-page-and-print-it-in-another-page
 
