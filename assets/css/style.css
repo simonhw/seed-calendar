@@ -13,7 +13,7 @@ h1 {
     font-size: xx-large;
 }
 
-h1, h2 {
+h1, h2, button {
     font-family: Diphylleia;
     text-align: center;
 }
@@ -58,6 +58,24 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
+}
+
+.vegetable-picker > div {
+    display: flex;
+}
+
+.radio-under {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: auto 1rem;
+}
+
+.vegetable-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .buttons {
@@ -69,15 +87,15 @@ input {
 }
 
 button {
-    /*border: 1px black;*/
     border-radius: 3%;
 }
 
 #calculate {
-    /* background-color: #95c97e; */
     background-image: linear-gradient(#95c97e, #1c5c00);
-    color: #1c5c00;
+    color: #f7ef81;
+    text-shadow: #6c4e1e 1px 1px;
     font-size: large;
+    padding: 8px 20px 12px;
 }
 
 #clear {
