@@ -53,3 +53,9 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 
 ## Credits
 https://stackoverflow.com/questions/58864049/how-to-get-the-value-of-input-field-in-one-page-and-print-it-in-another-page
+
+Custom input field validation was written in order to avoid the submit button refreshing the page as preventDefault didn't work fully as expected.
+
+The recalculate button does not clear the input fields as the user may wish to simply change the vegetable, not the size of the vegetable bed.
+
+to-do: Make a function to replace the switch.
