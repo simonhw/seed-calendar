@@ -5,9 +5,49 @@ body {
     font-family: 'Alegreya Sans';
 }
 
+section {
+    margin: auto 5px;
+}
+
 h1, h2 {
     font-family: Diphylleia;
     text-align: center;
+}
+
+.white-text {
+    color: white;
+    text-shadow: black 1px 1px;
+}
+
+p {
+    text-align: justify;
+}
+
+.bed-size {
+    background-image: url('../images/vegetable-bed.webp');
+    background-size: cover;
+    border-radius: 5%;
+}
+
+#black-opacity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border-radius: 5%;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+#black-opacity div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input {
+    width: 20px;
 }
 
 #results {
