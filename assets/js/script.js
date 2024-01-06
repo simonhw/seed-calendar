@@ -33,13 +33,13 @@ const vegetables = {
     }
 }
 
-// The Calculate button will execute a number of function to get relevant information for the user, hide the information section and show the results section.
+// Calculate Button: Clicking will execute a number of function to get relevant information for the user, hide the information section and show the results section.
 document.getElementsByTagName('button')[0].addEventListener('click', function (event) {
     let length = document.getElementById('length').value;
-    let width = document.getElementById('width').value;    
+    let width = document.getElementById('width').value;
     let vegetable = checkVegetable();
 
-    // Validation Checking
+    // Validation checking of input fields when button is clicked.
     if (length === '' || width === '') {
         alert('Please fill in the length and width of your vegetable bed.')
         return;
@@ -105,18 +105,30 @@ document.getElementsByTagName('button')[0].addEventListener('click', function (e
         document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
         document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
         document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
+        // Changes the image based on the vegetable
+        insertImage(vegetable);
     }
 })
 
+//Clear Form Button: Allows user to clear form if they so wish.
 document.getElementsByTagName('button')[1].addEventListener('click', function () {
+    let inputs = document.getElementsByTagName('input');
+    for (input of inputs) {
+        input.value = '';
+        input.checked = false;
+    }
+})
+
+// Recalculate Button: Clicking will return the user to the first page.
+document.getElementsByTagName('button')[2].addEventListener('click', function () {
     document.getElementById('information').setAttribute('style', 'display: block');
     document.getElementById('results').setAttribute('style', 'display: none');
 })
 
 /**
  * Calculates the user's plantable area for their chosen vegetable bulbs.
- * @param {Number} length The vegetable bed length in metres.
- * @param {Number} width The vegetable bed width in metres.
+ * @param {Number} length - The vegetable bed length in metres.
+ * @param {Number} width - The vegetable bed width in metres.
  * @returns the area of the bed
  */
 function calculateArea(length, width) {
@@ -141,8 +153,8 @@ function checkVegetable() {
 
 /**
  * Calculates the maximum number of row possible for the width of the vegetable bed.
- * @param {Number} width The vegetable bed width in metres.
- * @param {Number} rowGap The recomended gap between rows of the specified bulb.
+ * @param {Number} width - The vegetable bed width in metres.
+ * @param {Number} rowGap - The recomended gap between rows of the specified bulb.
  * @returns the number of rows
  */
 function calculateRows(width, rowGap) {
@@ -151,8 +163,8 @@ function calculateRows(width, rowGap) {
 
 /**
  * Calculated the maximum number of bulbs plantable in a given row.
- * @param {Number} length The vegetable bed length in metres.
- * @param {Number} bulbGap The recommended gap between bulbs in the same row.
+ * @param {Number} length - The vegetable bed length in metres.
+ * @param {Number} bulbGap - The recommended gap between bulbs in the same row.
  * @returns the numbers of bulbs per row
  */
 function calculateBulbsInRow(length, bulbGap) {
@@ -161,7 +173,7 @@ function calculateBulbsInRow(length, bulbGap) {
 
 /**
  * Assigns the value of various spans to be 'seeds' or 'bulbs' depending on the vegetable chosen.
- * @param {String} vegetable The user's chosen vegetable
+ * @param {String} vegetable - The user's chosen vegetable
  */
 function bulbsOrSeeds(vegetable) {
     let seeds = document.getElementsByClassName('seeds');
@@ -176,4 +188,13 @@ function bulbsOrSeeds(vegetable) {
             document.getElementById('seeds-or-bulbs').innerText = 'Bulbs';
         }
     }
+}
+
+/**
+ * Updates the image src link based on the vegetable chosen.
+ * @param {String} vegetable 
+ */
+function insertImage(vegetable) {
+    let src = String('assets/images/' + vegetable + '.webp');
+    document.getElementById('vegetable-image').src = src;
 }
