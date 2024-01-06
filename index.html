@@ -54,10 +54,12 @@
                 <label for="turnip">Turnip</label>
             </div>
         </div>
-        <!-- Button to calculate optimal planting layout for user selection. -->
-        <button type="button">Calculate!</button>
-        <!-- Button to clear input fields. -->
-        <button type="button">Clear Form</button>
+        <div class="buttons">
+            <!-- Button to calculate optimal planting layout for user selection. -->
+            <button type="button" id="calculate">Calculate!</button>
+            <!-- Button to clear input fields. -->
+            <button type="button" id="clear">Clear Form</button>
+        </div>
     </section>
 
     <!-- Section for displaying the results of the calculation.-->
@@ -68,7 +70,6 @@
             <h2>Suggested Planting</h2>
             <p>Thanks for submitting those details. Here is what we have calculated that best fits your <span
                     id="area">0</span> m&sup2; vegetable bed:</p>
-            <br>
             <p>You can plant your <span id="bulb-name">x</span> <span class="seeds">bulbs</span> in <span
                     id="rows">0</span> rows of <span id="bulbs-in-row">0</span>. The <span class="seeds">bulbs</span>
                 should be
