@@ -68,6 +68,23 @@ input {
     align-items: center;
 }
 
+button {
+    /*border: 1px black;*/
+    border-radius: 3%;
+}
+
+#calculate {
+    /* background-color: #95c97e; */
+    background-image: linear-gradient(#95c97e, #1c5c00);
+    color: #1c5c00;
+    font-size: large;
+}
+
+#clear {
+    background-color: #f7ef81;
+    color: #6c4e1e;
+}
+
 #results {
     display: none;
 }
