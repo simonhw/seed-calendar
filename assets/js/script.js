@@ -35,7 +35,7 @@ const vegetables = {
 
 // The Calculate button will execute a number of function to get relevant information for the user, hide the information section and show the results section.
 document.getElementsByTagName('button')[0].addEventListener('click', function () {
-    document.getElementById('information').setAttribute('style', 'display: none');
+    //document.getElementById('information').setAttribute('style', 'display: none');
     document.getElementById('results').setAttribute('style', 'display: block');
 
     let length = document.getElementById('length').value;
@@ -82,18 +82,12 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
     let bulbsInARow = calculateBulbsInRow(length, bulbGap);
     document.getElementById('bulbs-in-row').innerText = bulbsInARow;
 
-    let seeds = document.getElementsByClassName('seeds');
-    if (vegetable === 'turnip' || vegetable === 'parsnip') {
-        for (let i = 0; i < seeds.length; i++) {
-            seeds[i].innerText = 'seeds';
-        } 
-    } else {
-        for (let i = 0; i < seeds.length; i++) {
-            seeds[i].innerText = 'bulbs';
-        }
-    }
+    bulbsOrSeeds(vegetable);
 
-    document.getElementsByClassName('bulb-gap')[0].innerText = bulbGap * 100; // Convert metres to centimetres.
+    // Takes the vegetable name string and capitalises the first letter only.
+    document.getElementById('capitalised-name').innerText = vegetable[0].toUpperCase() + vegetable.slice(1);
+    // Below assignments use * 100 to convert metres to centimetres.
+    document.getElementsByClassName('bulb-gap')[0].innerText = bulbGap * 100;
     document.getElementsByClassName('bulb-gap')[1].innerText = bulbGap * 100;
     document.getElementsByClassName('bulb-depth')[0].innerText = depth * 100;
     document.getElementsByClassName('bulb-depth')[1].innerText = depth * 100;
@@ -106,7 +100,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
 
 document.getElementsByTagName('button')[1].addEventListener('click', function () {
     document.getElementById('information').setAttribute('style', 'display: block');
-    document.getElementById('results').setAttribute('style', 'display: none');
+    //document.getElementById('results').setAttribute('style', 'display: none');
 })
 
 /**
@@ -127,7 +121,7 @@ function getVegetable() {
     let radios = document.getElementsByTagName('input');
     for (radio of radios) {
         if (radio.checked) {
-            return radio.id;
+            return String(radio.id);
         } else {
             //validation check
         }
@@ -152,4 +146,23 @@ function calculateRows(width, rowGap) {
  */
 function calculateBulbsInRow(length, bulbGap) {
     return Math.floor(length / bulbGap);
+}
+
+/**
+ * Assigns the value of various spans to be 'seeds' or 'bulbs' depending on the vegetable chosen.
+ * @param {String} vegetable The user's chosen vegetable
+ */
+function bulbsOrSeeds(vegetable){
+    let seeds = document.getElementsByClassName('seeds');
+    if (vegetable === 'turnip' || vegetable === 'parsnip') {
+        for (let i = 0; i < seeds.length; i++) {
+            seeds[i].innerText = 'seeds';
+            document.getElementById('seeds-or-bulbs').innerText = 'Seeds';
+        } 
+    } else {
+        for (let i = 0; i < seeds.length; i++) {
+            seeds[i].innerText = 'bulbs';
+            document.getElementById('seeds-or-bulbs').innerText = 'Bulbs';
+        }
+    }
 }
