@@ -191,10 +191,12 @@ function bulbsOrSeeds(vegetable) {
 }
 
 /**
- * Updates the image src link based on the vegetable chosen.
+ * Updates the image src link and alt text based on the vegetable chosen.
  * @param {String} vegetable 
  */
 function insertImage(vegetable) {
     let src = String('assets/images/' + vegetable + '.webp');
     document.getElementById('vegetable-image').src = src;
+    let alt = String('An image of a ' + vegetable);
+    document.getElementById('vegetable-image').alt = alt;
 }
