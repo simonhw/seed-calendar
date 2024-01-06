@@ -44,14 +44,22 @@
         <div class="vegetable-picker">
             <h2>Vegetable Picker</h2>
             <div>
-                <input type="radio" name="vegetable-choice" id="onion">
-                <label for="onion">Onion</label>
-                <input type="radio" name="vegetable-choice" id="garlic">
-                <label for="garlic">Garlic</label>
-                <input type="radio" name="vegetable-choice" id="parsnip">
-                <label for="parsnip">Parsnip</label>
-                <input type="radio" name="vegetable-choice" id="turnip">
-                <label for="turnip">Turnip</label>
+                <div class="radio-under">
+                    <input type="radio" name="vegetable-choice" id="onion">
+                    <label for="onion">Onion</label>
+                </div>
+                <div class="radio-under">
+                    <input type="radio" name="vegetable-choice" id="garlic">
+                    <label for="garlic">Garlic</label>
+                </div>
+                <div class="radio-under">
+                    <input type="radio" name="vegetable-choice" id="parsnip">
+                    <label for="parsnip">Parsnip</label>
+                </div>
+                <div class="radio-under">
+                    <input type="radio" name="vegetable-choice" id="turnip">
+                    <label for="turnip">Turnip</label>
+                </div>
             </div>
         </div>
         <div class="buttons">
@@ -81,18 +89,20 @@
         </section>
         <!-- Section with specific information on the vegetable bulb chosen. -->
         <section>
-            <h2><span id="capitalised-name">Onion</span> <span id="seeds-or-bulbs">Bulbs</span></h2>
-            <div>
-                <ul>
-                    <li>Plant between <span id="plant-seasons">January</span></li>
-                    <li>Harvest between <span id="harvest-seasons">January</span></li>
-                    <li>Bulb Spacing: <span class="bulb-gap">0</span> cm</li>
-                    <li>Bulb Depth: <span class="bulb-depth">0</span> cm</li>
-                    <li>Row Spacing: <span class="row-gap">0</span> cm</li>
-                </ul>
-            </div>
-            <div>
-                <img id="vegetable-image" src='assets/images/turnip.webp' alt="An image of a vegetable bulb before planting.">
+            <div class="vegetable-card">
+                <h2><span id="capitalised-name">Onion</span> <span id="seeds-or-bulbs">Bulbs</span></h2>
+                <div>
+                    <ul>
+                        <li>Plant between <span id="plant-seasons">January</span></li>
+                        <li>Harvest between <span id="harvest-seasons">January</span></li>
+                        <li>Bulb Spacing: <span class="bulb-gap">0</span> cm</li>
+                        <li>Bulb Depth: <span class="bulb-depth">0</span> cm</li>
+                        <li>Row Spacing: <span class="row-gap">0</span> cm</li>
+                    </ul>
+                </div>
+                <div>
+                    <img id="vegetable-image" src='assets/images/turnip.webp' alt="An image of a vegetable.">
+                </div>
             </div>
         </section>
         <!-- Button to return the user to the previous page for a new calculation. -->
