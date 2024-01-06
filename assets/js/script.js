@@ -17,90 +17,100 @@ const vegetables = {
     },
     turnip: {
         name: 'turnip',
-        bulbGap: 0.15,//
-        rowGap: 0.3,//
-        depth: 0.01,//
-        plantSeasons: ['July', 'August'],//
-        harvestSeasons: ['August', 'October']//
+        bulbGap: 0.15,
+        rowGap: 0.3,
+        depth: 0.01,
+        plantSeasons: ['July', 'August'],
+        harvestSeasons: ['August', 'October']
     },
     parsnip: {
         name: 'parsnip',
-        bulbGap: 0.15,//
-        rowGap: 0.3,//
-        depth: 0.01,//
-        plantSeasons: ['March', 'May'],//
-        harvestSeasons: ['September', 'February']//
+        bulbGap: 0.15,
+        rowGap: 0.3,
+        depth: 0.01,
+        plantSeasons: ['March', 'May'],
+        harvestSeasons: ['September', 'February']
     }
 }
 
 // The Calculate button will execute a number of function to get relevant information for the user, hide the information section and show the results section.
-document.getElementsByTagName('button')[0].addEventListener('click', function () {
-    //document.getElementById('information').setAttribute('style', 'display: none');
-    document.getElementById('results').setAttribute('style', 'display: block');
-
+document.getElementsByTagName('button')[0].addEventListener('click', function (event) {
     let length = document.getElementById('length').value;
-    let width = document.getElementById('width').value;
-    document.getElementById('area').innerText = calculateArea(length, width);
+    let width = document.getElementById('width').value;    
+    let vegetable = checkVegetable();
 
-    // Assign the chosen vegetable's properties to useful variables.
-    let vegetable = getVegetable();
-    switch (vegetable) {
-        case 'onion':
-            rowGap = vegetables.onion.rowGap;
-            bulbGap = vegetables.onion.bulbGap;
-            depth = vegetables.onion.depth;
-            plantSeasons = vegetables.onion.plantSeasons;
-            harvestSeasons = vegetables.onion.harvestSeasons;
-            break;
-        case 'garlic':
-            rowGap = vegetables.garlic.rowGap;
-            bulbGap = vegetables.garlic.bulbGap;
-            depth = vegetables.garlic.depth;
-            plantSeasons = vegetables.garlic.plantSeasons;
-            harvestSeasons = vegetables.garlic.harvestSeasons;
-            break;
-        case 'radish':
-            rowGap = vegetables.radish.rowGap;
-            bulbGap = vegetables.radish.bulbGap;
-            depth = vegetables.radish.depth;
-            plantSeasons = vegetables.radish.plantSeasons;
-            harvestSeasons = vegetables.radish.harvestSeasons;
-            break;
-        case 'parsnip':
-            rowGap = vegetables.parsnip.rowGap;
-            bulbGap = vegetables.parsnip.bulbGap;
-            depth = vegetables.parsnip.depth;
-            plantSeasons = vegetables.parsnip.plantSeasons;
-            harvestSeasons = vegetables.parsnip.harvestSeasons;
+    // Validation Checking
+    if (length === '' || width === '') {
+        alert('Please fill in the length and width of your vegetable bed.')
+        return;
+    } else if (vegetable === false) {
+        alert('Please select a vegetable.')
+        return;
+    } else {
+        document.getElementById('information').setAttribute('style', 'display: none');
+        document.getElementById('results').setAttribute('style', 'display: block');
+
+        document.getElementById('area').innerText = calculateArea(length, width);
+
+        // Assign the chosen vegetable's properties to useful variables.
+        switch (vegetable) {
+            case 'onion':
+                rowGap = vegetables.onion.rowGap;
+                bulbGap = vegetables.onion.bulbGap;
+                depth = vegetables.onion.depth;
+                plantSeasons = vegetables.onion.plantSeasons;
+                harvestSeasons = vegetables.onion.harvestSeasons;
+                break;
+            case 'garlic':
+                rowGap = vegetables.garlic.rowGap;
+                bulbGap = vegetables.garlic.bulbGap;
+                depth = vegetables.garlic.depth;
+                plantSeasons = vegetables.garlic.plantSeasons;
+                harvestSeasons = vegetables.garlic.harvestSeasons;
+                break;
+            case 'radish':
+                rowGap = vegetables.radish.rowGap;
+                bulbGap = vegetables.radish.bulbGap;
+                depth = vegetables.radish.depth;
+                plantSeasons = vegetables.radish.plantSeasons;
+                harvestSeasons = vegetables.radish.harvestSeasons;
+                break;
+            case 'parsnip':
+                rowGap = vegetables.parsnip.rowGap;
+                bulbGap = vegetables.parsnip.bulbGap;
+                depth = vegetables.parsnip.depth;
+                plantSeasons = vegetables.parsnip.plantSeasons;
+                harvestSeasons = vegetables.parsnip.harvestSeasons;
+        }
+
+        // Assign values to the spans in the results section based on the vegetable chosen by the user.
+        document.getElementById('bulb-name').innerText = vegetable;
+        let rows = calculateRows(width, rowGap);
+        document.getElementById('rows').innerText = rows;
+
+        let bulbsInARow = calculateBulbsInRow(length, bulbGap);
+        document.getElementById('bulbs-in-row').innerText = bulbsInARow;
+
+        bulbsOrSeeds(vegetable);
+
+        // Takes the vegetable name string and capitalises the first letter only.
+        document.getElementById('capitalised-name').innerText = vegetable[0].toUpperCase() + vegetable.slice(1);
+        // Below assignments use * 100 to convert metres to centimetres.
+        document.getElementsByClassName('bulb-gap')[0].innerText = bulbGap * 100;
+        document.getElementsByClassName('bulb-gap')[1].innerText = bulbGap * 100;
+        document.getElementsByClassName('bulb-depth')[0].innerText = depth * 100;
+        document.getElementsByClassName('bulb-depth')[1].innerText = depth * 100;
+        document.getElementsByClassName('row-gap')[0].innerText = rowGap * 100;
+        document.getElementsByClassName('row-gap')[1].innerText = rowGap * 100;
+        document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
+        document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
+        document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
     }
-
-    // Assign values to the spans in the results section based on the vegetable chosen by the user.
-    document.getElementById('bulb-name').innerText = vegetable;
-    let rows = calculateRows(width, rowGap);
-    document.getElementById('rows').innerText = rows;
-
-    let bulbsInARow = calculateBulbsInRow(length, bulbGap);
-    document.getElementById('bulbs-in-row').innerText = bulbsInARow;
-
-    bulbsOrSeeds(vegetable);
-
-    // Takes the vegetable name string and capitalises the first letter only.
-    document.getElementById('capitalised-name').innerText = vegetable[0].toUpperCase() + vegetable.slice(1);
-    // Below assignments use * 100 to convert metres to centimetres.
-    document.getElementsByClassName('bulb-gap')[0].innerText = bulbGap * 100;
-    document.getElementsByClassName('bulb-gap')[1].innerText = bulbGap * 100;
-    document.getElementsByClassName('bulb-depth')[0].innerText = depth * 100;
-    document.getElementsByClassName('bulb-depth')[1].innerText = depth * 100;
-    document.getElementsByClassName('row-gap')[0].innerText = rowGap * 100;
-    document.getElementsByClassName('row-gap')[1].innerText = rowGap * 100;
-    document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
-    document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
-    document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
 })
 
 document.getElementsByTagName('button')[1].addEventListener('click', function () {
     document.getElementById('information').setAttribute('style', 'display: block');
-    //document.getElementById('results').setAttribute('style', 'display: none');
+    document.getElementById('results').setAttribute('style', 'display: none');
 })
 
 /**
@@ -114,18 +124,19 @@ function calculateArea(length, width) {
 }
 
 /**
- * 
- * @returns the user's selected vegetable from the radio button list. 
+ * Acts as a validation check for the vegetable radio buttons.
+ * @returns the user's selected vegetable if selected, or a false value if not. 
  */
-function getVegetable() {
+function checkVegetable() {
     let radios = document.getElementsByTagName('input');
+    let checker = false;
     for (radio of radios) {
         if (radio.checked) {
+            checker = true;
             return String(radio.id);
-        } else {
-            //validation check
         }
     }
+    return checker;
 }
 
 /**
@@ -152,13 +163,13 @@ function calculateBulbsInRow(length, bulbGap) {
  * Assigns the value of various spans to be 'seeds' or 'bulbs' depending on the vegetable chosen.
  * @param {String} vegetable The user's chosen vegetable
  */
-function bulbsOrSeeds(vegetable){
+function bulbsOrSeeds(vegetable) {
     let seeds = document.getElementsByClassName('seeds');
     if (vegetable === 'turnip' || vegetable === 'parsnip') {
         for (let i = 0; i < seeds.length; i++) {
             seeds[i].innerText = 'seeds';
             document.getElementById('seeds-or-bulbs').innerText = 'Seeds';
-        } 
+        }
     } else {
         for (let i = 0; i < seeds.length; i++) {
             seeds[i].innerText = 'bulbs';
