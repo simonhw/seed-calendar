@@ -33,8 +33,10 @@ const vegetables = {
     }
 }
 
-// The Calculate button will execute a number of function to get relvant information for the user, hide the information section and show the results section.
+// The Calculate button will execute a number of function to get relevant information for the user, hide the information section and show the results section.
 document.getElementsByTagName('button')[0].addEventListener('click', function () {
+    document.getElementById('information').setAttribute('style', 'display: none');
+    document.getElementById('results').setAttribute('style', 'display: block');
 
     let length = document.getElementById('length').value;
     let width = document.getElementById('width').value;
@@ -100,6 +102,11 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
     document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
     document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
     document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
+})
+
+document.getElementsByTagName('button')[1].addEventListener('click', function () {
+    document.getElementById('information').setAttribute('style', 'display: block');
+    document.getElementById('results').setAttribute('style', 'display: none');
 })
 
 /**
