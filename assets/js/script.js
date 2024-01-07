@@ -68,12 +68,12 @@ document.getElementsByTagName('button')[0].addEventListener('click', function (e
                 plantSeasons = vegetables.garlic.plantSeasons;
                 harvestSeasons = vegetables.garlic.harvestSeasons;
                 break;
-            case 'radish':
-                rowGap = vegetables.radish.rowGap;
-                bulbGap = vegetables.radish.bulbGap;
-                depth = vegetables.radish.depth;
-                plantSeasons = vegetables.radish.plantSeasons;
-                harvestSeasons = vegetables.radish.harvestSeasons;
+            case 'turnip':
+                rowGap = vegetables.turnip.rowGap;
+                bulbGap = vegetables.turnip.bulbGap;
+                depth = vegetables.turnip.depth;
+                plantSeasons = vegetables.turnip.plantSeasons;
+                harvestSeasons = vegetables.turnip.harvestSeasons;
                 break;
             case 'parsnip':
                 rowGap = vegetables.parsnip.rowGap;
