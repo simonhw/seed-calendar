@@ -15,7 +15,7 @@
     <title>Seed Planner | Details</title>
 </head>
 
-<body>
+<body class="flex-column-center">
     <!-- Parent section for gathering the user's choices for the calculations. -->
     <section id="information">
         <h1>Seed Planner</h1>
@@ -30,15 +30,17 @@
         <div class="bed-size">
             <div class="black-opacity white-text flex-column-center">
                 <h2>Vegetable Bed Size</h2>
-                <div>
-                    <label for="length">Length</label>
-                    <input type="number" id="length" name="length" min="0.1">
-                    <p>metres</p>
-                </div>
-                <div>
-                    <label for="width">Width</label>
-                    <input type="number" id="width" name="width" min="0.1">
-                    <p>metres</p>
+                <div class="input-container flex-column-center">
+                    <div>
+                        <label for="length">Length</label>
+                        <input type="number" id="length" name="length" min="0.1">
+                        <p>metres</p>
+                    </div>
+                    <div>
+                        <label for="width">Width</label>
+                        <input type="number" id="width" name="width" min="0.1">
+                        <p>metres</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,20 +49,24 @@
             <h2>Vegetable Picker</h2>
             <div>
                 <div class="radio-under flex-column-center">
-                    <input type="radio" name="vegetable-choice" id="onion">
                     <label for="onion">Onion</label>
+                    <label for="onion" ><img src='assets/images/onion.webp' alt="An image of a onion."/></label>
+                    <input type="radio" name="vegetable-choice" id="onion">
                 </div>
                 <div class="radio-under flex-column-center">
-                    <input type="radio" name="vegetable-choice" id="garlic">
                     <label for="garlic">Garlic</label>
+                    <label for="garlic"><img src='assets/images/garlic.webp' alt="An image of garlic."/></label>
+                    <input type="radio" name="vegetable-choice" id="garlic">
                 </div>
                 <div class="radio-under flex-column-center">
-                    <input type="radio" name="vegetable-choice" id="parsnip">
                     <label for="parsnip">Parsnip</label>
+                    <label for="parsnip"><img src='assets/images/parsnip.webp' alt="An image of parsnips."/></label>
+                    <input type="radio" name="vegetable-choice" id="parsnip">
                 </div>
                 <div class="radio-under flex-column-center">
-                    <input type="radio" name="vegetable-choice" id="turnip">
                     <label for="turnip">Turnip</label>
+                    <label for="turnip"><img src='assets/images/turnip.webp' alt="An image of turnips."/></label>
+                    <input type="radio" name="vegetable-choice" id="turnip">
                 </div>
             </div>
         </div>
@@ -112,7 +118,7 @@
                         </ul>
                     </div>
                     <div>
-                        <img id="vegetable-image" src='assets/images/garlic.webp' alt="An image of a vegetable.">
+                        <img id="vegetable-image" src='assets/images/garlic.webp' alt="An image of a vegetable."/>
                     </div>
                 </div>
             </div>
