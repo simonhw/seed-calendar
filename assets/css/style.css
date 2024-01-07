@@ -92,9 +92,9 @@ button {
     color: #6c4e1e;
 }
 
-/*#results {
+#results {
     display: none;
-}*/
+}
 
 .vegetable-card {
     background-image: url('../images/onions-growing.webp');
