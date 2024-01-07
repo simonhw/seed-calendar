@@ -33,6 +33,34 @@ const vegetables = {
     }
 }
 
+document.getElementsByName('vegetable-choice')[0].addEventListener('click', function() {
+    document.getElementById('picker-onion').setAttribute('class', 'green-border');
+    document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
+    document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
+    document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
+})
+
+document.getElementsByName('vegetable-choice')[1].addEventListener('click', function() {
+    document.getElementById('picker-onion').removeAttribute('class', 'green-border');
+    document.getElementById('picker-garlic').setAttribute('class', 'green-border');
+    document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
+    document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
+})
+
+document.getElementsByName('vegetable-choice')[2].addEventListener('click', function() {
+    document.getElementById('picker-onion').removeAttribute('class', 'green-border');
+    document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
+    document.getElementById('picker-parsnip').setAttribute('class', 'green-border');
+    document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
+})
+
+document.getElementsByName('vegetable-choice')[3].addEventListener('click', function() {
+    document.getElementById('picker-onion').removeAttribute('class', 'green-border');
+    document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
+    document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
+    document.getElementById('picker-turnip').setAttribute('class', 'green-border');
+})
+
 // Calculate Button: Clicking will execute a number of function to get relevant information for the user, hide the information section and show the results section.
 document.getElementsByTagName('button')[0].addEventListener('click', function (event) {
     let length = document.getElementById('length').value;
@@ -117,12 +145,16 @@ document.getElementsByTagName('button')[1].addEventListener('click', function ()
         input.value = '';
         input.checked = false;
     }
+    document.getElementById('picker-onion').removeAttribute('class', 'green-border');
+    document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
+    document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
+    document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
 })
 
 // Recalculate Button: Clicking will return the user to the first page.
 document.getElementsByTagName('button')[2].addEventListener('click', function () {
-    document.getElementById('information').setAttribute('style', 'display: block');
-    document.getElementById('results').setAttribute('style', 'display: flex');
+    document.getElementById('information').setAttribute('style', 'display: flex');
+    document.getElementById('results').setAttribute('style', 'display: none');
 })
 
 /**

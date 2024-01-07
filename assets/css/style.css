@@ -173,4 +173,9 @@ li {
         display: inline;
         width: 75px;
     }
+
+    .green-border {
+        outline: 2px solid #1c5c00;
+        outline-offset: -2px;
+    }
 }
