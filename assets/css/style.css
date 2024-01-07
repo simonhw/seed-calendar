@@ -66,8 +66,11 @@ input {
 }
 
 .radio-under {
-    flex-direction: column-reverse;
     margin: auto 1rem;
+}
+
+.radio-under img {
+    display: none;
 }
 
 .buttons {
@@ -126,7 +129,48 @@ li {
 
 /* Media Query for Tablets of width >= 768px */
 @media screen and (min-width: 768px) {
-    .bed-size {
-        width: 500px;
+    body {
+        background-image: url('../images/seedlings.webp');
+        height: 100vh;
+    }
+
+    
+    .bed-size, .black-opacity {
+        width: 400px;
+        height: 200px;
+    }
+
+    .black-opacity {
+        padding-bottom: 0px;
+    }
+
+    #information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        width: 600px;
+    }
+
+    .instructions {
+        width: 400px;
+    }
+
+    .input-container {
+        flex-direction: row;
+        width: 400px;
+        height: 60px;
+        justify-content: space-evenly;
+        margin-top: 1rem;
+    }
+
+    .vegetable-picker input {
+        width: 0px;
+        height: 0px;
+    }
+
+    .radio-under img {
+        display: inline;
+        width: 75px;
     }
 }
