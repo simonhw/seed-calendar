@@ -100,16 +100,26 @@ button {
     background-image: url('../images/onions-growing.webp');
 }
 
+ul {
+    padding-left: 20px;
+}
+
 li {
-    list-style: none;
+    list-style: disc;
+    padding-bottom: 5px;
+}
+
+.list-none {
+    list-style-type: none;
+    padding-left: -40px;
 }
 
 #vegetable-image {
     margin: 1rem;
-    box-shadow: white 1px 1px 10px 3px;
+    box-shadow: black 1px 1px 10px 3px;
 }
 
 #recalculate {
-    background-image: linear-gradient(#1c5c00, #6c4e1e);
+    background-image: linear-gradient(#1c5c00, #95c97e);;
     color: white;
 }
