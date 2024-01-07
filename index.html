@@ -28,41 +28,43 @@
         </div>
         <!-- Input fields for calculating user's planting area. -->
         <div class="bed-size">
-            <div id="black-opacity" class="white-text">
+            <div class="black-opacity white-text flex-column-center">
                 <h2>Vegetable Bed Size</h2>
                 <div>
-                    <label for="length" >Length</label>
-                    <input type="number" id="length" name="length" min="0.1"><p>metres</p>
+                    <label for="length">Length</label>
+                    <input type="number" id="length" name="length" min="0.1">
+                    <p>metres</p>
                 </div>
                 <div>
                     <label for="width">Width</label>
-                    <input type="number" id="width" name="width" min="0.1"><p>metres</p>
+                    <input type="number" id="width" name="width" min="0.1">
+                    <p>metres</p>
                 </div>
             </div>
         </div>
         <!-- Options for the user to select a vegetable to plant. -->
-        <div class="vegetable-picker">
+        <div class="vegetable-picker flex-column-center">
             <h2>Vegetable Picker</h2>
             <div>
-                <div class="radio-under">
+                <div class="radio-under flex-column-center">
                     <input type="radio" name="vegetable-choice" id="onion">
                     <label for="onion">Onion</label>
                 </div>
-                <div class="radio-under">
+                <div class="radio-under flex-column-center">
                     <input type="radio" name="vegetable-choice" id="garlic">
                     <label for="garlic">Garlic</label>
                 </div>
-                <div class="radio-under">
+                <div class="radio-under flex-column-center">
                     <input type="radio" name="vegetable-choice" id="parsnip">
                     <label for="parsnip">Parsnip</label>
                 </div>
-                <div class="radio-under">
+                <div class="radio-under flex-column-center">
                     <input type="radio" name="vegetable-choice" id="turnip">
                     <label for="turnip">Turnip</label>
                 </div>
             </div>
         </div>
-        <div class="buttons">
+        <div class="buttons flex-column-center">
             <!-- Button to calculate optimal planting layout for user selection. -->
             <button type="button" id="calculate">Calculate!</button>
             <!-- Button to clear input fields. -->
@@ -80,33 +82,34 @@
                     id="area">0</span> m&sup2; vegetable bed:</p>
             <p>You can plant your <span id="bulb-name">x</span> <span class="seeds">bulbs</span> in <span
                     id="rows">0</span> rows of <span id="bulbs-in-row">0</span>. The <span class="seeds">bulbs</span>
-                should be
-                spaced <span class="bulb-gap">0</span> cm apart and planted at a depth of <span
-                    class="bulb-depth">0</span>
-                cm. The rows must be planted <span class="row-gap">0</span> cm apart from each other.</p>
+                should be spaced <span class="bulb-gap">0</span> cm apart and planted at a depth of <span
+                    class="bulb-depth">0</span> cm. The rows must be planted <span class="row-gap">0</span> cm apart
+                from each other.</p>
             <p>You will need <span id="total-bulbs">0</span> <span class="seeds">bulbs</span> for the bed size you
                 specified.</p>
         </section>
         <!-- Section with specific information on the vegetable bulb chosen. -->
         <section>
-            <div class="vegetable-card">
-                <h2><span id="capitalised-name">Onion</span> <span id="seeds-or-bulbs">Bulbs</span></h2>
-                <div>
-                    <ul>
-                        <li>Plant between <span id="plant-seasons">January</span></li>
-                        <li>Harvest between <span id="harvest-seasons">January</span></li>
-                        <li>Bulb Spacing: <span class="bulb-gap">0</span> cm</li>
-                        <li>Bulb Depth: <span class="bulb-depth">0</span> cm</li>
-                        <li>Row Spacing: <span class="row-gap">0</span> cm</li>
-                    </ul>
-                </div>
-                <div>
-                    <img id="vegetable-image" src='' alt="An image of a vegetable.">
+            <div class="vegetable-card white-text flex-column-center">
+                <div class="black-opacity flex-column-center">
+                    <h2><span id="capitalised-name">Onion</span> <span id="seeds-or-bulbs">Bulbs</span></h2>
+                    <div>
+                        <ul>
+                            <li>Plant between <span id="plant-seasons">January</span></li>
+                            <li>Harvest between <span id="harvest-seasons">January</span></li>
+                            <li>Bulb Spacing: <span class="bulb-gap">0</span> cm</li>
+                            <li>Bulb Depth: <span class="bulb-depth">0</span> cm</li>
+                            <li>Row Spacing: <span class="row-gap">0</span> cm</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img id="vegetable-image" src='assets/images/garlic.webp' alt="An image of a vegetable.">
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Button to return the user to the previous page for a new calculation. -->
-        <div class="buttons">
+        <div class="buttons flex-column-center">
             <button id="recalculate">Recalculate!</button>
         </div>
     </section>
