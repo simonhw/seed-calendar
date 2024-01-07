@@ -82,7 +82,7 @@
     <section id="results">
         <h1>Seed Planner</h1>
         <!-- Section with specific information on planting the user's chosen vegetables. -->
-        <section>
+        <div class="instructions">
             <h2>Suggested Planting</h2>
             <p>Thanks for submitting those details. Here is what we have calculated that best fits your <span
                     id="area">0</span> m&sup2; vegetable bed:</p>
@@ -93,10 +93,9 @@
                 from each other.</p>
             <p>You will need <span id="total-bulbs">0</span> <span class="seeds">bulbs</span> for the bed size you
                 specified.</p>
-        </section>
+        </div>
         <!-- Section with specific information on the vegetable bulb chosen. -->
-        <section>
-            <div class="vegetable-card white-text flex-column-center">
+        <div class="vegetable-card white-text flex-column-center">
                 <div class="black-opacity flex-column-center">
                     <h2><span id="capitalised-name">Onion</span> <span id="seeds-or-bulbs">Bulbs</span></h2>
                     <div>
@@ -121,8 +120,7 @@
                         <img id="vegetable-image" src='assets/images/garlic.webp' alt="An image of a vegetable."/>
                     </div>
                 </div>
-            </div>
-        </section>
+        </div>
         <!-- Button to return the user to the previous page for a new calculation. -->
         <div class="buttons flex-column-center">
             <button id="recalculate">Recalculate!</button>
