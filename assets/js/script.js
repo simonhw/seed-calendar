@@ -153,7 +153,7 @@ document.getElementsByTagName('button')[1].addEventListener('click', function ()
 
 // Recalculate Button: Clicking will return the user to the first page.
 document.getElementsByTagName('button')[2].addEventListener('click', function () {
-    document.getElementById('information').setAttribute('style', 'display: flex');
+    document.getElementById('information').removeAttribute('style', 'display: none');
     document.getElementById('results').setAttribute('style', 'display: none');
 })
 
