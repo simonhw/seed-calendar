@@ -76,7 +76,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function (e
         return;
     } else {
         document.getElementById('information').setAttribute('style', 'display: none');
-        document.getElementById('results').setAttribute('style', 'display: block');
+        document.getElementById('results').setAttribute('style', 'display: flex');
 
         document.getElementById('area').innerText = calculateArea(length, width);
 
