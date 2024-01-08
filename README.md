@@ -1,6 +1,12 @@
-# Seed Calendar
+# Seed Planner
 
 This responsive website is designed to be viewed on a variety of screen sizes. Its purpose is to inform the user which vegetable and flowers seeds can be planted in given months throughout the year, and when they can be harvested.
+
+![Am I Responsive Screenshot](assets/images/readme/)
+
+Live website on GitHub Pages: [Seed Planner](https://simonhw.github.io/seed-planner/)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/simonhw/seed-planner) 
 
 ## Contents
 - [User Experience](#User-Experience)
@@ -22,12 +28,29 @@ The purpose of the web application is offer users with medium to large sized gar
 #### Returning Visitor Goals
 * To be able to reproduce previous results
 * To reference specific planting information for certain vegetables.
+#### Frequent Visitor Goals
+* To check for updates and improvements to the web application.
 
 ## Design
 ### Colour Scheme
 A colour scheme was chosen to reflect tones seen in the garden and the make the user feel excited about working with the earth under a clear blue sky.
 
 ![Coolors Palette](assets/images/readme/colour-palette.png)
+
+### Typography
+Two imported Google Fonts were used for this web application: 
+
+- Diphylleia for headings and button text
+
+![Diphylleia font 400 weight](assets/images/readme/diphylleia-400.png)
+
+- Alegreys Sans for paragraph and list content.
+
+![Alegreya Sans font 400 weight](assets/images/readme/alegreya-sans-400.png)
+![Alegreya Sans font 700 weight](assets/images/readme/alegreya-sans-700.png)
+
+Diphylleia was chosen as it evoked thoughts of nature and calming emotions due to its gentle design.
+Alegreya Sans was used for the main text content of the web applicaiton as it proved to be more readable when compared to Diphylleia. 
 
 ### Wireframes
 Wireframes were created for this website for mobile, tablet and desktop screen sizes. The original idea was a set of four interactive areas for the user to supply information about their garden and preferred vegetables, and for the application to provide guidance on planting of bulbs. The concept was simplified after a discussion with my CI Mentor and revised to deal with one type of vegetable at a time.
@@ -56,6 +79,8 @@ rowGap for turnip sometimes didn't work?
 
 ## Credits
 https://stackoverflow.com/questions/58864049/how-to-get-the-value-of-input-field-in-one-page-and-print-it-in-another-page
+
+https://stackoverflow.com/questions/19159977/inner-border-over-images-with-css 
 
 Custom input field validation was written in order to avoid the submit button refreshing the page as preventDefault didn't work fully as expected.
 
