@@ -118,6 +118,7 @@ ul {
 li {
     list-style: disc;
     padding-bottom: 5px;
+    max-width: 90%;
 }
 
 .list-none {
