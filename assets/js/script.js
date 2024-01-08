@@ -122,7 +122,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function (e
         bulbsOrSeeds(vegetable);
 
         // Takes the vegetable name string and capitalises the first letter only.
-        document.getElementById('capitalised-name').innerText = vegetable[0].toUpperCase() + vegetable.slice(1);
+        document.getElementById('capitalised-name').innerText = titleCase(vegetable);
         // Below assignments use * 100 to convert metres to centimetres.
         document.getElementsByClassName('bulb-gap')[0].innerText = bulbGap * 100;
         document.getElementsByClassName('bulb-gap')[1].innerText = bulbGap * 100;
@@ -212,11 +212,15 @@ function bulbsOrSeeds(vegetable) {
     if (vegetable === 'turnip' || vegetable === 'parsnip') {
         for (let i = 0; i < seeds.length; i++) {
             seeds[i].innerText = 'seeds';
+            document.getElementById('spacing').innerText = 'Seed';
+            document.getElementById('depth').innerText = 'Seed';
             document.getElementById('seeds-or-bulbs').innerText = 'Seeds';
         }
     } else {
         for (let i = 0; i < seeds.length; i++) {
             seeds[i].innerText = 'bulbs';
+            document.getElementById('spacing').innerText = 'Bulb';
+            document.getElementById('depth').innerText = 'Bulb';
             document.getElementById('seeds-or-bulbs').innerText = 'Bulbs';
         }
     }
@@ -231,4 +235,8 @@ function insertImage(vegetable) {
     document.getElementById('vegetable-image').src = src;
     let alt = String('An image of a ' + vegetable);
     document.getElementById('vegetable-image').alt = alt;
+}
+
+function titleCase(word) {
+    return word[0].toUpperCase() + word.slice(1);
 }
