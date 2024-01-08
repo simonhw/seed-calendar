@@ -74,6 +74,24 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 
 </details>
 
+### Responsiveness
+Content is presented from top to bottom as the user views the application on mobile screens. On wider screens, a background image is inserted to break up the extra white space and push the user's attention on the input fields in the centre of the page. To utilise the extra horizontal space, the Vegetable Bed Size input fields are presented in a row, and images of vegetables replace the simple radio buttons in the Vegetable Picker div. 
+Likewise, the image of the chosen vegetable is presented side-by-side with the planting details in the Results section. 
+
+<details><summary>Input Fields</summary>
+
+![Input Fields on mobile screens](assets/images/readme/input-fields-mobile.png)
+![Input Fields on tablet screens](assets/images/readme/input-fields-tablet.png)
+
+</details>
+
+<details><summary>Vegetable Card Div</summary>
+
+![Vegetable Card on mobile screens](assets/images/readme/vegetable-card-mobile.png)
+![Vegetable Card on tablet screens](assets/images/readme/vegetable-card-tablet.png)
+
+</details>
+
 ## Bugs
 rowGap for turnip sometimes didn't work?
 
