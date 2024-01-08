@@ -95,6 +95,7 @@ button {
     text-shadow: #6c4e1e 1px 1px;
     font-size: large;
     padding: 8px 20px 12px;
+    margin-bottom: 10px;
 }
 
 #clear {
