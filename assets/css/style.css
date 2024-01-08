@@ -65,7 +65,7 @@ input {
 }
 
 .vegetable-picker, .vegetable-card {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .vegetable-picker > div {
@@ -149,6 +149,7 @@ li {
 
     .black-opacity {
         padding-bottom: 0px;
+        height: 100%;
     }
 
     #information {
@@ -187,5 +188,17 @@ li {
     .green-border {
         outline: 2px solid #1c5c00;
         outline-offset: -2px;
+    }
+
+    .vegetable-card {
+        height: 330px;
+    }
+
+    #card-contents {
+        flex-direction: row;
+    }
+
+    #vegetable-image {
+        width: 160px;
     }
 }

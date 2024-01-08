@@ -96,8 +96,9 @@
         </div>
         <!-- Section with specific information on the vegetable bulb chosen. -->
         <div class="vegetable-card white-text flex-column-center">
-                <div class="black-opacity flex-column-center">
-                    <h2><span id="capitalised-name">Onion</span> <span id="seeds-or-bulbs">Bulbs</span></h2>
+            <div class="black-opacity flex-column-center">
+                <h2><span id="capitalised-name">Onion</span> <span class="seeds" id="seeds-or-bulbs">Bulb</span></h2>
+                <div id='card-contents' class="flex-column-center">
                     <div>
                         <ul>
                             <li class="list-none"><strong>When to plant?</strong></li>
@@ -110,8 +111,8 @@
                             </ul>
                             <li class="list-none"><strong>Planting info:</strong></li>
                             <ul>
-                                <li>Bulb Spacing: <span class="bulb-gap">0</span> cm</li>
-                                <li>Bulb Depth: <span class="bulb-depth">0</span> cm</li>
+                                <li><span id="spacing">Bulb</span> Spacing: <span class="bulb-gap">0</span> cm</li>
+                                <li><span id="depth">Bulb</span> Depth: <span class="bulb-depth">0</span> cm</li>
                                 <li>Row Spacing: <span class="row-gap">0</span> cm</li>
                             </ul>
                         </ul>
@@ -120,6 +121,7 @@
                         <img id="vegetable-image" src='assets/images/garlic.webp' alt="An image of a vegetable."/>
                     </div>
                 </div>
+            </div>
         </div>
         <!-- Button to return the user to the previous page for a new calculation. -->
         <div class="buttons flex-column-center">
