@@ -29,6 +29,11 @@ h1, h2, button {
     text-shadow: black 1px 1px;
 }
 
+.instructions {
+    max-width: 400px;
+    margin: auto 15px;
+}
+
 p {
     text-align: justify;
 }
@@ -37,6 +42,8 @@ p {
     background-image: url('../images/vegetable-bed.webp');
     background-size: cover;
     border-radius: 5%;
+    width: 90%;
+    max-width: 400px;
 }
 
 .black-opacity {
@@ -144,8 +151,11 @@ li {
         padding-bottom: 0px;
     }
 
-    #information, #results {
+    #information {
         display: flex;
+    }
+
+    #information, #results {
         flex-direction: column;
         align-items: center;
         background-color: white;
