@@ -69,17 +69,16 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
 
     // Validation checking of input fields when button is clicked.
     if (length === '' || width === '') {
-        alert('Please fill in the length and width of your vegetable bed. Minimum value of 0.15 metres.')
+        alert('Please fill in the length and width of your vegetable bed. Minimum value of 1 metre.')
         return;
-    } else if (length < 0.15 || width < 0.15) {
-        alert('Your length and width must be greater than 0.15 metres.')
+    } else if (length < 1 || width < 1) {
+        alert('Your length and width values must be at least 1 metre.')
         return;
     } else if (vegetable === false) {
         alert('Please select a vegetable.')
         return;
     } else {
-        document.getElementById('information').setAttribute('style', 'display: none');
-        document.getElementById('results').setAttribute('style', 'display: flex');
+        showResultsPage();
 
         document.getElementById('area').innerText = calculateArea(length, width);
 
@@ -127,10 +126,7 @@ document.getElementsByTagName('button')[1].addEventListener('click', function ()
 })
 
 // Recalculate Button: Clicking will return the user to the first page.
-document.getElementsByTagName('button')[2].addEventListener('click', function () {
-    document.getElementById('information').removeAttribute('style', 'display: none');
-    document.getElementById('results').setAttribute('style', 'display: none');
-})
+document.getElementsByTagName('button')[2].addEventListener('click', showInformationPage)
 
 /**
  * Calculates the user's plantable area for their chosen vegetable bulbs.
@@ -165,7 +161,7 @@ function checkVegetable() {
  * @returns the number of rows
  */
 function calculateRows(width, rowGap) {
-    return Math.floor(width / rowGap);
+    return Math.floor(width / rowGap) < 1 ? 1 : Math.floor(width / rowGap);
 }
 
 /**
@@ -231,4 +227,14 @@ function getVegetableValues(key) {
     depth = vegetables[key].depth;
     plantSeasons = vegetables[key].plantSeasons;
     harvestSeasons = vegetables[key].harvestSeasons;
+}
+
+function showResultsPage(){
+    document.getElementById('information').setAttribute('style', 'display: none');
+    document.getElementById('results').setAttribute('style', 'display: flex');
+}
+
+function showInformationPage(){
+    document.getElementById('information').removeAttribute('style', 'display: none');
+    document.getElementById('results').setAttribute('style', 'display: none');
 }
