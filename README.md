@@ -14,7 +14,11 @@ Live website on GitHub Pages: [Seed Planner](https://simonhw.github.io/seed-plan
     - [User Stories](#User-Stories)
 - [Design](#Design)
     - [Colour Scheme](#Colour-Scheme)
+    - [Typography](#Typography)
     - [Wireframes](#Wireframes)
+    - [Responsiveness](#Responsiveness)
+- [Bugs](#Bugs)
+- [Credits](#Credits)
 
 ## User Experience
 ### Initial Discussion
@@ -100,8 +104,8 @@ https://stackoverflow.com/questions/58864049/how-to-get-the-value-of-input-field
 
 https://stackoverflow.com/questions/19159977/inner-border-over-images-with-css 
 
+https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box
+
 Custom input field validation was written in order to avoid the submit button refreshing the page as preventDefault didn't work fully as expected.
 
 The recalculate button does not clear the input fields as the user may wish to simply change the vegetable, not the size of the vegetable bed.
-
-to-do: Make a function to replace the switch.
