@@ -81,35 +81,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function (e
         document.getElementById('area').innerText = calculateArea(length, width);
 
         // Assign the chosen vegetable's properties to useful variables.
-        switch (vegetable) {
-            case 'onion':
-                rowGap = vegetables.onion.rowGap;
-                bulbGap = vegetables.onion.bulbGap;
-                depth = vegetables.onion.depth;
-                plantSeasons = vegetables.onion.plantSeasons;
-                harvestSeasons = vegetables.onion.harvestSeasons;
-                break;
-            case 'garlic':
-                rowGap = vegetables.garlic.rowGap;
-                bulbGap = vegetables.garlic.bulbGap;
-                depth = vegetables.garlic.depth;
-                plantSeasons = vegetables.garlic.plantSeasons;
-                harvestSeasons = vegetables.garlic.harvestSeasons;
-                break;
-            case 'turnip':
-                rowGap = vegetables.turnip.rowGap;
-                bulbGap = vegetables.turnip.bulbGap;
-                depth = vegetables.turnip.depth;
-                plantSeasons = vegetables.turnip.plantSeasons;
-                harvestSeasons = vegetables.turnip.harvestSeasons;
-                break;
-            case 'parsnip':
-                rowGap = vegetables.parsnip.rowGap;
-                bulbGap = vegetables.parsnip.bulbGap;
-                depth = vegetables.parsnip.depth;
-                plantSeasons = vegetables.parsnip.plantSeasons;
-                harvestSeasons = vegetables.parsnip.harvestSeasons;
-        }
+        getVegetableValues(vegetable);
 
         // Assign values to the spans in the results section based on the vegetable chosen by the user.
         document.getElementById('bulb-name').innerText = vegetable;
@@ -239,4 +211,16 @@ function insertImage(vegetable) {
 
 function titleCase(word) {
     return word[0].toUpperCase() + word.slice(1);
+}
+
+/**
+ * Function to assign the values of each vegetable object key to their useful variables
+ * @param {String} key 
+ */
+function getVegetableValues(key) {
+    rowGap = vegetables[key].rowGap;
+    bulbGap = vegetables[key].bulbGap;
+    depth = vegetables[key].depth;
+    plantSeasons = vegetables[key].plantSeasons;
+    harvestSeasons = vegetables[key].harvestSeasons;
 }
