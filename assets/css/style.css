@@ -64,6 +64,17 @@ input {
     width: 20px;
 }
 
+/* The two rules below were taken from a StackOverflow post. Please refer to README. */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .vegetable-picker, .vegetable-card {
     margin-bottom: 1rem;
 }
