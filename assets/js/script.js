@@ -62,14 +62,17 @@ document.getElementsByName('vegetable-choice')[3].addEventListener('click', func
 })
 
 // Calculate Button: Clicking will execute a number of function to get relevant information for the user, hide the information section and show the results section.
-document.getElementsByTagName('button')[0].addEventListener('click', function (event) {
+document.getElementsByTagName('button')[0].addEventListener('click', function () {
     let length = document.getElementById('length').value;
     let width = document.getElementById('width').value;
     let vegetable = checkVegetable();
 
     // Validation checking of input fields when button is clicked.
     if (length === '' || width === '') {
-        alert('Please fill in the length and width of your vegetable bed.')
+        alert('Please fill in the length and width of your vegetable bed. Minimum value of 0.15 metres.')
+        return;
+    } else if (length < 0.15 || width < 0.15) {
+        alert('Your length and width must be greater than 0.15 metres.')
         return;
     } else if (vegetable === false) {
         alert('Please select a vegetable.')
@@ -209,6 +212,11 @@ function insertImage(vegetable) {
     document.getElementById('vegetable-image').alt = alt;
 }
 
+/**
+ * Takes in a string and returns it with the first letter capitalised.
+ * @param {string} word 
+ * @returns string 
+ */
 function titleCase(word) {
     return word[0].toUpperCase() + word.slice(1);
 }
