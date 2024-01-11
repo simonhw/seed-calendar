@@ -123,6 +123,7 @@ document.getElementsByTagName('button')[1].addEventListener('click', function ()
     for (let id of ids) {
          document.getElementById(id).removeAttribute('class', 'green-border');
     }
+    console.log(pluralise('test'));
 });
 
 // Recalculate Button: Clicking will return the user to the first page.
@@ -215,6 +216,15 @@ function insertImage(vegetable) {
  */
 function titleCase(word) {
     return word[0].toUpperCase() + word.slice(1);
+}
+
+/**
+ * This function adds an 's' to the end of a word change it to its plural form.
+ * @param {string} word - String to which the letter 's' will be added. 
+ * @returns the input string with an 's' added to the end
+ */
+function pluralise(word) {
+    return word + 's';
 }
 
 /**
