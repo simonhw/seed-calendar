@@ -41,13 +41,10 @@ const vegetables = {
     }
 };
 
-document.getElementsByName('vegetable-choice')[0].addEventListener('click', function(){
-    console.log('you clicked button 0');
-    setGreenBorder();
-});
-document.getElementsByName('vegetable-choice')[1].addEventListener('click', setGreenBorder);
-document.getElementsByName('vegetable-choice')[2].addEventListener('click', setGreenBorder);
-document.getElementsByName('vegetable-choice')[3].addEventListener('click', setGreenBorder);
+// Add event listeners to the vegetable picker images for indicating which one is checked.
+for (i = 0; i < 4; i++){
+    document.getElementsByName('vegetable-choice')[i].addEventListener('click', setGreenBorder);    
+}
 
 // Calculate Button: Clicking will execute a number of function to get relevant information for the user, hide the information section and show the results section.
 document.getElementsByTagName('button')[0].addEventListener('click', function () {
@@ -110,7 +107,6 @@ document.getElementsByTagName('button')[1].addEventListener('click', function ()
     for (let id of ids) {
         document.getElementById(id).removeAttribute('class', 'green-border');
     }
-    console.log(convertM2ToCm2(10));
 });
 
 // Recalculate Button: Clicking will return the user to the first page.
