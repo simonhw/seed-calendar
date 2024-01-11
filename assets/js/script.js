@@ -1,37 +1,45 @@
 const vegetables = {
     onion: {
         name: 'onion',
-        bulbGap: 0.05,
-        rowGap: 0.25,
-        depth: 0.02,
+        bulbGap: 5,
+        rowGap: 5,
+        depth: 2,
         plantSeasons: ['March', 'April'],
-        harvestSeasons: ['June', 'August']
+        harvestSeasons: ['June', 'August'],
+        src: 'assets/images/onion.webp',
+        alt: 'An image of a brown onion in a bowl.'
     },
     garlic: {
         name: 'garlic',
-        bulbGap: 0.15,
-        rowGap: 0.3,
-        depth: 0.025,
+        bulbGap: 15,
+        rowGap: 30,
+        depth: 2.5,
         plantSeasons: ['October', 'February'],
-        harvestSeasons: ['June', 'August']
+        harvestSeasons: ['June', 'August'],
+        src: 'assets/images/garlic.webp',
+        alt: 'An image of a head of garlic on a table.'
     },
     turnip: {
         name: 'turnip',
-        bulbGap: 0.15,
-        rowGap: 0.3,
-        depth: 0.01,
+        bulbGap: 15,
+        rowGap: 30,
+        depth: 1,
         plantSeasons: ['July', 'August'],
-        harvestSeasons: ['August', 'October']
+        harvestSeasons: ['August', 'October'],
+        src: 'assets/images/turnip.webp',
+        alt: 'An image of turnips in a pile.'
     },
     parsnip: {
         name: 'parsnip',
-        bulbGap: 0.15,
-        rowGap: 0.3,
-        depth: 0.01,
+        bulbGap: 15,
+        rowGap: 30,
+        depth: 1,
         plantSeasons: ['March', 'May'],
-        harvestSeasons: ['September', 'February']
+        harvestSeasons: ['September', 'February'],
+        src: 'assets/images/parsnip.webp',
+        alt: 'An image of a stack of parsnips.'
     }
-}
+};
 
 document.getElementsByName('vegetable-choice')[0].addEventListener('click', function() {
     document.getElementById('picker-onion').setAttribute('class', 'green-border');
