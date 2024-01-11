@@ -2,7 +2,7 @@ const vegetables = {
     onion: {
         name: 'onion',
         bulbGap: 5,
-        rowGap: 5,
+        rowGap: 25,
         depth: 2,
         plantSeasons: ['March', 'April'],
         harvestSeasons: ['June', 'August'],
@@ -41,28 +41,28 @@ const vegetables = {
     }
 };
 
-document.getElementsByName('vegetable-choice')[0].addEventListener('click', function() {
+document.getElementsByName('vegetable-choice')[0].addEventListener('click', function () {
     document.getElementById('picker-onion').setAttribute('class', 'green-border');
     document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
     document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
     document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
 })
 
-document.getElementsByName('vegetable-choice')[1].addEventListener('click', function() {
+document.getElementsByName('vegetable-choice')[1].addEventListener('click', function () {
     document.getElementById('picker-onion').removeAttribute('class', 'green-border');
     document.getElementById('picker-garlic').setAttribute('class', 'green-border');
     document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
     document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
 })
 
-document.getElementsByName('vegetable-choice')[2].addEventListener('click', function() {
+document.getElementsByName('vegetable-choice')[2].addEventListener('click', function () {
     document.getElementById('picker-onion').removeAttribute('class', 'green-border');
     document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
     document.getElementById('picker-parsnip').setAttribute('class', 'green-border');
     document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
 })
 
-document.getElementsByName('vegetable-choice')[3].addEventListener('click', function() {
+document.getElementsByName('vegetable-choice')[3].addEventListener('click', function () {
     document.getElementById('picker-onion').removeAttribute('class', 'green-border');
     document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
     document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
@@ -106,12 +106,12 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
         // Takes the vegetable name string and capitalises the first letter only.
         document.getElementById('capitalised-name').innerText = titleCase(vegetable);
         // Below assignments use * 100 to convert metres to centimetres.
-        document.getElementsByClassName('bulb-gap')[0].innerText = bulbGap * 100;
-        document.getElementsByClassName('bulb-gap')[1].innerText = bulbGap * 100;
-        document.getElementsByClassName('bulb-depth')[0].innerText = depth * 100;
-        document.getElementsByClassName('bulb-depth')[1].innerText = depth * 100;
-        document.getElementsByClassName('row-gap')[0].innerText = rowGap * 100;
-        document.getElementsByClassName('row-gap')[1].innerText = rowGap * 100;
+        document.getElementsByClassName('bulb-gap')[0].innerText = bulbGap;
+        document.getElementsByClassName('bulb-gap')[1].innerText = bulbGap;
+        document.getElementsByClassName('bulb-depth')[0].innerText = depth;
+        document.getElementsByClassName('bulb-depth')[1].innerText = depth;
+        document.getElementsByClassName('row-gap')[0].innerText = rowGap;
+        document.getElementsByClassName('row-gap')[1].innerText = rowGap;
         document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
         document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
         document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
@@ -129,7 +129,7 @@ document.getElementsByTagName('button')[1].addEventListener('click', function ()
     }
     let ids = ['picker-onion', 'picker-garlic', 'picker-parsnip', 'picker-turnip'];
     for (let id of ids) {
-         document.getElementById(id).removeAttribute('class', 'green-border');
+        document.getElementById(id).removeAttribute('class', 'green-border');
     }
     console.log(convertM2ToCm2(10));
 });
@@ -138,22 +138,24 @@ document.getElementsByTagName('button')[1].addEventListener('click', function ()
 document.getElementsByTagName('button')[2].addEventListener('click', showInformationPage)
 
 /**
- * Calculates the user's plantable area for their chosen vegetable bulbs.
+ * Calculates the user's plantable area for their chosen vegetable bulbs. To limit the result 
+ * to two decimal places, the value is multiplied by 100 before being rounded to a whole number
+ * and then being divided by 100.
  * @param {Number} length - The vegetable bed length in metres.
  * @param {Number} width - The vegetable bed width in metres.
  * @returns the area of the bed
  */
 function calculateArea(length, width) {
-    return Math.round(length * width * 100) / 100; //This limits the area displayed to a maximum of two decimal places.
+    return Math.round(length * width * 100) / 100;
 }
 
 /**
- * This function takes in a value in square metres and convert the number to square centimetres.
+ * This function takes in a value in metres and convert the number to centimetres.
  * @param {number} value 
- * @returns the input number multiplied by 10,000
+ * @returns the input number multiplied by 100
  */
-function convertM2ToCm2(value){
-    return value * 10000;
+function convertMToCm(value) {
+    return value * 100;
 }
 
 /**
@@ -175,11 +177,11 @@ function checkVegetable() {
 /**
  * Calculates the maximum number of row possible for the width of the vegetable bed.
  * @param {Number} width - The vegetable bed width in metres.
- * @param {Number} rowGap - The recomended gap between rows of the specified bulb.
+ * @param {Number} rowGap - The recommended gap in centimetres between rows of the specified bulb.
  * @returns the number of rows
  */
 function calculateRows(width, rowGap) {
-    return Math.floor(width / rowGap) < 1 ? 1 : Math.floor(width / rowGap);
+    return Math.floor(convertMToCm(width) / rowGap) < 1 ? 1 : Math.floor(convertMToCm(width) / rowGap);
 }
 
 /**
@@ -189,7 +191,7 @@ function calculateRows(width, rowGap) {
  * @returns the numbers of bulbs per row
  */
 function calculateBulbsInRow(length, bulbGap) {
-    return Math.floor(length / bulbGap);
+    return Math.floor(convertMToCm(length) / bulbGap);
 }
 
 /**
@@ -251,12 +253,12 @@ function getVegetableValues(key) {
     harvestSeasons = vegetables[key].harvestSeasons;
 }
 
-function showResultsPage(){
+function showResultsPage() {
     document.getElementById('information').setAttribute('style', 'display: none');
     document.getElementById('results').setAttribute('style', 'display: flex');
 }
 
-function showInformationPage(){
+function showInformationPage() {
     document.getElementById('information').removeAttribute('style', 'display: none');
     document.getElementById('results').setAttribute('style', 'display: none');
 }
