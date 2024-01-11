@@ -115,15 +115,15 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
 //Clear Form Button: Allows user to clear form if they so wish.
 document.getElementsByTagName('button')[1].addEventListener('click', function () {
     let inputs = document.getElementsByTagName('input');
-    for (input of inputs) {
+    for (let input of inputs) {
         input.value = '';
         input.checked = false;
     }
-    document.getElementById('picker-onion').removeAttribute('class', 'green-border');
-    document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
-    document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
-    document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
-})
+    let ids = ['picker-onion', 'picker-garlic', 'picker-parsnip', 'picker-turnip'];
+    for (let id of ids) {
+         document.getElementById(id).removeAttribute('class', 'green-border');
+    }
+});
 
 // Recalculate Button: Clicking will return the user to the first page.
 document.getElementsByTagName('button')[2].addEventListener('click', showInformationPage)
