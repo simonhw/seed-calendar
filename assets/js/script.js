@@ -58,8 +58,8 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
     } else {
         document.getElementById('area').innerText = calculateArea(length, width);
 
-         // Assign the chosen vegetable's properties to useful variables using object destructuring.
-         let {rowGap, bulbGap, depth, plantSeasons, harvestSeasons} = getVegetableValues(vegetable);
+        // Assign the chosen vegetable's properties to useful variables.
+        getVegetableValues(vegetable);
 
         // Assign values to the spans in the results section based on the vegetable chosen by the user.
         document.getElementById('bulb-name').innerText = vegetable;
@@ -228,14 +228,12 @@ function pluralise(word) {
  * @param {String} key 
  */
 function getVegetableValues(key) {
-    let rowGap = vegetables[key].rowGap;
-    let bulbGap = vegetables[key].bulbGap;
-    let depth = vegetables[key].depth;
-    let plantSeasons = vegetables[key].plantSeasons;
-    let harvestSeasons = vegetables[key].harvestSeasons;
-    return [rowGap, bulbGap, depth, plantSeasons, harvestSeasons];
+    rowGap = vegetables[key].rowGap;
+    bulbGap = vegetables[key].bulbGap;
+    depth = vegetables[key].depth;
+    plantSeasons = vegetables[key].plantSeasons;
+    harvestSeasons = vegetables[key].harvestSeasons;
 }
-
  /**
   * This function hides the information section and displays the results section.
   */
