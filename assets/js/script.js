@@ -131,7 +131,7 @@ document.getElementsByTagName('button')[1].addEventListener('click', function ()
     for (let id of ids) {
          document.getElementById(id).removeAttribute('class', 'green-border');
     }
-    console.log(pluralise('test'));
+    console.log(convertM2ToCm2(10));
 });
 
 // Recalculate Button: Clicking will return the user to the first page.
@@ -145,6 +145,15 @@ document.getElementsByTagName('button')[2].addEventListener('click', showInforma
  */
 function calculateArea(length, width) {
     return Math.round(length * width * 100) / 100; //This limits the area displayed to a maximum of two decimal places.
+}
+
+/**
+ * This function takes in a value in square metres and convert the number to square centimetres.
+ * @param {number} value 
+ * @returns the input number multiplied by 10,000
+ */
+function convertM2ToCm2(value){
+    return value * 10000;
 }
 
 /**
