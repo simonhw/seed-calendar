@@ -181,21 +181,16 @@ function calculateBulbsInRow(length, bulbGap) {
  */
 function bulbsOrSeeds(vegetable) {
     let seeds = document.getElementsByClassName('seeds');
+    let string = 'bulb';
     if (vegetable === 'turnip' || vegetable === 'parsnip') {
-        for (let i = 0; i < seeds.length; i++) {
-            seeds[i].innerText = 'seeds';
-            document.getElementById('spacing').innerText = 'Seed';
-            document.getElementById('depth').innerText = 'Seed';
-            document.getElementById('seeds-or-bulbs').innerText = 'Seeds';
-        }
-    } else {
-        for (let i = 0; i < seeds.length; i++) {
-            seeds[i].innerText = 'bulbs';
-            document.getElementById('spacing').innerText = 'Bulb';
-            document.getElementById('depth').innerText = 'Bulb';
-            document.getElementById('seeds-or-bulbs').innerText = 'Bulbs';
-        }
+        string = 'seed';
     }
+    for (let i = 0; i < seeds.length; i++) {
+        seeds[i].innerText = pluralise(string);
+    }
+    document.getElementById('spacing').innerText = titleCase(string);
+    document.getElementById('depth').innerText = titleCase(string);
+    document.getElementById('seeds-or-bulbs').innerText = pluralise(titleCase(string));
 }
 
 /**
