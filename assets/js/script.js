@@ -41,33 +41,13 @@ const vegetables = {
     }
 };
 
-document.getElementsByName('vegetable-choice')[0].addEventListener('click', function () {
-    document.getElementById('picker-onion').setAttribute('class', 'green-border');
-    document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
-    document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
-    document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
-})
-
-document.getElementsByName('vegetable-choice')[1].addEventListener('click', function () {
-    document.getElementById('picker-onion').removeAttribute('class', 'green-border');
-    document.getElementById('picker-garlic').setAttribute('class', 'green-border');
-    document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
-    document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
-})
-
-document.getElementsByName('vegetable-choice')[2].addEventListener('click', function () {
-    document.getElementById('picker-onion').removeAttribute('class', 'green-border');
-    document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
-    document.getElementById('picker-parsnip').setAttribute('class', 'green-border');
-    document.getElementById('picker-turnip').removeAttribute('class', 'green-border');
-})
-
-document.getElementsByName('vegetable-choice')[3].addEventListener('click', function () {
-    document.getElementById('picker-onion').removeAttribute('class', 'green-border');
-    document.getElementById('picker-garlic').removeAttribute('class', 'green-border');
-    document.getElementById('picker-parsnip').removeAttribute('class', 'green-border');
-    document.getElementById('picker-turnip').setAttribute('class', 'green-border');
-})
+document.getElementsByName('vegetable-choice')[0].addEventListener('click', function(){
+    console.log('you clicked button 0');
+    setGreenBorder();
+});
+document.getElementsByName('vegetable-choice')[1].addEventListener('click', setGreenBorder);
+document.getElementsByName('vegetable-choice')[2].addEventListener('click', setGreenBorder);
+document.getElementsByName('vegetable-choice')[3].addEventListener('click', setGreenBorder);
 
 // Calculate Button: Clicking will execute a number of function to get relevant information for the user, hide the information section and show the results section.
 document.getElementsByTagName('button')[0].addEventListener('click', function () {
@@ -86,8 +66,6 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
         alert('Please select a vegetable.')
         return;
     } else {
-        showResultsPage();
-
         document.getElementById('area').innerText = calculateArea(length, width);
 
         // Assign the chosen vegetable's properties to useful variables.
@@ -117,6 +95,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
         document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
         // Changes the image based on the vegetable
         insertImage(vegetable);
+        showResultsPage();
     }
 })
 
@@ -252,13 +231,33 @@ function getVegetableValues(key) {
     plantSeasons = vegetables[key].plantSeasons;
     harvestSeasons = vegetables[key].harvestSeasons;
 }
-
+ /**
+  * This function hides the information section and displays the results section.
+  */
 function showResultsPage() {
     document.getElementById('information').setAttribute('style', 'display: none');
     document.getElementById('results').setAttribute('style', 'display: flex');
 }
 
+/**
+ * This function hides the results section and displays the information section.
+ */
 function showInformationPage() {
     document.getElementById('information').removeAttribute('style', 'display: none');
     document.getElementById('results').setAttribute('style', 'display: none');
+}
+
+/**
+ * This function loops through inputs and add a green border to the checked elements 
+ * and removes it from any unchecked elements.
+ */
+function setGreenBorder(){
+    let radios = document.getElementsByName('vegetable-choice');
+    for (let radio of radios) {
+        if (radio.checked) {
+            radio.previousElementSibling.firstChild.setAttribute('class', 'green-border');
+        } else {
+            radio.previousElementSibling.firstChild.removeAttribute('class', 'green-border');
+        }
+    }
 }
