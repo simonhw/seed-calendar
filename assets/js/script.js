@@ -53,14 +53,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
     let vegetable = checkVegetable();
 
     // Validation checking of input fields when button is clicked.
-    if (length === '' || width === '') {
-        alert('Please fill in the length and width of your vegetable bed. Minimum value of 1 metre.')
-        return;
-    } else if (length < 1 || width < 1) {
-        alert('Your length and width values must be at least 1 metre.')
-        return;
-    } else if (vegetable === false) {
-        alert('Please select a vegetable.')
+    if (!validationCheck(length, width, vegetable)) {
         return;
     } else {
         document.getElementById('area').innerText = calculateArea(length, width);
@@ -98,15 +91,8 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
 
 //Clear Form Button: Allows user to clear form if they so wish.
 document.getElementsByTagName('button')[1].addEventListener('click', function () {
-    let inputs = document.getElementsByTagName('input');
-    for (let input of inputs) {
-        input.value = '';
-        input.checked = false;
-    }
-    let ids = ['picker-onion', 'picker-garlic', 'picker-parsnip', 'picker-turnip'];
-    for (let id of ids) {
-        document.getElementById(id).removeAttribute('class', 'green-border');
-    }
+    clearSizeInputs();
+    clearRadioButtons();
 });
 
 // Recalculate Button: Clicking will return the user to the first page.
@@ -122,6 +108,25 @@ document.getElementsByTagName('button')[2].addEventListener('click', showInforma
  */
 function calculateArea(length, width) {
     return Math.round(length * width * 100) / 100;
+}
+ /**
+  * Function that clears the text inputs fields in the Information section.
+  */
+function clearSizeInputs(){
+    let inputs = document.getElementsByName('size-input');
+    for (let input of inputs) {
+        input.value = '';
+    }
+}
+ /**
+  * Function that unchecks all radio buttons and removes any green borders.
+  */
+function clearRadioButtons(){
+    let ids = ['picker-onion', 'picker-garlic', 'picker-parsnip', 'picker-turnip'];
+    for (let id of ids) {
+        document.getElementById(id).removeAttribute('class', 'green-border');
+        id.checked = false;
+    }
 }
 
 /**
@@ -255,5 +260,29 @@ function setGreenBorder(){
         } else {
             radio.previousElementSibling.firstChild.removeAttribute('class', 'green-border');
         }
+    }
+}
+
+/**
+ * This function validates the input fields ensuring that dimensions added by the user 
+ * are between 1 and 20 metres and that a vegetable radio button has been checked.
+ * @param {number} length 
+ * @param {number} width 
+ * @param {string} vegetable 
+ * @returns boolean and/or an alert window.
+ */
+function validationCheck(length, width, vegetable) {
+    if (length === '' || width === '') {
+        alert('Please fill in the length and width of your vegetable bed. Minimum value: 1 metre. Maximim value: 20 metres.');
+        return false;
+    } else if (length < 1 || width < 1 || length > 20 || width > 20) {
+        alert('Your length and width values must be at least 1 metre and at most 20 metres.');
+        clearSizeInputs();
+        return false;
+    } else if (vegetable === false) {
+        alert('Please select a vegetable.');
+        return false;
+    } else {
+        return true;
     }
 }
