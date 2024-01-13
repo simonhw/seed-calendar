@@ -3,10 +3,11 @@
 
 body {
     font-family: 'Alegreya Sans';
+    margin: 0px;
 }
 
 section {
-    margin: auto 5px;
+    margin: auto 0px;
 }
 
 .flex-column-center {
@@ -17,6 +18,10 @@ section {
 
 h1 {
     font-size: xx-large;
+    padding-top: 27px;
+    margin-top: 0px;
+    background-image: linear-gradient(180deg, #8ccaf3, transparent);
+    width: 100%;
 }
 
 h1, h2, button {
@@ -155,11 +160,14 @@ li {
         height: 100vh;
     }
 
+    h1 {
+        background-image: none;
+    }
+
     section {
         height: 808px;
     }
-
-    
+ 
     .bed-size, .black-opacity {
         width: 400px;
         height: 200px;
