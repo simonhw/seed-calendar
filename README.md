@@ -1,13 +1,13 @@
 # Seed Planner
 
-This responsive website is designed to be viewed on a variety of screen sizes. Its purpose is to aid the user in planning for the planting of various vegetables in their garden beds, and provide detailed information on how to plant them and when they should plant and harvest them.
+This responsive website is designed to be viewed on a variety of screen sizes. Its purpose is to aid the user in planning for the planting of various vegetables in their garden beds, and provide detailed information on how to plant them and when they shgiould plant and harvest them.
 
 ![Am I Responsive Screenshot](assets/images/readme/amiresponsive-seed-planner.png)
 
 Live website on GitHub Pages: [Seed Planner](https://simonhw.github.io/seed-planner/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/simonhw/seed-planner) ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsimonhw.github.io%2Fseed-planner%2F&label=HTML&labelColor=%23e34c26)
- ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsimonhw.github.io%2Fseed-planner%2Fassets%2Fcss%2Fstyle.css&label=CSS&labelColor=%23264de4%20)
+![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsimonhw.github.io%2Fseed-planner%2Fassets%2Fcss%2Fstyle.css&label=CSS&labelColor=%23264de4%20)
  ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsimonhw.github.io%2Fseed-planner%2Fassets%2Fjs%2Fscript.js&label=JS&labelColor=f0db4f)
 ![GitHub top language](https://img.shields.io/github/languages/top/simonhw/seed-planner)
 
@@ -363,7 +363,9 @@ The recalculate button does not clear the input fields as the user may wish to s
 
 
 footer ??
+- not this version
 
 check validators
+- fix hmtl ul ul children
 
 optimise vegetable values function
