@@ -89,14 +89,14 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 Content is presented from top to bottom as the user views the application on mobile screens. On wider screens, a blurred background image is inserted to break up the extra white space and push the user's attention to the input fields in the centre of the page. To utilise the extra horizontal space, the Vegetable Bed Size input fields are presented in a row, and images of vegetables replace the simple radio buttons in the Vegetable Picker div. 
 Likewise, the image of the chosen vegetable is presented side-by-side with the planting details in the Results section. 
 
-<details><summary>Input Fields</summary>
+<details><summary>Input Fields on mobile screens and larger sizes</summary>
 
 ![Input Fields on mobile screens](assets/images/readme/input-fields-mobile.png)
 ![Input Fields on tablet screens](assets/images/readme/input-fields-tablet.png)
 
 </details>
 
-<details><summary>Vegetable Card Div</summary>
+<details><summary>Vegetable Card Div on mobile screen and larger sizes</summary>
 
 ![Vegetable Card on mobile screens](assets/images/readme/vegetable-card-mobile.png)
 ![Vegetable Card on tablet screens](assets/images/readme/vegetable-card-tablet.png)
@@ -166,6 +166,65 @@ A button to send to user back to the previous application state is presented at 
 When returning the user to the information section, this button does not clear the input fields because of the possibility that the user may want to use the same bed size to get results for a different type of vegetable.
 
 ### Javascript
+#### Validation
+The web application uses custom validation to more specifically guide the user when they either forget to provide inputs or to try to use invalid inputs. The `validationCheck();` function returns an alert and/or a boolean to either permit the user to move to the results section or not.
+- If all fields are left blank, the user is given clear instructions on how to proceed correctly: 
+
+![Alert when all fields are left blank](assets/images/readme/alert-one.png)
+
+- If the user tries to use length or width values that are less than 1 or greater than 20, they are reminded of the limits. The input fields are also cleared using `clearSizeInputs();` when this alert is dismissed to make it easier for the user to put in new values:
+
+![Alert when invalid sizes inputted](assets/images/readme/alert-two.png)
+
+- If the user does not select any vegetable, they are reminded that this is a required input before proceeding:
+
+![Alert when the user does not select a vegetable](assets/images/readme/alert-three.png)
+
+#### Vegetable Picker
+Event listeners added to the four radio buttons use `setGreenBorder();` to add or remove a green border around the vegetable clicked by the user.
+
+![Gif demonstrating the Vegetable Picker green borders](assets/images/readme/vegetable-picker.gif)
+
+#### Calculate Button
+When the user clicks the Calculate button, an event listener runs `validationCheck();` and if the inputs are correct, various functions described [below](#Suggested-Planting-Paragraphs) are executed to calculate the appropriate details before running `showResultsPage();` which adds a `display:none` style to the information section and adds `display: flex` to the results section.
+
+![Gif demonstrating the Calcualte button being used](assets/images/readme/calculate-button.gif)
+
+#### Clear Form Button
+An event listener for the Clear Form button runs the `clearSizeInputs();` and `clearRadioButtons();` functions when clicked. These actions were split into two functions so that one could be used in the validation check as explained above.
+
+![Gif demonstrating the Clear Form button being used](assets/images/readme/clear-form.gif)
+
+#### Suggested Planting Paragraphs
+Using a number of functions, namely `checkVegetable();` `calculateArea();` `getVegetableValues();` `calculateRows();` and `calculateBulbsInRow();`, various parts of the paragraphs under "Suggested Planting" will be updated based on the user inputs: 
+- the area of the vegetable bed
+- the name of the vegetable
+- the number of rows and how many vegetables per row
+- the spacing between bulbs in the same row
+- the depth at which the vegetables should be planted
+- the spacing between rows
+- how many bulbs or seeds will be needed
+
+(In the below gif image, the fields that change are shown in red just for the purposes of the README)
+
+![Gif of text changing in the Suggested Planting paragraphs](assets/images/readme/suggested-planting.gif)
+
+#### Vegetable Card
+Similarly, using `function();` and `insertImage();`, the details in the vegetable card change based on the user's selection:
+
+![Gif of the vegetable card details changing](assets/images/readme/vegetable-card.gif)
+
+#### Seeds or Bulbs?
+Depending on the vegetable chosen, the user will be given details for the planting of seeds or bulbs. To change these words in the web application, spans with classes and ids were used and the javascript function `bulbsOrSeeds();` called by the Calculate button event listener inserted the correct words using the `.innerText` property.
+
+(In the below gif image, the fields that change are shown in red just for the purposes of the README)
+
+![Gif of different words being inserted depending on the choice of vegetable](assets/images/readme/bulbs-or-seeds.gif)
+
+#### Recalculate Button
+The event listener for the Recalcualte button simply calls the `showInformationPage();` function when it is clicked. This function removes the `display:none` style from the information section and removes the same style from the results section.
+
+![Gif of the Recalculate button being used](assets/images/readme/recalculate-button.gif)
 
 ## Bugs
 rowGap for turnip sometimes didn't work?
