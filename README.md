@@ -82,7 +82,7 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 </details>
 
 ### Responsiveness
-Content is presented from top to bottom as the user views the application on mobile screens. On wider screens, a background image is inserted to break up the extra white space and push the user's attention on the input fields in the centre of the page. To utilise the extra horizontal space, the Vegetable Bed Size input fields are presented in a row, and images of vegetables replace the simple radio buttons in the Vegetable Picker div. 
+Content is presented from top to bottom as the user views the application on mobile screens. On wider screens, a blurred background image is inserted to break up the extra white space and push the user's attention to the input fields in the centre of the page. To utilise the extra horizontal space, the Vegetable Bed Size input fields are presented in a row, and images of vegetables replace the simple radio buttons in the Vegetable Picker div. 
 Likewise, the image of the chosen vegetable is presented side-by-side with the planting details in the Results section. 
 
 <details><summary>Input Fields</summary>
@@ -98,6 +98,59 @@ Likewise, the image of the chosen vegetable is presented side-by-side with the p
 ![Vegetable Card on tablet screens](assets/images/readme/vegetable-card-tablet.png)
 
 </details>
+
+## Features
+This web application is made up of a single HTML page with a Javascript file and CSS stylesheet.
+
+A favicon of a seedling is used for the HTML page:
+
+![Favicon of a Seedling](assets/images/readme/favicon.png)
+
+Only one of two sections is displayed to the user at any given time: the information gathering section or the results section. When a user first visits or reloads the page, they are presented with the information section only.
+
+### Information Section
+Three input options are required of a user:
+- the vegetable bed length
+- the vegetable bed width
+- a choice of one of four vegetables to plant
+
+#### Vegetable Bed Size
+The bed size inputs are displayed in a div with a background image of a gardener planting young leafy vegetables. This makes good use of what would otherwise be empty white space for two simple inputs. The use of this image evokes positive thoughts in the user as they identify with the person in the photo and think about their future work in the garden.
+
+![Vegetable Bed Size div](assets/images/readme/bed-size-div.png)
+
+A transparent black color is utilised between the image and the white text to aid in contrast. The heading "Vegetable Bed Size" has been given a text shadow to further contrast it from the backround image and add a subtle style to the already attractive font.
+
+A minimium and maximum size of 1 metre and 20 metres respectively was set for these input fields via Javascript as the web application is designed for users with medium to large sized gardens.
+
+CSS code was found and utilised from a post on Stack Overflow to remove the up and down arrows from these number input fields for aesthetic reasons and is [credited below](#Credits).
+
+#### Vegetable Picker
+The third option presented to the user is which vegetable to plant. On mobile screens this is a simple horizontal list of radio buttons with labels above. 
+
+![Vegetable Picker radios](assets/images/readme/vegetable-picker-radios.png)
+
+On tablet-sized screens and larger I added images of the vegetables and hid the radio buttons. This makes the web application look more professional on larger screen sizes and also helps the user best choose what they want to plant by making them visualise the final result.
+
+![Vegetable Picker Images](assets/images/readme/vegetable-picker-div.png)
+
+Javascript code was written that highlights the image with a green border when that particular vegetable is tapped or clicked. This clearly shows the user what option they have chosen before moving forward to view the results.
+
+#### Calculate and Clear Form Buttons
+A large "Calculate" button is the next thing presented to the user after the input fields have been filled out. It uses a gradient of the two green colours chosen for the site as its background colour. The text itself uses the yellow with a text shadow of brown. The colour green is synonymous with progression and affirmation and so is a perfect choice for a button the brings the user to the results page using the data they have provided.
+
+![Information Section Buttons](assets/images/readme/information-buttons.png)
+
+The Clear Form button is smaller and placed a distance away from its sibling to avoid accidental selection by the user. It uses a yellow background with brown text to further distinguish itself as a different type of button. 
+
+### Results Section
+#### Planting Suggestions
+Under a heading of "Suggested Planting" to make clear to the user what they are describing, paragraphs list properties of the type of vegetable bed the user has specified in the previous section. In the below image, text in red changes based on the user inputs thanks to Javascript functions written to push the correct information for different types of vegetables and bed sizes.
+
+![Suggested Planting paragraphs with red text highlights](assets/images/readme/suggested-planting.png)
+
+#### Vegetable Card
+A neatly-contained div is presented next to the user, summarising the important information needed plant the user's chosen vegetable. A heading and large image clearly describes the vegetable and the instructions given to the user change depending on their choice.
 
 ## Bugs
 rowGap for turnip sometimes didn't work?
