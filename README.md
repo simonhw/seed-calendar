@@ -17,6 +17,10 @@ Live website on GitHub Pages: [Seed Planner](https://simonhw.github.io/seed-plan
     - [Typography](#Typography)
     - [Wireframes](#Wireframes)
     - [Responsiveness](#Responsiveness)
+- [Features](#Features)
+    - [Information Section](#Information-Section)
+    - [Results Section](#Results-Section)
+    - [Javascript](#Javscript)
 - [Bugs](#Bugs)
 - [Credits](#Credits)
 
@@ -150,7 +154,18 @@ Under a heading of "Suggested Planting" to make clear to the user what they are 
 ![Suggested Planting paragraphs with red text highlights](assets/images/readme/suggested-planting.png)
 
 #### Vegetable Card
-A neatly-contained div is presented next to the user, summarising the important information needed plant the user's chosen vegetable. A heading and large image clearly describes the vegetable and the instructions given to the user change depending on their choice.
+A neatly-contained div is presented next to the user, summarising the important information needed to plant the user's chosen vegetable. A heading and large image clearly denote the vegetable and the instructions given to the user change depending on their choice.
+
+![Vegetable Card](assets/images/readme/vegetable-card.png)
+
+#### Recalculate Button
+A button to send to user back to the previous application state is presented at the bottom of the section. This "Recalculate" button has a similar style to the "Calculate" button, however the font is white with a brown text shadow, and the background gradient moves in the opposite direction.
+
+![Recalculate Button](assets/images/readme/results-buttons.png)
+
+When returning the user to the information section, this button does not clear the input fields because of the possibility that the user may want to use the same bed size to get results for a different type of vegetable.
+
+### Javascript
 
 ## Bugs
 rowGap for turnip sometimes didn't work?
