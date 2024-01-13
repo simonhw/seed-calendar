@@ -6,7 +6,10 @@ This responsive website is designed to be viewed on a variety of screen sizes. I
 
 Live website on GitHub Pages: [Seed Planner](https://simonhw.github.io/seed-planner/)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/simonhw/seed-planner) 
+![GitHub last commit](https://img.shields.io/github/last-commit/simonhw/seed-planner) ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsimonhw.github.io%2Fseed-planner%2F&label=HTML&labelColor=%23e34c26)
+ ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsimonhw.github.io%2Fseed-planner%2Fassets%2Fcss%2Fstyle.css&label=CSS&labelColor=%23264de4%20)
+ ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsimonhw.github.io%2Fseed-planner%2Fassets%2Fjs%2Fscript.js&label=JS&labelColor=f0db4f)
+![GitHub top language](https://img.shields.io/github/languages/top/simonhw/seed-planner)
 
 ## Contents
 - [User Experience](#User-Experience)
@@ -255,6 +258,42 @@ Accessibilty was kept in mind when building this web application by:
 - Using semantic HTML elements where appropriate.
 - Using contrasting colours that clearly stand out from the background.
 - Including clear and descriptive alt attributes for all `<img/>` elements.
+
+## Technologies Used
+### Languages
+HTML, CSS, and Javascript.
+
+### Frameworks, Libraries, and Programs
+Balsamiq - To create the initial wireframes.
+
+Chrome Developer Tools - To visualise and test changes to the HTML and CSS code.
+
+Visual Studio Code - The IDE used to write my code.
+
+Git - For version control.
+
+GitHub - To save and store files online.
+
+Google Fonts - For imported fonts used on the website.
+
+[Favicon.io](https://favicon.io/) - To source the favicon used.
+
+[Pexels.com](https://www.pexels.com/) - To source images used on the website.
+
+[ScreenToGif](https://www.screentogif.com/) - To create gif files for this README.
+
+[TinyPNG](https://tinypng.com/) - To compress images.
+
+Shutter Encoder  - To convert images to .webp format.
+
+GitHub Pages - To host the live version of the website.
+
+[Am I Responsive?](https://ui.dev/amiresponsive) - To showcase the website on different screen sizes for this README.
+
+[Shields.io](https://shields.io/) - To add badges to this README.
+
+[Coolors](https://coolors.co/) - To showcase the colour palette of the website.
+
 
 ## Bugs
 - rowGap for turnip sometimes didn't work?
