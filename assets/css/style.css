@@ -152,7 +152,11 @@ li {
 @media screen and (min-width: 768px) {
     body {
         background-image: url('../images/seedlings.webp');
-        height: 100%;
+        height: 100vh;
+    }
+
+    section {
+        height: 808px;
     }
 
     
