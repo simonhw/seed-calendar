@@ -56,6 +56,9 @@ Two imported Google Fonts were used for this web application:
 Diphylleia was chosen as it evoked thoughts of nature and calming emotions due to its gentle design.
 Alegreya Sans was used for the main text content of the web applicaiton as it proved to be more readable when compared to Diphylleia. 
 
+### Imagery
+The images used for the web application have perspectives low to the ground, at the level of the plants being planted and grown. These images were chosen as they reflect the desire of the user who wishes to plan their vegetable bed and get down to work in the soil themselves.
+
 ### Wireframes
 Wireframes were created for this website for mobile, tablet and desktop screen sizes. The original idea was a set of four interactive areas for the user to supply information about their garden and preferred vegetables, and for the application to provide guidance on planting of bulbs. The concept was simplified after a discussion with my CI Mentor and revised to deal with one type of vegetable at a time.
 
@@ -109,3 +112,10 @@ https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-
 Custom input field validation was written in order to avoid the submit button refreshing the page as preventDefault didn't work fully as expected.
 
 The recalculate button does not clear the input fields as the user may wish to simply change the vegetable, not the size of the vegetable bed.
+
+
+footer ??
+
+check validators
+
+optimise vegetable values function
