@@ -86,17 +86,31 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 </details>
 
 ### Responsiveness
-Content is presented from top to bottom as the user views the application on mobile screens. On wider screens, a blurred background image is inserted to break up the extra white space and push the user's attention to the input fields in the centre of the page. To utilise the extra horizontal space, the Vegetable Bed Size input fields are presented in a row, and images of vegetables replace the simple radio buttons in the Vegetable Picker div. 
-Likewise, the image of the chosen vegetable is presented side-by-side with the planting details in the Results section. 
+- The majority of content is presented from top to bottom as the user views the application on mobile screens. 
+- On wider screens, a blurred background image is inserted to break up the extra white space and also to focus the user's attention on the input fields in the centre of the page. 
+- To utilise the extra horizontal space, the Vegetable Bed Size input fields are reoriented into a row, and images of vegetables replace the simple radio buttons in the Vegetable Picker div. 
+- Likewise in the Results section, the image of the chosen vegetable is no longer underneath the planting details but is presented alongside that content.
 
-<details><summary>Input Fields on mobile screens and larger sizes</summary>
+<details><summary>The web application viewed on the Galaxy Fold</summary>
+
+![A gif showing he web application viewed on the Galaxy Fold](assets/images/readme/mobile-screen.gif)
+
+</details>
+
+<details><summary>The web application viewed on wider screens</summary>
+
+![A gif showing he web application viewed on wider screens](assets/images/readme/tablet-screen.gif)
+
+</details>
+
+<details><summary>Differences between input fields on mobile screens and larger sizes</summary>
 
 ![Input Fields on mobile screens](assets/images/readme/input-fields-mobile.png)
 ![Input Fields on tablet screens](assets/images/readme/input-fields-tablet.png)
 
 </details>
 
-<details><summary>Vegetable Card Div on mobile screen and larger sizes</summary>
+<details><summary>Differences in the Vegetable Card div on mobile screens and larger sizes</summary>
 
 ![Vegetable Card on mobile screens](assets/images/readme/vegetable-card-mobile.png)
 ![Vegetable Card on tablet screens](assets/images/readme/vegetable-card-tablet.png)
@@ -228,6 +242,8 @@ The event listener for the Recalcualte button simply calls the `showInformationP
 
 ## Bugs
 rowGap for turnip sometimes didn't work?
+
+On mobile screens, clicking calculate shows you the results section already scrolled down a bit
 
 ## Credits
 https://stackoverflow.com/questions/58864049/how-to-get-the-value-of-input-field-in-one-page-and-print-it-in-another-page
