@@ -133,6 +133,8 @@ Only one of two sections is displayed to the user at any given time: the informa
 ### Information Section
 In the first set of paragraphs the purpose of the website is presented to the user. Instructions follow on how to properly use the application features and the current limits of the calculations are listed.
 
+![Instruction Paragraphs](assets/images/readme/instructions.png)
+
 Three input options are required of the user:
 - the vegetable bed length
 - the vegetable bed width
@@ -294,6 +296,28 @@ GitHub Pages - To host the live version of the website.
 
 [Coolors](https://coolors.co/) - To showcase the colour palette of the website.
 
+## Deployment
+
+The live version of the web application was deployed on GitHub Pages as follows:
+  1. Log in or sign up to GitHub.
+  2. Navigate to the repository for [Seed Planner](https://github.com/simonhw/seed-planner).
+  3. Click the Settings link near the top of the page.
+  4. Click on the Pages link on the left-hand side under Code and Automation.
+  5. Under Build and Deployment click the dropdown menu for Branches and select 'main'. For the Folder dropdown menu, select 'root'.
+  6. Click Save to deploy the website on GitHub Pages.
+
+### Local Deployment
+To deploy this project locally on your device, follow the below steps:
+#### Forking 
+1. Log in or sign up to GitHub.
+2. Navigate to the repository for [Seed Planner](https://github.com/simonhw/seed-planner).
+3. Click the Fork button located in the top right part of the webpage.
+#### Cloning
+1. Log in or sign up to GitHub.
+2. Navigate to the repository for [Seed Planner](https://github.com/simonhw/seed-planner).
+3. Click on the green Code button and select your preferred option of HTTPS, SSH, or GitHub CLI and copy the relevant link.
+4. Open the terminal in your IDE and navigate to your directory of choice for this new clone.
+5. Type `git clone` into the terminal and paste in your copied link. Press enter.
 
 ## Bugs
 - rowGap for turnip sometimes didn't work?
