@@ -42,8 +42,8 @@ const vegetables = {
 };
 
 // Add event listeners to the vegetable picker images for indicating which one is checked.
-for (i = 0; i < 4; i++){
-    document.getElementsByName('vegetable-choice')[i].addEventListener('click', setGreenBorder);    
+for (i = 0; i < 4; i++) {
+    document.getElementsByName('vegetable-choice')[i].addEventListener('click', setGreenBorder);
 }
 
 // Calculate Button: Clicking will execute a number of function to get relevant information for the user, hide the information section and show the results section.
@@ -110,20 +110,20 @@ function calculateArea(length, width) {
     return Math.round(length * width * 100) / 100;
 }
 
- /**
-  * Function that clears the text inputs fields in the Information section.
-  */
-function clearSizeInputs(){
+/**
+ * Function that clears the text inputs fields in the Information section.
+ */
+function clearSizeInputs() {
     let inputs = document.getElementsByName('size-input');
     for (let input of inputs) {
         input.value = '';
     }
 }
 
- /**
-  * Function that unchecks all radio buttons and removes any green borders.
-  */
-function clearRadioButtons(){
+/**
+ * Function that unchecks all radio buttons and removes any green borders.
+ */
+function clearRadioButtons() {
     let ids = ['picker-onion', 'picker-garlic', 'picker-parsnip', 'picker-turnip'];
     for (let id of ids) {
         document.getElementById(id).removeAttribute('class', 'green-border');
@@ -234,9 +234,9 @@ function getVegetableValues(key) {
     plantSeasons = vegetables[key].plantSeasons;
     harvestSeasons = vegetables[key].harvestSeasons;
 }
- /**
-  * This function hides the information section and displays the results section.
-  */
+/**
+ * This function hides the information section and displays the results section.
+ */
 function showResultsPage() {
     document.getElementById('information').setAttribute('style', 'display: none');
     document.getElementById('results').setAttribute('style', 'display: flex');
@@ -254,7 +254,7 @@ function showInformationPage() {
  * This function loops through inputs and add a green border to the checked elements 
  * and removes it from any unchecked elements.
  */
-function setGreenBorder(){
+function setGreenBorder() {
     let radios = document.getElementsByName('vegetable-choice');
     for (let radio of radios) {
         if (radio.checked) {
@@ -275,7 +275,7 @@ function setGreenBorder(){
  */
 function validationCheck(length, width, vegetable) {
     if (length === '' || width === '') {
-        alert('Please fill in the length and width of your vegetable bed. Minimum value: 1 metre. Maximim value: 20 metres.');
+        alert('Please fill in the length and width of your vegetable bed with a minimum value of 1 metre and a maximim value of 20 metres. Please also select a vegetable.');
         return false;
     } else if (length < 1 || width < 1 || length > 20 || width > 20) {
         alert('Your length and width values must be at least 1 metre and at most 20 metres.');
