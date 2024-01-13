@@ -319,18 +319,44 @@ To deploy this project locally on your device, follow the below steps:
 4. Open the terminal in your IDE and navigate to your directory of choice for this new clone.
 5. Type `git clone` into the terminal and paste in your copied link. Press enter.
 
+## Testing
+### Manual Testing
+### Full Testing
+#### Information Section
+#### Results Section
+### Automated Testing
+[W3C]() was used to validate the HTML and CSS files. [JSHint]() was used to validate the Javascript file.
+- [index.html]() - Three errors
+- [style.css]() - One error
+- [script.js]() - One error
+
+### Lighthouse Testing
+#### Desktop Tests
+#### Mobile Tests
+### Accessibility Testing
 ## Bugs
+### Known Bugs
 - rowGap for turnip sometimes didn't work?
 - On mobile screens, clicking calculate shows you the results section already scrolled down a bit
 - vertical scrollbar
 
+### Solved Bugs
+
 ## Credits
+### Code Used
 https://stackoverflow.com/questions/58864049/how-to-get-the-value-of-input-field-in-one-page-and-print-it-in-another-page
 
 https://stackoverflow.com/questions/19159977/inner-border-over-images-with-css 
 
 https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box
 
+### Content
+
+### Media
+
+## Acknowledgements
+
+### To Do list and notes
 Custom input field validation was written in order to avoid the submit button refreshing the page as preventDefault didn't work fully as expected.
 
 The recalculate button does not clear the input fields as the user may wish to simply change the vegetable, not the size of the vegetable bed.
