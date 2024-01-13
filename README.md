@@ -127,6 +127,8 @@ A favicon of a seedling is used for the HTML page:
 Only one of two sections is displayed to the user at any given time: the information gathering section or the results section. When a user first visits or reloads the page, they are presented with the information section only.
 
 ### Information Section
+The purpose of the website is presented to the user and instructions on how to properly use the calculation features is explained in the first set of paragraphs.
+
 Three input options are required of a user:
 - the vegetable bed length
 - the vegetable bed width
@@ -195,7 +197,7 @@ The web application uses custom validation to more specifically guide the user w
 ![Alert when the user does not select a vegetable](assets/images/readme/alert-three.png)
 
 #### Vegetable Picker
-Event listeners added to the four radio buttons use `setGreenBorder();` to add or remove a green border around the vegetable clicked by the user.
+On wider screens, event listeners added to the four radio buttons use `setGreenBorder();` to add or remove a green border around the vegetable clicked by the user.
 
 ![Gif demonstrating the Vegetable Picker green borders](assets/images/readme/vegetable-picker.gif)
 
@@ -236,14 +238,21 @@ Depending on the vegetable chosen, the user will be given details for the planti
 ![Gif of different words being inserted depending on the choice of vegetable](assets/images/readme/bulbs-or-seeds.gif)
 
 #### Recalculate Button
-The event listener for the Recalcualte button simply calls the `showInformationPage();` function when it is clicked. This function removes the `display:none` style from the information section and removes the same style from the results section.
+The event listener for the Recalcualte button simply calls the `showInformationPage();` function when it is clicked. This function removes the `display:none` style from the information section and sets the same style to the results section.
 
 ![Gif of the Recalculate button being used](assets/images/readme/recalculate-button.gif)
 
-## Bugs
-rowGap for turnip sometimes didn't work?
+### Features to be Implemented
+This web application has great potential to be improved upon and to be able offer users more complicated customisation of inputs for garden planning.
+- Use template literals to insert different vegetable options for the user when they select a given month of the year. The `vegetables` object literal can be used to store the blocks of HTML used for the radio buttons to achieve this.
+- Allow user to convert the vegetable details card to an image and download to their device or share to other users.
+- Allow the user the option to select multiple vegetables for the same plot and customise how much space is dedicated to each type of buld or seed. This will be achieved using custom Javascript functions.
+- Add HTML pages dedicated to the seedling growing phase in greenhouses before planting in vegetable beds.
 
-On mobile screens, clicking calculate shows you the results section already scrolled down a bit
+## Bugs
+- rowGap for turnip sometimes didn't work?
+- On mobile screens, clicking calculate shows you the results section already scrolled down a bit
+- vertical scrollbar
 
 ## Credits
 https://stackoverflow.com/questions/58864049/how-to-get-the-value-of-input-field-in-one-page-and-print-it-in-another-page
