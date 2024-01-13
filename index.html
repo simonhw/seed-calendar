@@ -21,8 +21,8 @@
         <h1>Seed Planner</h1>
         <!-- Paragraphs to inform the user of the purpose of the site and how to use it. -->
         <div class="instructions">
-            <p>This website allows you to calculate how many seeds or bulbs of a given vegetable you can plant in your garden
-                plot or raised bed!</p>
+            <p>This website allows you to calculate how many seeds or bulbs of a given vegetable you can plant in your
+                garden plot or raised bed!</p>
             <p>Enter the dimensions of your garden plot below in metres and select the vegetable you wish to plant. Once
                 you are happy with your selection, click the calculate button to let us do the planning for you!</p>
         </div>
@@ -33,12 +33,12 @@
                 <div class="input-container flex-column-center">
                     <div>
                         <label for="length">Length</label>
-                        <input type="number" id="length" name="length" min="1" step="0.1">
+                        <input type="number" id="length" name="size-input" min="1" max='20' step="0.1">
                         <p>metres</p>
                     </div>
                     <div>
                         <label for="width">Width</label>
-                        <input type="number" id="width" name="width" min="1" step="0.1">
+                        <input type="number" id="width" name="size-input" min="1" max="20" step="0.1">
                         <p>metres</p>
                     </div>
                 </div>
@@ -50,22 +50,26 @@
             <div>
                 <div class="radio-under flex-column-center">
                     <label for="onion">Onion</label>
-                    <label for="onion" ><img src='assets/images/onion.webp' alt="An image of a onion." id="picker-onion"/></label>
+                    <label for="onion"><img src='assets/images/onion.webp' alt="An image of a onion."
+                            id="picker-onion" /></label>
                     <input type="radio" name="vegetable-choice" id="onion">
                 </div>
                 <div class="radio-under flex-column-center">
                     <label for="garlic">Garlic</label>
-                    <label for="garlic"><img src='assets/images/garlic.webp' alt="An image of garlic." id="picker-garlic"/></label>
+                    <label for="garlic"><img src='assets/images/garlic.webp' alt="An image of garlic."
+                            id="picker-garlic" /></label>
                     <input type="radio" name="vegetable-choice" id="garlic">
                 </div>
                 <div class="radio-under flex-column-center">
                     <label for="parsnip">Parsnip</label>
-                    <label for="parsnip"><img src='assets/images/parsnip.webp' alt="An image of parsnips." id="picker-parsnip"/></label>
+                    <label for="parsnip"><img src='assets/images/parsnip.webp' alt="An image of parsnips."
+                            id="picker-parsnip" /></label>
                     <input type="radio" name="vegetable-choice" id="parsnip">
                 </div>
                 <div class="radio-under flex-column-center">
                     <label for="turnip">Turnip</label>
-                    <label for="turnip"><img src='assets/images/turnip.webp' alt="An image of turnips." id="picker-turnip"/></label>
+                    <label for="turnip"><img src='assets/images/turnip.webp' alt="An image of turnips."
+                            id="picker-turnip" /></label>
                     <input type="radio" name="vegetable-choice" id="turnip">
                 </div>
             </div>
@@ -118,7 +122,7 @@
                         </ul>
                     </div>
                     <div>
-                        <img id="vegetable-image" src='assets/images/garlic.webp' alt="An image of a vegetable."/>
+                        <img id="vegetable-image" src='assets/images/garlic.webp' alt="An image of a vegetable." />
                     </div>
                 </div>
             </div>
