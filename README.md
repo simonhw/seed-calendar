@@ -1,6 +1,6 @@
 # Seed Planner
 
-This responsive website is designed to be viewed on a variety of screen sizes. Its purpose is to inform the user which vegetable and flowers seeds can be planted in given months throughout the year, and when they can be harvested.
+This responsive website is designed to be viewed on a variety of screen sizes. Its purpose is to aid the user in planning for the planting of various vegetables in their garden beds, and provide detailed information on how to plant them and when they should plant and harvest them.
 
 ![Am I Responsive Screenshot](assets/images/readme/amiresponsive-seed-planner.png)
 
@@ -87,7 +87,8 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 
 ### Responsiveness
 - The majority of content is presented from top to bottom as the user views the application on mobile screens. 
-- On wider screens, a blurred background image is inserted to break up the extra white space and also to focus the user's attention on the input fields in the centre of the page. 
+- On mobile screens only, a blue background gradient is applied to the H1 heading to add some extra colour to the application.
+- On wider screens, a blurred background image is inserted to break up the extra white space and also to focus the user's attention on the input fields in the centre of the page. The blue gradient is removed from the H1 heading.
 - To utilise the extra horizontal space, the Vegetable Bed Size input fields are reoriented into a row, and images of vegetables replace the simple radio buttons in the Vegetable Picker div. 
 - Likewise in the Results section, the image of the chosen vegetable is no longer underneath the planting details but is presented alongside that content.
 
@@ -127,9 +128,9 @@ A favicon of a seedling is used for the HTML page:
 Only one of two sections is displayed to the user at any given time: the information gathering section or the results section. When a user first visits or reloads the page, they are presented with the information section only.
 
 ### Information Section
-The purpose of the website is presented to the user and instructions on how to properly use the calculation features is explained in the first set of paragraphs.
+In the first set of paragraphs the purpose of the website is presented to the user. Instructions follow on how to properly use the application features and the current limits of the calculations are listed.
 
-Three input options are required of a user:
+Three input options are required of the user:
 - the vegetable bed length
 - the vegetable bed width
 - a choice of one of four vegetables to plant
@@ -248,6 +249,12 @@ This web application has great potential to be improved upon and to be able offe
 - Allow user to convert the vegetable details card to an image and download to their device or share to other users.
 - Allow the user the option to select multiple vegetables for the same plot and customise how much space is dedicated to each type of buld or seed. This will be achieved using custom Javascript functions.
 - Add HTML pages dedicated to the seedling growing phase in greenhouses before planting in vegetable beds.
+
+### Accessibility
+Accessibilty was kept in mind when building this web application by:
+- Using semantic HTML elements where appropriate.
+- Using contrasting colours that clearly stand out from the background.
+- Including clear and descriptive alt attributes for all `<img/>` elements.
 
 ## Bugs
 - rowGap for turnip sometimes didn't work?
