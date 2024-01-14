@@ -35,7 +35,7 @@ The purpose of the web application is offer users with medium to large sized gar
 #### First-time Visitor Goals
 * To understand the purpose of the web application.
 * To interact with the input fields without confusion as to their purpose.
-* To customise the outputs for their specific needs.
+* To learn important information about the vegetables they wish to plant.
 #### Returning Visitor Goals
 * To be able to reproduce previous results
 * To reference specific planting information for certain vegetables.
@@ -323,6 +323,18 @@ To deploy this project locally on your device, follow the below steps:
 
 ## Testing
 ### Manual Testing
+| User Stories | Achieved By: | Supporting Images |
+| --- | --- | --- |
+| **First-time Visitor Goals** |||
+| To understand the purpose of the web application. | The main heading of "Seed Planner" immediately infers to the user that they are about to use an interactive web application. The introductory paragraphs are kept short and to-the-point to inform the user about the web application's purpose and how to correctly use it. A large green "Calculate" button infers that there is more content to see once the user provides some personalised details.| ![Instruction Paragraphs](assets/images/readme/instructions.png) ![Information Section Buttons](assets/images/readme/information-buttons.png) |
+| To interact with the input fields without confusion as to their purpose. | The input fields are presented clearly to the user, without any major distraction. It is clear that the user should fill in two length values in the Vegetable Bed Size div, and the heading of "Vegetable **Picker**" tell the user that they need to interact with the radio buttons or vegetable images before proceeding. | ![Input Fields on mobile screens](assets/images/readme/input-fields-mobile.png)![Input Fields on tablet screens](assets/images/readme/input-fields-tablet.png) |
+| To learn important information about the vegetables they wish to plant. | The user is presented with customised information about their chosen vegetable in the results section. Any novice gardeners will be able to use the application to plant the vegetable without being overwhelmed with too many details. | ![Suggested planting paragaph](assets/images/readme/suggested-planting-black.png) |
+| **Returning Visitor Goals** |||
+| To be able to reproduce previous results | With just three inputs required of the user, there is no risk that they will not be able to reproduce previous results, as long as they remember what vegetable bed size they chose. This goal is also achieved in the same user session by not clearing the input fields when the recalculate button is pressed.  ||
+| To reference specific planting information for certain vegetables. | A brightly-coloured vegetable card is presented to the user which succinctly lists the important planting factors, including a large image of the vegetable. This is a positive experience for the returning user who may not wish to read through the Suggested Planting paragraphs again. | ![Vegetable Card](assets/images/readme/vegetable-card.png) |
+| **Frequent Visitor Goals** |||
+| To check for updates and improvements to the web application. | The straightforward layout of the web application allows frequent users to easily notice if major changes or updates have been made. The use of informative headings means that any new input fields required of the user would not be easily overlooked. ||
+
 ### Full Testing
 #### Information Section
 #### Results Section
