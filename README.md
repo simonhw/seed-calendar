@@ -278,6 +278,8 @@ GitHub - To save and store files online.
 
 Google Fonts - For imported fonts used on the website.
 
+[W3Schools.com](https://www.w3schools.com/) - For reasearching and learning about Javascript methods and syntax.
+
 [Favicon.io](https://favicon.io/) - To source the favicon used.
 
 [Pexels.com](https://www.pexels.com/) - To source images used on the website.
@@ -336,18 +338,22 @@ To deploy this project locally on your device, follow the below steps:
 ### Accessibility Testing
 ## Bugs
 ### Known Bugs
-- rowGap for turnip sometimes didn't work?
-- On mobile screens, clicking calculate shows you the results section already scrolled down a bit
+Note: Not all known bugs are present in the final version of the website.
+| # | Bug | Image | Plan to Solve |
+| --- | --- | --- | --- |
+| 1a | When large mobile devices are rotated, the background image does not fill the full length of the device. | ![Background image bug on large mobiles](assets/images/bugs/large-mobile-bug.png) | The removal of `background-size: cover` fixes this bug but creates a new issue: Bug 1b. Investigate which other CSS properties could fix this issue without affecting large tablet screen sizes. |
+| 1b | As mentioned above, one solution to Bug 1a causes the background image to not cover the full height of the iPad Pro tablet, which otherwise does not happen. | ![Background image bug on iPad Pro](assets/images/bugs/ipad-pro-bug.png) | Adding `background-size: cover` fixes this bug but causes Bug 1a to reoccur. Investigate which other CSS properties could fix this issue. |
+| 2 | On the first page load or after a cache refresh, text wrapped in `<b>` tags is shown in a default font for ~32 milliseconds. (Note: the frames showing the default text have had time added to them just for the purposes of showing the effect in this gif file)| ![Strong tags bug](assets/images/bugs/b-bug.gif) | This issue can be elimitated by removing the `<b>` tags around the text. It seems to be an issue with the browser loading the bold version of the Alegreya Sans font. I tried directly adding the font weight via CSS stlying but the issue persisted. It was decided that the bold style did not add enough value to the web appliction compared to the delay in the font loading which did detract from the user experience. The `<b>` tags were therefore removed from the final version of the site.|
+
+
 - vertical scrollbar
 - background image doesn't stretch on rotated large mobiles
-
-- strong text delayed pop in
 
 ### Solved Bugs
 | # | Bug | Image | Solution |
 | --- | --- | --- | --- |
-| 1 | When small mobile devices were rotated, the blue background gradient of the H1 heading did not fill the new screen width. | ![Blue gradient bug](assets/images/bugs/galaxy-fold-bug.png) | The h1 width style was changed from 100% to 100vw to solve this issue.
-- jshint for loop
+| 1 | When small mobile devices were rotated, the blue background gradient of the H1 heading did not fill the new screen width. | ![Blue gradient bug](assets/images/bugs/galaxy-fold-bug.png) | The h1 width style was changed from `width: 100%;` to `width: 100vw;` to solve this issue.
+| 2 | On screens where the user has to scroll down to click the calculate button, the results section wass loaded with the content already scrolled down. | ![Mobile scrolling bug](assets/images/bugs/scrolling-bug.gif) | The method `window.scrollTo(0,0);` was added to the code for the Calculate and Recalculate buttons after being researched on W3Schools.
 
 ## Credits
 ### Code Used
@@ -356,6 +362,8 @@ https://stackoverflow.com/questions/58864049/how-to-get-the-value-of-input-field
 https://stackoverflow.com/questions/19159977/inner-border-over-images-with-css 
 
 https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box
+
+https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript
 
 ### Content
 
