@@ -339,8 +339,15 @@ To deploy this project locally on your device, follow the below steps:
 - rowGap for turnip sometimes didn't work?
 - On mobile screens, clicking calculate shows you the results section already scrolled down a bit
 - vertical scrollbar
+- background image doesn't stretch on rotated large mobiles
+
+- strong text delayed pop in
 
 ### Solved Bugs
+| # | Bug | Image | Solution |
+| --- | --- | --- | --- |
+| 1 | When small mobile devices were rotated, the blue background gradient of the H1 heading did not fill the new screen width. | ![Blue gradient bug](assets/images/bugs/galaxy-fold-bug.png) | The h1 width style was changed from 100% to 100vw to solve this issue.
+- jshint for loop
 
 ## Credits
 ### Code Used
