@@ -56,19 +56,18 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
     if (!validationCheck(length, width, vegetable)) {
         return;
     } else {
-        
         insertAreaValues(length, width);
         // Assign the chosen vegetable's properties to useful variables.
         let {rowGap, bulbGap, depth, plantSeasons, harvestSeasons, src, alt} = getVegetableValues(vegetable);
-        // Assign values to the spans in the results section based on the vegetable chosen by the user.
-        document.getElementById('bulb-name').innerText = vegetable;
+        insertVegetableNames(vegetable);
+        /*document.getElementById('bulb-name').innerText = vegetable;*/
         let rows = calculateRows(width, rowGap);
         document.getElementById('rows').innerText = rows;
         let bulbsInARow = calculateBulbsInRow(length, bulbGap);
         document.getElementById('bulbs-in-row').innerText = bulbsInARow;
         bulbsOrSeeds(vegetable);
         // Takes the vegetable name string and capitalises the first letter only.
-        document.getElementById('capitalised-name').innerText = titleCase(vegetable);
+        /*document.getElementById('capitalised-name').innerText = titleCase(vegetable);*/
         insertVegetableValues(vegetable);
         document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
         document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
@@ -292,12 +291,26 @@ function insertVegetableValues(key){
     }
     
 }
-
+ /**
+  * This function will insert the calculated value of the area of the 
+  * user's vegetable bed into all spans with a class of "area".
+  * @param {Number} length - The length of the user's vegetable bed
+  * @param {Width} width - The width of the user's vegetable bed
+  */
 function insertAreaValues(length, width){
     let areas = document.getElementsByClassName('area');
-    console.log('areas is ', areas);
     for (let i in areas){
-        console.log('areas[i] ', areas[i]);
         areas[i].innerText = calculateArea(length, width);
+    }
+}
+
+function insertVegetableNames(key){
+    let names = document.getElementsByClassName('bulb-name');
+    for (let i in names){
+        names[i].innerText = key;
+    }
+    let capitalisedNames = document.getElementsByClassName('capitalised-name');
+    for (let i in capitalisedNames){
+        capitalisedNames[i].innerText = titleCase(key);
     }
 }
