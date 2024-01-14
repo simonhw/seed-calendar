@@ -385,7 +385,8 @@ Note: Not all known bugs are present in the final version of the website.
 | --- | --- | --- | --- |
 | 1 | When small mobile devices were rotated, the blue background gradient of the H1 heading did not fill the new screen width. | ![Blue gradient bug](assets/images/bugs/galaxy-fold-bug.png) | The h1 width style was changed from `width: 100%;` to `width: 100vw;` to solve this issue. |
 | 2 | When large mobile devices and tablets were rotated, the background image did not fill the full length of the device. | ![Background image bug on large mobiles](assets/images/bugs/large-mobile-bug.png) | The removal of `background-size: cover` fixed this bug. |
-| 3 | On screens where the user has to scroll down to click the calculate button, the results section wass loaded with the content already scrolled down. | ![Mobile scrolling bug](assets/images/bugs/scrolling-bug.gif) | The method `window.scrollTo(0,0);` was added to the code for the Calculate and Recalculate buttons after being researched on W3Schools.
+| 3 | On screens where the user has to scroll down to click the calculate button, the results section wass loaded with the content already scrolled down. | ![Mobile scrolling bug](assets/images/bugs/scrolling-bug.gif) | The method `window.scrollTo(0,0);` was added to the code for the Calculate and Recalculate buttons after being researched on W3Schools. |
+| 4 | On the Mozila Firefox browser, the vegetable radio buttons were still partly visible even with their CSS styles of `width: 0px;` and `height: 0px`. | ![Mozilla Firefox radio buttons](assets/images/bugs/mozilla-buttons.png) | A solution [was found](#Credits) on StackOverflow to add `opacity: 0;` to the elements which resolved the issue and did not cause any new issues on other browsers. |  
 
 ## Credits
 ### Code Used
@@ -396,6 +397,8 @@ https://stackoverflow.com/questions/19159977/inner-border-over-images-with-css
 https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box
 
 https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript
+
+https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css 
 
 ### Content
 
