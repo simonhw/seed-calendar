@@ -204,6 +204,7 @@ function pluralise(word) {
 function showResultsPage() {
     document.getElementById('information').setAttribute('style', 'display: none');
     document.getElementById('results').setAttribute('style', 'display: flex');
+    window.scrollTo(0,0);
 }
 
 /**
@@ -212,6 +213,7 @@ function showResultsPage() {
 function showInformationPage() {
     document.getElementById('information').removeAttribute('style', 'display: none');
     document.getElementById('results').setAttribute('style', 'display: none');
+    window.scrollTo(0,0);
 }
 
 /**
