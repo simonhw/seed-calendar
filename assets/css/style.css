@@ -138,7 +138,7 @@ li {
     max-width: 90%;
 }
 
-.list-none {
+.parent-list > li {
     list-style-type: none;
 }
 
