@@ -393,7 +393,7 @@ Note: Not all known bugs are present in the final version of the website.
 
 
 - vertical scrollbar
-- background image doesn't stretch on rotated large mobiles
+- background image doesn't stretch on large tablets
 
 ### Solved Bugs
 | # | Bug | Image | Solution |
@@ -415,6 +415,10 @@ https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-
 
 https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css 
 
+https://stackoverflow.com/questions/60240404/accessibility-how-to-use-multiple-label-elements-for-one-input-item-correctly 
+
+https://stackoverflow.com/questions/48265742/how-to-group-form-inputs-accessibly-without-a-fieldset 
+
 ### Content
 
 ### Media
@@ -427,6 +431,4 @@ Custom input field validation was written in order to avoid the submit button re
 footer ??
 - not this version
 
-optimise vegetable values function
-
-insert image use new values
+the body isn't vertically centered anymore... what changed??? check commits.
