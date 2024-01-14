@@ -325,10 +325,10 @@ To deploy this project locally on your device, follow the below steps:
 #### Information Section
 #### Results Section
 ### Automated Testing
-[W3C]() was used to validate the HTML and CSS files. [JSHint]() was used to validate the Javascript file.
-- [index.html]() - Three errors
-- [style.css]() - One error
-- [script.js]() - One error
+[W3C](https://validator.w3.org/) was used to validate the HTML and CSS files. [JSHint](https://jshint.com/) was used to validate the Javascript file.
+- [index.html](assets/images/readme/w3c-index.png) - Passed. Five info messages are shown for the `<img/>` elements: "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values."
+- [style.css](assets/images/readme/w3c-style.png) - Passed with four [warnings](assets/images/readme/w3c-style-warnings.png) about vendor elements. These are included to remove the up and down arrows in the number input fields in the information section. 
+- [script.js](assets/images/readme/jshint-metrics.png) - Passed with no warnings.
 
 ### Lighthouse Testing
 #### Desktop Tests
@@ -359,13 +359,9 @@ https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-
 ### To Do list and notes
 Custom input field validation was written in order to avoid the submit button refreshing the page as preventDefault didn't work fully as expected.
 
-The recalculate button does not clear the input fields as the user may wish to simply change the vegetable, not the size of the vegetable bed.
-
-
 footer ??
 - not this version
 
-check validators
-- fix hmtl ul ul children
-
 optimise vegetable values function
+
+insert image use new values
