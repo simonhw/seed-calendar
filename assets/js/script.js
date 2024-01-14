@@ -56,30 +56,20 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
     if (!validationCheck(length, width, vegetable)) {
         return;
     } else {
-        document.getElementById('area').innerText = calculateArea(length, width);
-
+        
+        insertAreaValues(length, width);
         // Assign the chosen vegetable's properties to useful variables.
         let {rowGap, bulbGap, depth, plantSeasons, harvestSeasons, src, alt} = getVegetableValues(vegetable);
-
         // Assign values to the spans in the results section based on the vegetable chosen by the user.
         document.getElementById('bulb-name').innerText = vegetable;
         let rows = calculateRows(width, rowGap);
         document.getElementById('rows').innerText = rows;
-
         let bulbsInARow = calculateBulbsInRow(length, bulbGap);
         document.getElementById('bulbs-in-row').innerText = bulbsInARow;
-
         bulbsOrSeeds(vegetable);
-
         // Takes the vegetable name string and capitalises the first letter only.
         document.getElementById('capitalised-name').innerText = titleCase(vegetable);
-        // Below assignments use * 100 to convert metres to centimetres.
-        document.getElementsByClassName('bulb-gap')[0].innerText = bulbGap;
-        document.getElementsByClassName('bulb-gap')[1].innerText = bulbGap;
-        document.getElementsByClassName('bulb-depth')[0].innerText = depth;
-        document.getElementsByClassName('bulb-depth')[1].innerText = depth;
-        document.getElementsByClassName('row-gap')[0].innerText = rowGap;
-        document.getElementsByClassName('row-gap')[1].innerText = rowGap;
+        insertVegetableValues(vegetable);
         document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
         document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
         document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
@@ -95,7 +85,7 @@ document.getElementsByTagName('button')[1].addEventListener('click', function ()
     clearRadioButtons();
 });
 
-// Recalculate Button: Clicking will return the user to the first page.
+// Recalculate Button: Clicking will return the user to the first 'page'.
 document.getElementsByTagName('button')[2].addEventListener('click', showInformationPage);
 
 /**
@@ -141,7 +131,7 @@ function convertMToCm(value) {
 }
 
 /**
- * Acts as a validation check for the vegetable radio buttons.
+ * Returns the id of the chosen vegetable and/or also acts as a helper for the radio buttons validation check.
  * @returns the user's selected vegetable if selected, or a false value if not. 
  */
 function checkVegetable() {
@@ -287,5 +277,27 @@ function validationCheck(length, width, vegetable) {
         return false;
     } else {
         return true;
+    }
+}
+
+
+function insertVegetableValues(key){
+    let variableNames = ['bulbGap', 'depth', 'rowGap'];
+    let classNames = ['bulb-gap', 'bulb-depth', 'row-gap'];
+    for (let i in variableNames){
+        let elements = document.getElementsByClassName(classNames[i]);
+        for (let j in elements){
+            elements[j].innerText = vegetables[key][variableNames[i]];
+        }
+    }
+    
+}
+
+function insertAreaValues(length, width){
+    let areas = document.getElementsByClassName('area');
+    console.log('areas is ', areas);
+    for (let i in areas){
+        console.log('areas[i] ', areas[i]);
+        areas[i].innerText = calculateArea(length, width);
     }
 }
