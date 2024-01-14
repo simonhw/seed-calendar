@@ -57,15 +57,11 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
         return;
     } else {
         insertAreaValues(length, width);
-            // Assign the chosen vegetable's properties to useful variables.
-            let {rowGap, bulbGap, depth, plantSeasons, harvestSeasons, src, alt} = getVegetableValues(vegetable);
         insertVegetableNames(vegetable);
         insertRowDetails(length, width, vegetable);  
         bulbsOrSeeds(vegetable);
         insertVegetableProperties(vegetable);
-            document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
-            document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
-        insertImage(src, alt);
+        insertImage(vegetable);
         showResultsPage();
     }
 });
@@ -177,11 +173,11 @@ function bulbsOrSeeds(vegetable) {
 
 /**
  * Updates the image src link and alt text based on the vegetable chosen.
- * @param {String} vegetable 
+ * @param {String} key - The object key to look up.
  */
-function insertImage(src,alt) {
-    document.getElementById('vegetable-image').src = src;
-    document.getElementById('vegetable-image').alt = alt;
+function insertImage(key) {
+    document.getElementById('vegetable-image').src = vegetables[key].src;
+    document.getElementById('vegetable-image').alt = vegetables[key].alt;
 }
 
 /**
@@ -202,20 +198,6 @@ function pluralise(word) {
     return word + 's';
 }
 
-/**
- * Function to assign the values of each vegetable object key to their useful variables
- * @param {String} key 
- */
-function getVegetableValues(key) {
-    let rowGap = vegetables[key].rowGap;
-    let bulbGap = vegetables[key].bulbGap;
-    let depth = vegetables[key].depth;
-    let plantSeasons = vegetables[key].plantSeasons;
-    let harvestSeasons = vegetables[key].harvestSeasons;
-    let src = vegetables[key].src;
-    let alt = vegetables[key].alt;
-    return {rowGap, bulbGap, depth, plantSeasons, harvestSeasons, src, alt};
-}
 /**
  * This function hides the information section and displays the results section.
  */
@@ -271,7 +253,11 @@ function validationCheck(length, width, vegetable) {
     }
 }
 
-
+/**
+ * Function that inserts all relevent properties of the user's chosen vegetable
+ * into the appropriate spans in the HTML body.
+ * @param {String} key - The object key to look up. 
+ */
 function insertVegetableProperties(key){
     let variableNames = ['bulbGap', 'depth', 'rowGap'];
     let classNames = ['bulb-gap', 'bulb-depth', 'row-gap'];
@@ -281,7 +267,8 @@ function insertVegetableProperties(key){
             elements[j].innerText = vegetables[key][variableNames[i]];
         }
     }
-    
+    document.getElementById('plant-seasons').innerText = vegetables[key].plantSeasons[0] + " and " + vegetables[key].plantSeasons[1];
+    document.getElementById('harvest-seasons').innerText = vegetables[key].harvestSeasons[0] + " and " + vegetables[key].harvestSeasons[1];  
 }
  /**
   * This function will insert the calculated value of the area of the 
