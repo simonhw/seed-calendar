@@ -157,7 +157,6 @@ li {
     body {
         background-image: url('../images/seedlings.webp');
         background-repeat: no-repeat;
-        background-size: cover;
         height: 100vh;
     }
 
