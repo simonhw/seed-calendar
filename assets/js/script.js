@@ -87,7 +87,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
         insertImage(src, alt);
         showResultsPage();
     }
-})
+});
 
 //Clear Form Button: Allows user to clear form if they so wish.
 document.getElementsByTagName('button')[1].addEventListener('click', function () {
@@ -96,7 +96,7 @@ document.getElementsByTagName('button')[1].addEventListener('click', function ()
 });
 
 // Recalculate Button: Clicking will return the user to the first page.
-document.getElementsByTagName('button')[2].addEventListener('click', showInformationPage)
+document.getElementsByTagName('button')[2].addEventListener('click', showInformationPage);
 
 /**
  * Calculates the user's plantable area for their chosen vegetable bulbs. To limit the result 
