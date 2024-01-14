@@ -1,6 +1,6 @@
 # Seed Planner
 
-This responsive website is designed to be viewed on a variety of screen sizes. Its purpose is to aid the user in planning for the planting of various vegetables in their garden beds, and provide detailed information on how to plant them and when they shgiould plant and harvest them.
+This responsive website is designed to be viewed on a variety of screen sizes. Its purpose is to aid the user in planning for the planting of various vegetables in their garden beds, and provide detailed information on how to plant them and when they should plant and harvest them.
 
 ![Am I Responsive Screenshot](assets/images/readme/amiresponsive-seed-planner.png)
 
@@ -8,7 +8,7 @@ Live website on GitHub Pages: [Seed Planner](https://simonhw.github.io/seed-plan
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/simonhw/seed-planner) ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsimonhw.github.io%2Fseed-planner%2F&label=HTML&labelColor=%23e34c26)
 ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsimonhw.github.io%2Fseed-planner%2Fassets%2Fcss%2Fstyle.css&label=CSS&labelColor=%23264de4%20)
- ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsimonhw.github.io%2Fseed-planner%2Fassets%2Fjs%2Fscript.js&label=JS&labelColor=f0db4f)
+ ![Static Badge](https://img.shields.io/badge/validated-brightgreen?label=JS&labelColor=%23f0db4f)
 ![GitHub top language](https://img.shields.io/github/languages/top/simonhw/seed-planner)
 
 ## Contents
@@ -218,7 +218,7 @@ An event listener for the Clear Form button runs the `clearSizeInputs();` and `c
 ![Gif demonstrating the Clear Form button being used](assets/images/readme/clear-form.gif)
 
 #### Suggested Planting Paragraphs
-Using a number of functions, namely `checkVegetable();` `calculateArea();` `getVegetableValues();` `calculateRows();` and `calculateBulbsInRow();`, various parts of the paragraphs under "Suggested Planting" will be updated based on the user inputs: 
+Using a number of functions, namely `insertAreaValues();`, `insertVegetableNames();`, `insertRowDetails();`, and `insertVegetableProperties();`, various parts of the paragraphs under "Suggested Planting" will be updated based on the user inputs: 
 - the area of the vegetable bed
 - the name of the vegetable
 - the number of rows and how many vegetables per row
@@ -232,7 +232,7 @@ Using a number of functions, namely `checkVegetable();` `calculateArea();` `getV
 ![Gif of text changing in the Suggested Planting paragraphs](assets/images/readme/suggested-planting.gif)
 
 #### Vegetable Card
-Similarly, using `function();` and `insertImage();`, the details in the vegetable card change based on the user's selection:
+Similarly, using `insertVegetableNames();`, `insertVegetableProperties();`, and `insertImage();`, the details in the vegetable card change based on the user's selection:
 
 ![Gif of the vegetable card details changing](assets/images/readme/vegetable-card.gif)
 
@@ -244,15 +244,15 @@ Depending on the vegetable chosen, the user will be given details for the planti
 ![Gif of different words being inserted depending on the choice of vegetable](assets/images/readme/bulbs-or-seeds.gif)
 
 #### Recalculate Button
-The event listener for the Recalcualte button simply calls the `showInformationPage();` function when it is clicked. This function removes the `display:none` style from the information section and sets the same style to the results section.
+The event listener for the Recalcualte button simply calls the `showInformationPage();` function when it is clicked. This function removes the `display:none` style from the information section and sets the same style to the results section. It also scrolls the user to the top of the window using `window.scrollTo(0,0);`.
 
 ![Gif of the Recalculate button being used](assets/images/readme/recalculate-button.gif)
 
 ### Features to be Implemented
 This web application has great potential to be improved upon and to be able offer users more complicated customisation of inputs for garden planning.
 - Use template literals to insert different vegetable options for the user when they select a given month of the year. The `vegetables` object literal can be used to store the blocks of HTML used for the radio buttons to achieve this.
-- Allow user to convert the vegetable details card to an image and download to their device or share to other users.
-- Allow the user the option to select multiple vegetables for the same plot and customise how much space is dedicated to each type of buld or seed. This will be achieved using custom Javascript functions.
+- Allow users to convert the vegetable details card to an image and download to their device or share to other users.
+- Allow the user the option to select multiple vegetables for the same plot and customise how much space is dedicated to each type of bulb or seed. This could be achieved using custom Javascript functions.
 - Add HTML pages dedicated to the seedling growing phase in greenhouses before planting in vegetable beds.
 
 ### Accessibility
@@ -341,9 +341,7 @@ To deploy this project locally on your device, follow the below steps:
 Note: Not all known bugs are present in the final version of the website.
 | # | Bug | Image | Plan to Solve |
 | --- | --- | --- | --- |
-| 1a | When large mobile devices are rotated, the background image does not fill the full length of the device. | ![Background image bug on large mobiles](assets/images/bugs/large-mobile-bug.png) | The removal of `background-size: cover` fixes this bug but creates a new issue: Bug 1b. Investigate which other CSS properties could fix this issue without affecting large tablet screen sizes. |
-| 1b | As mentioned above, one solution to Bug 1a causes the background image to not cover the full height of the iPad Pro tablet, which otherwise does not happen. | ![Background image bug on iPad Pro](assets/images/bugs/ipad-pro-bug.png) | Adding `background-size: cover` fixes this bug but causes Bug 1a to reoccur. Investigate which other CSS properties could fix this issue. |
-| 2 | On the first page load or after a cache refresh, text wrapped in `<b>` tags is shown in a default font for ~32 milliseconds. (Note: the frames showing the default text have had time added to them just for the purposes of showing the effect in this gif file)| ![Strong tags bug](assets/images/bugs/b-bug.gif) | This issue can be elimitated by removing the `<b>` tags around the text. It seems to be an issue with the browser loading the bold version of the Alegreya Sans font. I tried directly adding the font weight via CSS stlying but the issue persisted. It was decided that the bold style did not add enough value to the web appliction compared to the delay in the font loading which did detract from the user experience. The `<b>` tags were therefore removed from the final version of the site.|
+| 1 | On the first page load or after a cache refresh, text wrapped in `<b>` tags is shown in a default font for ~32 milliseconds. (Note: the frames showing the default text have had time added to them just for the purposes of showing the effect in this gif file)| ![Strong tags bug](assets/images/bugs/b-bug.gif) | This issue can be elimitated by removing the `<b>` tags around the text. It seems to be an issue with the browser loading the bold version of the Alegreya Sans font. I tried directly adding the font weight via CSS stlying but the issue persisted. It was decided that the bold style did not add enough value to the web appliction compared to the delay in the font loading which did detract from the user experience. The `<b>` tags were therefore removed from the final version of the site.|
 
 
 - vertical scrollbar
@@ -352,8 +350,9 @@ Note: Not all known bugs are present in the final version of the website.
 ### Solved Bugs
 | # | Bug | Image | Solution |
 | --- | --- | --- | --- |
-| 1 | When small mobile devices were rotated, the blue background gradient of the H1 heading did not fill the new screen width. | ![Blue gradient bug](assets/images/bugs/galaxy-fold-bug.png) | The h1 width style was changed from `width: 100%;` to `width: 100vw;` to solve this issue.
-| 2 | On screens where the user has to scroll down to click the calculate button, the results section wass loaded with the content already scrolled down. | ![Mobile scrolling bug](assets/images/bugs/scrolling-bug.gif) | The method `window.scrollTo(0,0);` was added to the code for the Calculate and Recalculate buttons after being researched on W3Schools.
+| 1 | When small mobile devices were rotated, the blue background gradient of the H1 heading did not fill the new screen width. | ![Blue gradient bug](assets/images/bugs/galaxy-fold-bug.png) | The h1 width style was changed from `width: 100%;` to `width: 100vw;` to solve this issue. |
+| 2 | When large mobile devices and tablets were rotated, the background image did not fill the full length of the device. | ![Background image bug on large mobiles](assets/images/bugs/large-mobile-bug.png) | The removal of `background-size: cover` fixed this bug. |
+| 3 | On screens where the user has to scroll down to click the calculate button, the results section wass loaded with the content already scrolled down. | ![Mobile scrolling bug](assets/images/bugs/scrolling-bug.gif) | The method `window.scrollTo(0,0);` was added to the code for the Calculate and Recalculate buttons after being researched on W3Schools.
 
 ## Credits
 ### Code Used
