@@ -59,7 +59,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
         document.getElementById('area').innerText = calculateArea(length, width);
 
         // Assign the chosen vegetable's properties to useful variables.
-        getVegetableValues(vegetable);
+        let {rowGap, bulbGap, depth, plantSeasons, harvestSeasons, src, alt} = getVegetableValues(vegetable);
 
         // Assign values to the spans in the results section based on the vegetable chosen by the user.
         document.getElementById('bulb-name').innerText = vegetable;
@@ -84,7 +84,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
         document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
         document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
         // Changes the image based on the vegetable
-        insertImage(vegetable);
+        insertImage(src, alt);
         showResultsPage();
     }
 })
@@ -198,10 +198,8 @@ function bulbsOrSeeds(vegetable) {
  * Updates the image src link and alt text based on the vegetable chosen.
  * @param {String} vegetable 
  */
-function insertImage(vegetable) {
-    let src = String('assets/images/' + vegetable + '.webp');
+function insertImage(src,alt) {
     document.getElementById('vegetable-image').src = src;
-    let alt = String('An image of a ' + vegetable);
     document.getElementById('vegetable-image').alt = alt;
 }
 
@@ -228,11 +226,14 @@ function pluralise(word) {
  * @param {String} key 
  */
 function getVegetableValues(key) {
-    rowGap = vegetables[key].rowGap;
-    bulbGap = vegetables[key].bulbGap;
-    depth = vegetables[key].depth;
-    plantSeasons = vegetables[key].plantSeasons;
-    harvestSeasons = vegetables[key].harvestSeasons;
+    let rowGap = vegetables[key].rowGap;
+    let bulbGap = vegetables[key].bulbGap;
+    let depth = vegetables[key].depth;
+    let plantSeasons = vegetables[key].plantSeasons;
+    let harvestSeasons = vegetables[key].harvestSeasons;
+    let src = vegetables[key].src;
+    let alt = vegetables[key].alt;
+    return {rowGap, bulbGap, depth, plantSeasons, harvestSeasons, src, alt};
 }
 /**
  * This function hides the information section and displays the results section.
