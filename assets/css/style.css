@@ -205,6 +205,7 @@ li {
     .vegetable-picker input {
         width: 0px;
         height: 0px;
+        opacity: 0;
     }
 
     .radio-under img {
