@@ -42,7 +42,7 @@ const vegetables = {
 };
 
 // Add event listeners to the vegetable picker images for indicating which one is checked.
-for (i = 0; i < 4; i++) {
+for (let i = 0; i < 4; i++) {
     document.getElementsByName('vegetable-choice')[i].addEventListener('click', setGreenBorder);
 }
 
@@ -147,7 +147,7 @@ function convertMToCm(value) {
 function checkVegetable() {
     let radios = document.getElementsByTagName('input');
     let checker = false;
-    for (radio of radios) {
+    for (let radio of radios) {
         if (radio.checked) {
             checker = true;
             return String(radio.id);
