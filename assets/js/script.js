@@ -57,22 +57,14 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
         return;
     } else {
         insertAreaValues(length, width);
-        // Assign the chosen vegetable's properties to useful variables.
-        let {rowGap, bulbGap, depth, plantSeasons, harvestSeasons, src, alt} = getVegetableValues(vegetable);
+            // Assign the chosen vegetable's properties to useful variables.
+            let {rowGap, bulbGap, depth, plantSeasons, harvestSeasons, src, alt} = getVegetableValues(vegetable);
         insertVegetableNames(vegetable);
-        /*document.getElementById('bulb-name').innerText = vegetable;*/
-        let rows = calculateRows(width, rowGap);
-        document.getElementById('rows').innerText = rows;
-        let bulbsInARow = calculateBulbsInRow(length, bulbGap);
-        document.getElementById('bulbs-in-row').innerText = bulbsInARow;
+        insertRowDetails(length, width, vegetable);  
         bulbsOrSeeds(vegetable);
-        // Takes the vegetable name string and capitalises the first letter only.
-        /*document.getElementById('capitalised-name').innerText = titleCase(vegetable);*/
-        insertVegetableValues(vegetable);
-        document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
-        document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
-        document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
-        // Changes the image based on the vegetable
+        insertVegetableProperties(vegetable);
+            document.getElementById('plant-seasons').innerText = plantSeasons[0] + " and " + plantSeasons[1];
+            document.getElementById('harvest-seasons').innerText = harvestSeasons[0] + " and " + harvestSeasons[1];
         insertImage(src, alt);
         showResultsPage();
     }
@@ -280,7 +272,7 @@ function validationCheck(length, width, vegetable) {
 }
 
 
-function insertVegetableValues(key){
+function insertVegetableProperties(key){
     let variableNames = ['bulbGap', 'depth', 'rowGap'];
     let classNames = ['bulb-gap', 'bulb-depth', 'row-gap'];
     for (let i in variableNames){
@@ -295,7 +287,7 @@ function insertVegetableValues(key){
   * This function will insert the calculated value of the area of the 
   * user's vegetable bed into all spans with a class of "area".
   * @param {Number} length - The length of the user's vegetable bed
-  * @param {Width} width - The width of the user's vegetable bed
+  * @param {Number} width - The width of the user's vegetable bed
   */
 function insertAreaValues(length, width){
     let areas = document.getElementsByClassName('area');
@@ -304,13 +296,34 @@ function insertAreaValues(length, width){
     }
 }
 
-function insertVegetableNames(key){
+/**
+ * This function will insert the name of the vegetable chosen into any
+ * span with a class of "bulb-name" and a capitalised version into any
+ * span with a class of "capitalised-name".
+ * @param {String} vegetable - The user's chosen vegetable.
+ */
+function insertVegetableNames(vegetable){
     let names = document.getElementsByClassName('bulb-name');
     for (let i in names){
-        names[i].innerText = key;
+        names[i].innerText = vegetable;
     }
     let capitalisedNames = document.getElementsByClassName('capitalised-name');
     for (let i in capitalisedNames){
-        capitalisedNames[i].innerText = titleCase(key);
+        capitalisedNames[i].innerText = titleCase(vegetable);
     }
+}
+
+/**
+ * A function to insert the number of row of vegetables and total number
+ * of bulbs or seed required into the HTML elements.
+ * @param {Number} length - The length of the user's vegetable bed
+ * @param {Number} width - The width of the user's vegetable bed
+ * @param {String} key - The object key to look up.
+ */
+function insertRowDetails(length, width, key){
+    let rows = calculateRows(width, vegetables[key].rowGap);
+    document.getElementById('rows').innerText = rows;
+    let bulbsInARow = calculateBulbsInRow(length, vegetables[key].bulbGap);
+    document.getElementById('bulbs-in-row').innerText = bulbsInARow;
+    document.getElementById('total-bulbs').innerText = rows * bulbsInARow;
 }
