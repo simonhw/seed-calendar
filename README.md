@@ -368,7 +368,18 @@ Calculate Button | When the user correctly fills out the size input fields and s
 ### Lighthouse Testing
 #### Desktop Tests
 #### Mobile Tests
+
 ### Accessibility Testing
+[Wave](https://wave.webaim.org/) was used to check the web application for errors and issue associated with accessibility.
+
+There was one alert for a missing fieldset around the group of radio buttons. It was determined that the purpose of the radio buttons was explained by the heading of "Vegetable Picker", so the fieldset was omitted. To satisfy accessibility requirements, the parent div was given the attributes `role="radiogroup"` and `aria-label="Vegetable Picker` to aid screen reader users. The alert no longer appears for the current version of the web application.
+
+![Wave alert for missing fieldset](assets/images/readme/testing/missing-fieldset.png)
+
+There are seven alerts for justified paragraph text. The paragraphs look more presentable when using this text alignment style, and the negative impat on readability that can sometimes be associated with this stlye ("varying word/letter spacing and 'rivers of white' that flow through the text") were not observed in the web application.
+
+![Wave alerts for justified text](assets/images/readme/testing/justified-text.png)
+
 ## Bugs
 ### Known Bugs
 Note: Not all known bugs are present in the final version of the website.
