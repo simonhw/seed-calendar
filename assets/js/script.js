@@ -261,9 +261,9 @@ function validationCheck(length, width, vegetable) {
 function insertVegetableProperties(key){
     let variableNames = ['bulbGap', 'depth', 'rowGap'];
     let classNames = ['bulb-gap', 'bulb-depth', 'row-gap'];
-    for (let i in variableNames){
+    for (let i = 0; i < variableNames.length; i++){
         let elements = document.getElementsByClassName(classNames[i]);
-        for (let j in elements){
+        for (let j = 0; j < elements.length; j++){
             elements[j].innerText = vegetables[key][variableNames[i]];
         }
     }
@@ -278,7 +278,7 @@ function insertVegetableProperties(key){
   */
 function insertAreaValues(length, width){
     let areas = document.getElementsByClassName('area');
-    for (let i in areas){
+    for (let i = 0; i < areas.length; i++){
         areas[i].innerText = calculateArea(length, width);
     }
 }
@@ -291,11 +291,11 @@ function insertAreaValues(length, width){
  */
 function insertVegetableNames(vegetable){
     let names = document.getElementsByClassName('bulb-name');
-    for (let i in names){
+    for (let i = 0; i < names.length; i++){
         names[i].innerText = vegetable;
     }
     let capitalisedNames = document.getElementsByClassName('capitalised-name');
-    for (let i in capitalisedNames){
+    for (let i = 0; i < capitalisedNames.length; i++){
         capitalisedNames[i].innerText = titleCase(vegetable);
     }
 }
