@@ -158,6 +158,7 @@ li {
 
 /* Media Query for Tablets of width >= 768px */
 @media screen and (min-width: 768px) {
+    /* Two rules in the below style were taken from a Stack Overflow post. See README for full details. */
     body {
         background-image: url('../images/seedlings.webp');
         background-size: cover;
