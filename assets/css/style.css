@@ -220,8 +220,8 @@ li {
     }
 
     .green-border {
-        outline: 2px solid #1c5c00;
-        outline-offset: -2px;
+        outline: 5px solid #1c5c00;
+        outline-offset: -3px;
     }
 
     .vegetable-card {
