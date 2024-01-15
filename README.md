@@ -381,18 +381,26 @@ Calculate Button | When the user correctly fills out the size input fields and s
 
 ### Accessibility Testing
 [Wave](https://wave.webaim.org/) was used to check the web application for errors and issues associated with accessibility.
+The results for each page are shown below.
 
-![Results of Wave test for the web application](assets/images/readme/testing/wave-test.png)
+#### Index.html
+![Results of Wave test for index.html](assets/images/readme/testing/wave-test.png)
 
-There was initially a alert for a missing fieldset around the group of radio buttons. It was determined that the purpose of the radio buttons was explained by the heading of "Vegetable Picker", so the fieldset was omitted. To satisfy accessibility requirements, the parent div was given the attributes `role="radiogroup"` and `aria-label="Vegetable Picker` to aid screen reader users. The alert no longer appears for the current version of the web application.
+- There is one alert for a redundant link. This is the email link in the second footer. There are two links and two footers due to the different layout of the content on mobile screens and larger screens.
 
-![Wave alert for missing fieldset](assets/images/readme/testing/missing-fieldset.png)
+    ![Wave alerts for redundant link](assets/images/readme/testing/redundant-link.png)
 
-There are seven alerts for justified paragraph text. The paragraphs look more presentable when using this text alignment style, and the negative impat on readability that can sometimes be associated with this stlye ("varying word/letter spacing and 'rivers of white' that flow through the text") were not observed in the web application.
+- There are ten alerts for justified paragraph text. The paragraphs look more presentable when using this text alignment style, and the negative impat on readability that can sometimes be associated with this stlye ("varying word/letter spacing and 'rivers of white' that flow through the text") were not observed in the web application.
 
-![Wave alerts for justified text](assets/images/readme/testing/justified-text.png)
+    ![Wave alerts for justified text](assets/images/readme/testing/justified-text.png)
 
-To improve accessibilty and not sacrifice the existing code structure, the use of `aria-labelledby` was utilised for each radio button to make sure users of screen readers would know which button they were interacting with. 
+- There was initially an alert for a missing fieldset around the group of radio buttons. It was determined that the purpose of the radio buttons was explained by the heading of "Vegetable Picker", so the fieldset was omitted. To satisfy accessibility requirements, the parent div was given the attributes `role="radiogroup"` and `aria-label="Vegetable Picker` to aid screen reader users. The alert no longer appears for the current version of the web application.
+
+    ![Wave alert for missing fieldset](assets/images/readme/testing/missing-fieldset.png)
+
+- To improve accessibilty and not sacrifice the existing code structure, the use of `aria-labelledby` was utilised for each radio button to make sure users of screen readers would know which button they were interacting with. 
+
+#### 404.html
 
 ## Bugs
 ### Known Bugs
@@ -400,10 +408,6 @@ Note: Not all known bugs are present in the final version of the website.
 | # | Bug | Image | Plan to Solve |
 | --- | --- | --- | --- |
 | 1 | On the first page load or after a cache refresh, text wrapped in `<b>` tags is shown in a default font for ~32 milliseconds. (Note: the frames showing the default text have had time added to them just for the purposes of showing the effect in this gif file)| ![Strong tags bug](assets/images/bugs/b-bug.gif) | This issue can be elimitated by removing the `<b>` tags around the text. It seems to be an issue with the browser loading the bold version of the Alegreya Sans font. I tried directly adding the font weight via CSS stlying but the issue persisted. It was decided that the bold style did not add enough value to the web appliction compared to the delay in the font loading which did detract from the user experience. The `<b>` tags were therefore removed from the final version of the site.|
-
-
-- vertical scrollbar
-- background image doesn't stretch on large tablets
 
 ### Solved Bugs
 | # | Bug | Image | Solution |
