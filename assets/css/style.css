@@ -157,8 +157,14 @@ li {
 @media screen and (min-width: 768px) {
     body {
         background-image: url('../images/seedlings.webp');
+        background-size: cover;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         height: 100vh;
+    }
+
+    main {
+        height: 100%;
     }
 
     h1 {
