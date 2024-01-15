@@ -156,6 +156,22 @@ li {
     color: white;
 }
 
+/* FOOTER STYLES */
+footer {
+    font-family: Diphylleia;
+    padding: 10px;
+    margin: 0px 10px 10px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
 /* Media Query for Tablets of width >= 768px */
 @media screen and (min-width: 768px) {
     /* Two rules in the below style were taken from a Stack Overflow post. See README for full details. */
