@@ -256,6 +256,8 @@ This web application has great potential to be improved upon and to be able offe
 - Allow users to convert the vegetable details card to an image and download to their device or share to other users.
 - Allow the user the option to select multiple vegetables for the same plot and customise how much space is dedicated to each type of bulb or seed. This could be achieved using custom Javascript functions.
 - Add HTML pages dedicated to the seedling growing phase in greenhouses before planting in vegetable beds.
+- Add a header with a nav bar once the application has more than one HTML page intended for the user to view.
+- Store the `vegetables` object in its own .js or .json file as it grows in size so that main script.js file will be kept neat and tidy.
 
 ### Accessibility
 Accessibilty was kept in mind when building this web application by:
@@ -453,14 +455,10 @@ I would like to acknowledge the following people:
 
 ### To Do list and notes
 
+css comments
+
 add contant link at bottom
-
-justify no nav or footer 
-
-404 with redirect, credit previous project
 
 talk about separating vegetables object into its own js file
 
-css comments
-
-fix rowGapm image name
+404 with redirect, credit previous project
