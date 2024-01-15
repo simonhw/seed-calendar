@@ -97,13 +97,13 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 
 <details><summary>The web application viewed on the Galaxy Fold</summary>
 
-![A gif showing he web application viewed on the Galaxy Fold](assets/images/readme/mobile-screen.gif)
+![A gif showing the web application viewed on the Galaxy Fold](assets/images/readme/mobile-screen.gif)
 
 </details>
 
 <details><summary>The web application viewed on wider screens</summary>
 
-![A gif showing he web application viewed on wider screens](assets/images/readme/tablet-screen.gif)
+![A gif showing the web application viewed on wider screens](assets/images/readme/tablet-screen.gif)
 
 </details>
 
@@ -124,7 +124,7 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 ## Features
 This web application is made up of a single HTML page with a Javascript file and CSS stylesheet.
 
-The use of a header, nav bar, and footer was initially considered for this project; however, seeing as the web application was being designed all on one HTML page, and the aim was to make the user feel like they are using a slick and professional web app, it was decided to omit these types of features from this first version of the project. 
+The use of a header and nav bar was initially considered for this project; however, seeing as the web application was being designed all on one HTML page, and the aim was to make the user feel like they are using a slick and professional web app, it was decided to omit these types of features from this first version of the project. 
 
 A favicon of a seedling is used for the HTML page:
 
@@ -170,6 +170,11 @@ A large "Calculate" button is the next thing presented to the user after the inp
 ![Information Section Buttons](assets/images/readme/information-buttons.png)
 
 The Clear Form button is smaller and placed a distance away from its sibling to avoid accidental selection by the user. It uses a yellow background with brown text to further distinguish itself as a different type of button. 
+
+#### Footer
+A simple footer was included at the bottom of each section with a link inviting the user to contact the site owners with any questions or suggestions. This footer was styled minimally so that it did not draw too much attention from the main content of the web application.
+
+![Footer on mobile screen](assets/images/readme/footer.png)
 
 ### Results Section
 #### Planting Suggestions
@@ -337,7 +342,7 @@ To deploy this project locally on your device, follow the below steps:
 | To be able to reproduce previous results | With just three inputs required of the user, there is no risk that they will not be able to reproduce previous results, as long as they remember what vegetable bed size they chose. This goal is also achieved in the same user session by not clearing the input fields when the recalculate button is pressed.  ||
 | To reference specific planting information for certain vegetables. | A brightly-coloured vegetable card is presented to the user which succinctly lists the important planting factors, including a large image of the vegetable. This is a positive experience for the returning user who may not wish to read through the Suggested Planting paragraphs again. | [Vegetable Card Image](assets/images/readme/vegetable-card.png) |
 | **Frequent Visitor Goals** |||
-| To check for updates and improvements to the web application. | The straightforward layout of the web application allows frequent users to easily notice if major changes or updates have been made. The use of informative headings means that any new input fields required of the user would not be easily overlooked. ||
+| To check for updates and improvements to the web application. | The straightforward layout of the web application allows frequent users to easily notice if major changes or updates have been made. The use of informative headings means that any new input fields required of the user would not be easily overlooked. The footer provides a link for the user to get in touch and ask questions or even make suggestions. ||
 
 ### Full Testing
 The web application was tested on a Windows 10 desktop with a 26" monitor and on a One Plus 9 Pro mobile phone. Other types of devices were testing using Chrome Developer Tools.
@@ -362,6 +367,7 @@ Calculate Button | When the user correctly fills out the size input fields and s
 | Clear Form Button | When the user clicks the button, any value in the size input fields are cleared and the radio button are unchecked. Any green borders around the vegetable images on wider screen are removed. | Button clicked when values are present in the size input fields and a vegetable is selected. | The size input fields are cleared and the vegetable radio buttons or green borders are unchecked/removed. | Pass |
 | Clear Form Button | When the user clicks the Clear Form button when no values are present in the size input fields and no vegetable radio button is selected, no changes are observed on the site. | Button clicked when no values are present in the size input fields and no vegetable radio button is selected. | No changes observed. | Pass |
 | Recalculate Button | When clicked, the results section is hidden and the information section displayed, with the user's previous inputs still present in their respective fields. | Button clicked. | The results section is hidden and the information section displayed again with the user's previous inputs still present in their respective fields. | Pass |
+| Contact Us link | When clicked, the user is redirected to an email app with the email address populated in the To field | Link clicked | Email app opened with email in To field | Pass |
 
 ### Automated Testing
 [W3C](https://validator.w3.org/) was used to validate the HTML and CSS files. [JSHint](https://jshint.com/) was used to validate the Javascript file.
@@ -404,14 +410,17 @@ Note: Not all known bugs are present in the final version of the website.
 | --- | --- | --- | --- |
 | 1 | When small mobile devices were rotated, the blue background gradient of the H1 heading did not fill the new screen width. | ![Blue gradient bug](assets/images/bugs/galaxy-fold-bug.png) | The h1 width style was changed from `width: 100%;` to `width: 100vw;` to solve this issue. |
 | 2a | When large mobile devices and tablets were rotated, the background image did not fill the full length of the device. | ![Background image bug on large mobiles](assets/images/bugs/large-mobile-bug.png) | The removal of `background-size: cover` fixed this bug. |
-| 2b | On large tablets, the fix for Bug 2a caused the background image to not fill the full length of the device, where before it did. | ![Background image bug on large tablets](assets/images/bugs/large-tablet-bug.png) | The reinsertion of `background-size: cover` combined with the addition of `background-attachement: fixed;` fixed both bug 2a and 2b. |
-| 3 | On screens where the user has to scroll down to click the calculate button, the results section wass loaded with the content already scrolled down. | ![Mobile scrolling bug](assets/images/bugs/scrolling-bug.gif) | The method `window.scrollTo(0,0);` was added to the code for the Calculate and Recalculate buttons after being researched on W3Schools. |
+| 2b | On large tablets, the fix for Bug 2a caused the background image to not fill the full length of the device, where before it did. | ![Background image bug on large tablets](assets/images/bugs/large-tablet-bug.png) | The reinsertion of `background-size: cover` combined with the addition of `background-attachment: fixed;` fixed both bug 2a and 2b. |
+| 3 | On screens where the user has to scroll down to click the calculate button, the results section wass loaded with the content already scrolled down. | ![Mobile scrolling bug](assets/images/bugs/scrolling-bug.gif) | The method `window.scrollTo(0,0);` was added to the code for the Calculate and Recalculate buttons after research [on Stack Overflow](#Credits). |
 | 4 | On the Mozila Firefox browser, the vegetable radio buttons were still partly visible even with their CSS styles of `width: 0px;` and `height: 0px`. | ![Mozilla Firefox radio buttons](assets/images/bugs/mozilla-buttons.png) | A solution [was found](#Credits) on StackOverflow to add `opacity: 0;` to the elements which resolved the issue and did not cause any new issues on other browsers. |  
 
 ## Credits
 ### Code Used
 The HTML code used to redirect the 404 page back to index.html was taken from my first portfolio project.
 - [GitHub - West Cork Beekeeping, thank-you.html](https://github.com/simonhw/beekeeping/blob/main/thank-you.html)
+
+CSS code to solve Bugs 2a and 2b were found on a Stack Overflow post.
+- [Background Cover not working on Mobile Devices](https://stackoverflow.com/questions/36854417/background-cover-not-working-on-mobile-devices)
 
 CSS code to add the inner green border over the images in the vegetable picker radio group was found on a Stack Overflow post.
 - [Stack Overflow - Inner border over images with CSS](https://stackoverflow.com/questions/19159977/inner-border-over-images-with-css) 
@@ -455,10 +464,10 @@ I would like to acknowledge the following people:
 
 ### To Do list and notes
 
-css comments
-
 add contant link at bottom
 
-talk about separating vegetables object into its own js file
-
 404 with redirect, credit previous project
+
+lighthouse tests
+
+wave tests for new pages
