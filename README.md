@@ -406,12 +406,14 @@ Note: Not all known bugs are present in the final version of the website.
 
 ## Credits
 ### Code Used
-https://stackoverflow.com/questions/58864049/how-to-get-the-value-of-input-field-in-one-page-and-print-it-in-another-page
 
-https://stackoverflow.com/questions/19159977/inner-border-over-images-with-css 
+Code to add the inner green border over the images in the vegetable picker was found on a Stack Overflow post.
+- [Stack Overflow - Inner border over images with CSS](https://stackoverflow.com/questions/19159977/inner-border-over-images-with-css) 
 
-https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box
+Code to remove the up and down arrows in the size input fields was found on a Stack Overflow post.
+- [Stack Overflow - Can I hide the HTML5 number input's spin box](https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box)
 
+Javascript method used scroll the window to specified x,y coordinates was found on Stack Overflow
 https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript
 
 https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css 
@@ -437,6 +439,12 @@ All images used were foind on [Pexels](https://www.pexels.com/) and [Unsplash](h
 - Turnips Image: [White turnips](https://unsplash.com/photos/white-turnips-jzqyx7vfmpI)
 
 ## Acknowledgements
+
+graeme
+
+kera
+
+robin
 
 ### To Do list and notes
 Custom input field validation was written in order to avoid the submit button refreshing the page as preventDefault didn't work fully as expected.
