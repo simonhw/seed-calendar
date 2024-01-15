@@ -1,6 +1,7 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Diphylleia&display=swap');
 
+/* GENERAL STYLES */
 body {
     font-family: 'Alegreya Sans';
     margin: 0px;
@@ -29,18 +30,19 @@ h1, h2, button {
     text-align: center;
 }
 
+p {
+    text-align: justify;
+}
+
 .white-text {
     color: white;
     text-shadow: black 1px 1px;
 }
-
+ 
+/* INFORMATION SECTION STYLES */
 .instructions {
     max-width: 400px;
     margin: auto 15px;
-}
-
-p {
-    text-align: justify;
 }
 
 .bed-size, .vegetable-card {
@@ -125,6 +127,7 @@ button {
     display: none;
 }
 
+/* RESULTS SECTION STYLES */
 .vegetable-card {
     background-image: url('../images/onions-growing.webp');
 }
@@ -185,6 +188,7 @@ li {
         height: 100%;
     }
 
+    /* Information Section Styles on tablets and larger screens */
     #information {
         display: flex;
     }
@@ -226,6 +230,7 @@ li {
         outline-offset: -3px;
     }
 
+    /* Results Section Styles on tablets and larger screens */
     .vegetable-card {
         height: 350px;
     }
