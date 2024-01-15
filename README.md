@@ -269,6 +269,7 @@ Accessibilty was kept in mind when building this web application by:
 - Using semantic HTML elements where appropriate.
 - Using contrasting colours that clearly stand out from the background.
 - Including clear and descriptive alt attributes for all `<img/>` elements.
+- Using aria labels to describe the actions that will be taken when interacting with links. This is shown in the email address links in the footer in index.html.
 
 ## Technologies Used
 ### Languages
@@ -339,10 +340,10 @@ To deploy this project locally on your device, follow the below steps:
 | To interact with the input fields without confusion as to their purpose. | The input fields are presented clearly to the user, without any major distraction. It is clear that the user should fill in two length values in the Vegetable Bed Size div, and the heading of "Vegetable **Picker**" tell the user that they need to interact with the radio buttons or vegetable images before proceeding. | [1. Input Fields on Mobile Screens Image](assets/images/readme/input-fields-mobile.png) [2. Input Fields on Wider Screens Image](assets/images/readme/input-fields-tablet.png) |
 | To learn important information about the vegetables they wish to plant. | The user is presented with customised information about their chosen vegetable in the results section. Any novice gardeners will be able to use the application to plant the vegetable without being overwhelmed with too many details. | [Suggested Planting Paragaphs Image](assets/images/readme/suggested-planting-black.png) |
 | **Returning Visitor Goals** |||
-| To be able to reproduce previous results | With just three inputs required of the user, there is no risk that they will not be able to reproduce previous results, as long as they remember what vegetable bed size they chose. This goal is also achieved in the same user session by not clearing the input fields when the recalculate button is pressed.  ||
+| To be able to reproduce previous results | With just three inputs required of the user, there is no risk that they will not be able to reproduce previous results, as long as they remember what vegetable bed size they chose. This goal is also achieved in the same user session by not clearing the input fields when the recalculate button is pressed.  |[Input Fields Image](assets/images/readme/input-fields-mobile.png) |
 | To reference specific planting information for certain vegetables. | A brightly-coloured vegetable card is presented to the user which succinctly lists the important planting factors, including a large image of the vegetable. This is a positive experience for the returning user who may not wish to read through the Suggested Planting paragraphs again. | [Vegetable Card Image](assets/images/readme/vegetable-card.png) |
 | **Frequent Visitor Goals** |||
-| To check for updates and improvements to the web application. | The straightforward layout of the web application allows frequent users to easily notice if major changes or updates have been made. The use of informative headings means that any new input fields required of the user would not be easily overlooked. The footer provides a link for the user to get in touch and ask questions or even make suggestions. ||
+| To check for updates and improvements to the web application. | The straightforward layout of the web application allows frequent users to easily notice if major changes or updates have been made. The use of informative headings means that any new input fields required of the user would not be easily overlooked. The footer provides a link for the user to get in touch and ask questions or even make suggestions. | [Footer Link Image](assets/images/readme/footer.png)|
 
 ### Full Testing
 The web application was tested on a Windows 10 desktop with a 26" monitor and on a One Plus 9 Pro mobile phone. Other types of devices were testing using Chrome Developer Tools.
@@ -366,8 +367,9 @@ Vegetable Radio Buttons | On wider screens, when a vegetable image was clicked, 
 Calculate Button | When the user correctly fills out the size input fields and selects a vegetable, the information section is hidden and the results section is displayed. | Button clicked with input fields filled out correctly and a vegetable radio button checked. | The information section is hidden and the results section is displayed. | Pass |
 | Clear Form Button | When the user clicks the button, any value in the size input fields are cleared and the radio button are unchecked. Any green borders around the vegetable images on wider screen are removed. | Button clicked when values are present in the size input fields and a vegetable is selected. | The size input fields are cleared and the vegetable radio buttons or green borders are unchecked/removed. | Pass |
 | Clear Form Button | When the user clicks the Clear Form button when no values are present in the size input fields and no vegetable radio button is selected, no changes are observed on the site. | Button clicked when no values are present in the size input fields and no vegetable radio button is selected. | No changes observed. | Pass |
+| Contact Us Link #1 | When clicked, the user is redirected to an email app with the email address populated in the To field | Link clicked | Email app opened with email in To field | Pass |
 | Recalculate Button | When clicked, the results section is hidden and the information section displayed, with the user's previous inputs still present in their respective fields. | Button clicked. | The results section is hidden and the information section displayed again with the user's previous inputs still present in their respective fields. | Pass |
-| Contact Us link | When clicked, the user is redirected to an email app with the email address populated in the To field | Link clicked | Email app opened with email in To field | Pass |
+| Contact Us Link #2 | When clicked, the user is redirected to an email app with the email address populated in the To field | Link clicked | Email app opened with email in To field | Pass |
 
 ### Automated Testing
 [W3C](https://validator.w3.org/) was used to validate the HTML and CSS files. [JSHint](https://jshint.com/) was used to validate the Javascript file.
@@ -376,8 +378,29 @@ Calculate Button | When the user correctly fills out the size input fields and s
 - [script.js](assets/images/readme/jshint-metrics.png) - Passed with no warnings.
 
 ### Lighthouse Testing
+The Lighthouse feature in Chrome Developer Tools was used to test the performance, accessibility, best practices, and search engine optmisation qualities of the web application.
+
 #### Desktop Tests
+All tests in dekstop mode were satisfactory with scores between 90 and 100.
+
+Index page:
+
+![Lighthouse Test - Desktop index.html](assets/images/readme/testing/lighthouse-desktop-index.png)
+
+404 page:
+
+![Lighthouse Test - Desktop 404.html]()
+
 #### Mobile Tests
+All tests in mobile mode were satisfactory with scores between 90 and 100.
+
+Index page:
+
+![Lighthouse Test - Mobile index.html](assets/images/readme/testing/lighthouse-mobile-index.png)
+
+404 page:
+
+![Lighthouse Test - Mobile 404.html]()
 
 ### Accessibility Testing
 [Wave](https://wave.webaim.org/) was used to check the web application for errors and issues associated with accessibility.
@@ -401,6 +424,7 @@ The results for each page are shown below.
 - To improve accessibilty and not sacrifice the existing code structure, the use of `aria-labelledby` was utilised for each radio button to make sure users of screen readers would know which button they were interacting with. 
 
 #### 404.html
+![Results of Wave test for 404.html]()
 
 ## Bugs
 ### Known Bugs
@@ -473,3 +497,7 @@ I would like to acknowledge the following people:
 lighthouse tests
 
 wave tests for new pages
+
+table of contents
+
+spell check all files
