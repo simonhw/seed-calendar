@@ -468,8 +468,6 @@ I would like to acknowledge the following people:
 
 ### To Do list and notes
 
-add contant link at bottom
-
 404 with redirect, credit previous project
 
 lighthouse tests
