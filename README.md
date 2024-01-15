@@ -382,7 +382,7 @@ There are seven alerts for justified paragraph text. The paragraphs look more pr
 
 ![Wave alerts for justified text](assets/images/readme/testing/justified-text.png)
 
-There were initially errors associated with the previous HTML layout of the radio buttons. To improve accessibilty and not sacrifice the existing code structure, the use of `aria-labelledby` was utilised for each radio button to make sure users of screen readers would know which button they were interacting with. 
+To improve accessibilty and not sacrifice the existing code structure, the use of `aria-labelledby` was utilised for each radio button to make sure users of screen readers would know which button they were interacting with. 
 
 ## Bugs
 ### Known Bugs
@@ -406,21 +406,26 @@ Note: Not all known bugs are present in the final version of the website.
 
 ## Credits
 ### Code Used
+The HTML code used to redirect the 404 page back to index.html was taken from my first portfolio project.
+- [GitHub - West Cork Beekeeping, thank-you.html](https://github.com/simonhw/beekeeping/blob/main/thank-you.html)
 
-Code to add the inner green border over the images in the vegetable picker was found on a Stack Overflow post.
+CSS code to add the inner green border over the images in the vegetable picker radio group was found on a Stack Overflow post.
 - [Stack Overflow - Inner border over images with CSS](https://stackoverflow.com/questions/19159977/inner-border-over-images-with-css) 
 
-Code to remove the up and down arrows in the size input fields was found on a Stack Overflow post.
+CSS code to remove the up and down arrows in the size input fields was found on a Stack Overflow post.
 - [Stack Overflow - Can I hide the HTML5 number input's spin box](https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box)
 
-Javascript method used scroll the window to specified x,y coordinates was found on Stack Overflow
-https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript
+The Javascript method `window.scrollTo();` used to scroll the window to specified x,y coordinates was found on Stack Overflow.
+- [Stack Overflow - Scroll to the top of a page using Javascript](https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript)
 
-https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css 
+CSS code to hide radio buttons without disabling them completely was found on Stack Overflow.
+- [Stack Overflow - Hide check radio buttons with CSS](https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css)
 
-https://stackoverflow.com/questions/60240404/accessibility-how-to-use-multiple-label-elements-for-one-input-item-correctly 
+HTML code to ensure accessibility of the radio buttons while having an `<img/>` element instead of text as the child of the input's `<label>` was found on a Stack Overflow post.
+- [Stack Overflow - Accessibility: How to use multiple LABEL elements for one INPUT item correctly (via ARIA, etc.)?](https://stackoverflow.com/questions/60240404/accessibility-how-to-use-multiple-label-elements-for-one-input-item-correctly)
 
-https://stackoverflow.com/questions/48265742/how-to-group-form-inputs-accessibly-without-a-fieldset 
+HTML code to ensure accessibility of the radio button group as a whole without using a fieldset and legend was found on Stack Overflow.
+- [Stack Overflow - How to group form inputs accessibly without a fieldset?](https://stackoverflow.com/questions/48265742/how-to-group-form-inputs-accessibly-without-a-fieldset )
 
 ### Content
 All code content was written by Simon Henleywillis unless otherwise specified above.
@@ -447,7 +452,15 @@ kera
 robin
 
 ### To Do list and notes
-Custom input field validation was written in order to avoid the submit button refreshing the page as preventDefault didn't work fully as expected.
 
-footer ??
-- not this version
+add contant link at bottom
+
+justify no nav or footer 
+
+404 with redirect, credit previous project
+
+talk about separating vegetables object into its own js file
+
+css comments
+
+fix rowGapm image name
