@@ -124,6 +124,8 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 ## Features
 This web application is made up of a single HTML page with a Javascript file and CSS stylesheet.
 
+The use of a header, nav bar, and footer was initially considered for this project; however, seeing as the web application was being designed all on one HTML page, and the aim was to make the user feel like they are using a slick and professional web app, it was decided to omit these types of features from this first version of the project. 
+
 A favicon of a seedling is used for the HTML page:
 
 ![Favicon of a Seedling](assets/images/readme/favicon.png)
@@ -444,12 +446,10 @@ All images used were foind on [Pexels](https://www.pexels.com/) and [Unsplash](h
 - Turnips Image: [White turnips](https://unsplash.com/photos/white-turnips-jzqyx7vfmpI)
 
 ## Acknowledgements
-
-graeme
-
-kera
-
-robin
+I would like to acknowledge the following people:
+- My CI Mentor [Graeme Taylor](https://github.com/G-Taylor) who was a fantastic support throughout my second portfolio project.
+- [Creating Your First README - Kera Cudmore](https://github.com/kera-cudmore/readme-examples)
+- Robin Hublard for his proof-reading and encouragement. 
 
 ### To Do list and notes
 
