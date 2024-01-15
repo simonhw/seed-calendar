@@ -421,8 +421,20 @@ https://stackoverflow.com/questions/60240404/accessibility-how-to-use-multiple-l
 https://stackoverflow.com/questions/48265742/how-to-group-form-inputs-accessibly-without-a-fieldset 
 
 ### Content
+All code content was written by Simon Henleywillis unless otherwise specified above.
+
+Text content was written by Simon Henleywillis and specific details about planting the different vegetables was sourced from the [Royal Horticultural Society](https://www.rhs.org.uk/) website.
 
 ### Media
+All images used were foind on [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/license). The Pexels website states that "*All photos and videos on Pexels can be downloaded and used for free*" and Unsplash states "*Unsplash photos are made to be used freely. Our license reflects that.*"
+
+- Vegetable Bed Size Image: [Anonymous farmer planting seedlings into soil](https://www.pexels.com/photo/anonymous-farmer-planting-seedlings-into-soil-7728082/)
+- Vegetable Card Image: [Close up photo of plants](https://www.pexels.com/photo/close-up-photo-of-plants-2284170/)
+- Seedling Background Image: [Green leafed plant](https://www.pexels.com/photo/green-leafed-plant-bokeh-photography-767240/)
+- Onion Image: [Bowl with raw onion bulbs on marble surface](https://www.pexels.com/photo/bowl-with-raw-onion-bulbs-on-marble-surface-4197444/)
+- Garlic Image: [Photography of garlic on wooden table](https://www.pexels.com/photo/photography-of-garlic-on-wooden-table-630766/)
+- Parsnips Image: [A pile of freshly dug up turnips sitting next to each other](https://unsplash.com/photos/a-pile-of-freshly-dug-up-turnips-sitting-next-to-each-other-4kgiiENVABI)
+- Turnips Image: [White turnips](https://unsplash.com/photos/white-turnips-jzqyx7vfmpI)
 
 ## Acknowledgements
 
@@ -431,5 +443,3 @@ Custom input field validation was written in order to avoid the submit button re
 
 footer ??
 - not this version
-
-the body isn't vertically centered anymore... what changed??? check commits.
