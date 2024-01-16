@@ -264,6 +264,7 @@ footer a {
     .body-404 {
         color: white;
         background-image: url(../images/leaf-404-2.webp);
+        background-position-y: center;
     }
 
     .body-404, #section-404 {
