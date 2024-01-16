@@ -41,18 +41,18 @@ const vegetables = {
     }
 };
 
-// Add event listeners to the vegetable picker images for indicating which one is checked.
+// Add event listeners to the vegetable picker images to indicate which one is checked.
 for (let i = 0; i < 4; i++) {
     document.getElementsByName('vegetable-choice')[i].addEventListener('click', setGreenBorder);
 }
 
-// Calculate Button: Clicking will execute a number of function to get relevant information for the user, hide the information section and show the results section.
+// Calculate Button: Clicking will execute several functions to get relevant information for the user, hide the information section and show the results section.
 document.getElementsByTagName('button')[0].addEventListener('click', function () {
     let length = document.getElementById('length').value;
     let width = document.getElementById('width').value;
     let vegetable = checkVegetable();
 
-    // Validation checking of input fields when button is clicked.
+    // Validation checking of input fields when the button is clicked.
     if (!validationCheck(length, width, vegetable)) {
         return;
     } else {
@@ -66,7 +66,7 @@ document.getElementsByTagName('button')[0].addEventListener('click', function ()
     }
 });
 
-//Clear Form Button: Allows user to clear form if they so wish.
+//Clear Form Button: Allows user to clear the input fields if they so wish.
 document.getElementsByTagName('button')[1].addEventListener('click', function () {
     clearSizeInputs();
     clearRadioButtons();
@@ -109,7 +109,7 @@ function clearRadioButtons() {
 }
 
 /**
- * This function takes in a value in metres and convert the number to centimetres.
+ * This function takes in a value in metres and converts the number to centimetres.
  * @param {number} value 
  * @returns the input number multiplied by 100
  */
@@ -134,7 +134,7 @@ function checkVegetable() {
 }
 
 /**
- * Calculates the maximum number of row possible for the width of the vegetable bed.
+ * Calculates the maximum number of rows possible for the width of the vegetable bed.
  * @param {Number} width - The vegetable bed width in metres.
  * @param {Number} rowGap - The recommended gap in centimetres between rows of the specified bulb.
  * @returns the number of rows
@@ -144,10 +144,10 @@ function calculateRows(width, rowGap) {
 }
 
 /**
- * Calculated the maximum number of bulbs plantable in a given row.
+ * Calculates the maximum number of bulbs plantable in a given row.
  * @param {Number} length - The vegetable bed length in metres.
  * @param {Number} bulbGap - The recommended gap between bulbs in the same row.
- * @returns the numbers of bulbs per row
+ * @returns the number of bulbs per row
  */
 function calculateBulbsInRow(length, bulbGap) {
     return Math.floor(convertMToCm(length) / bulbGap);
@@ -190,7 +190,7 @@ function titleCase(word) {
 }
 
 /**
- * This function adds an 's' to the end of a word change it to its plural form.
+ * This function adds an 's' to the end of a word to change it to its plural form.
  * @param {string} word - String to which the letter 's' will be added. 
  * @returns the input string with an 's' added to the end
  */
@@ -217,7 +217,7 @@ function showInformationPage() {
 }
 
 /**
- * This function loops through inputs and add a green border to the checked elements 
+ * This function loops through inputs and adds a green border to the checked elements 
  * and removes it from any unchecked elements.
  */
 function setGreenBorder() {
@@ -233,7 +233,7 @@ function setGreenBorder() {
 
 /**
  * This function validates the input fields ensuring that dimensions added by the user 
- * are between 1 and 20 metres and that a vegetable radio button has been checked.
+ * are between 1 and 20 metres, and a vegetable radio button has been checked.
  * @param {number} length 
  * @param {number} width 
  * @param {string} vegetable 
@@ -241,7 +241,7 @@ function setGreenBorder() {
  */
 function validationCheck(length, width, vegetable) {
     if (length === '' || width === '') {
-        alert('Please fill in the length and width of your vegetable bed with a minimum value of 1 metre and a maximim value of 20 metres. Please also select a vegetable.');
+        alert('Please fill in the length and width of your vegetable bed with a minimum value of 1 metre and a maximum value of 20 metres. Please also select a vegetable.');
         return false;
     } else if (length < 1 || width < 1 || length > 20 || width > 20) {
         alert('Your length and width values must be at least 1 metre and at most 20 metres.');
@@ -256,7 +256,7 @@ function validationCheck(length, width, vegetable) {
 }
 
 /**
- * Function that inserts all relevent properties of the user's chosen vegetable
+ * Function that inserts all relevant properties of the user's chosen vegetable
  * into the appropriate spans in the HTML body.
  * @param {String} key - The object key to look up. 
  */
@@ -303,8 +303,8 @@ function insertVegetableNames(vegetable){
 }
 
 /**
- * A function to insert the number of row of vegetables and total number
- * of bulbs or seed required into the HTML elements.
+ * A function to insert the number of rows of vegetables and the total number
+ * of bulbs or seeds required into the HTML elements.
  * @param {Number} length - The length of the user's vegetable bed
  * @param {Number} width - The width of the user's vegetable bed
  * @param {String} key - The object key to look up.
