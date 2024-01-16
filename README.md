@@ -12,20 +12,41 @@ Live website on GitHub Pages: [Seed Planner](https://simonhw.github.io/seed-plan
 ![GitHub top language](https://img.shields.io/github/languages/top/simonhw/seed-planner)
 
 ## Contents
-- [User Experience](#User-Experience)
-    - [Initial Discussion](#Initial-Discussion)
-    - [User Stories](#User-Stories)
-- [Design](#Design)
-    - [Colour Scheme](#Colour-Scheme)
-    - [Typography](#Typography)
-    - [Wireframes](#Wireframes)
-    - [Responsiveness](#Responsiveness)
-- [Features](#Features)
-    - [Information Section](#Information-Section)
-    - [Results Section](#Results-Section)
-    - [Javascript](#Javscript)
+- [User Experience](#user-experience)
+    - [Initial Discussion](#initial-discussion)
+    - [User Stories](#user-stories)
+- [Design](#design)
+    - [Colour Scheme](#colour-scheme)
+    - [Typography](#typography)
+    - [Imagery](#imagery)
+    - [Wireframes](#wireframes)
+    - [Responsiveness](#responsiveness)
+- [Features](#features)
+    - [Information Section](#information-section)
+    - [Results Section](#results-section)
+    - [404 Page](#404-page)
+    - [Javascript](#javascript)
+    - [Features to be Implemented](#features-to-be-implemented)
+    - [Accessibility](#accessibility)
+- [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Frameworks, Libraries, and Programs](#frameworks-libraries-and-programs)
+- [Deployment](#deployment)
+    - [Local Deployment](#local-deployment)
+- [Testing](#testing)
+    - [Manual Testing](#manual-testing)
+    - [Full Testing](#full-testing)
+    - [Automated Testing](#automated-testing)
+    - [Lighthouse Testing](#lighthouse-testing)
+    - [Accessibility Testing](#accessibility-testing)
 - [Bugs](#Bugs)
-- [Credits](#Credits)
+    - [Known Bugs](#known-bugs)
+    - [Solved Bugs](#solved-bugs)
+- [Credits](#credits)
+    - [Code Used](#code-used)
+    - [Content](#content)
+    - [Media](#media)
+- [Acknowledgements](#acknowledgements)
 
 ## User Experience
 ### Initial Discussion
@@ -123,20 +144,21 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 
 <details><summary>Differences in the 404 Page on mobile screens and larger sizes</summary>
 
-![Vegetable Card on mobile screens](assets/images/readme/404-page-mobile.png)
-![Vegetable Card on tablet screens](assets/images/readme/404-page-tablet.png)
+![404 Page on mobile screens](assets/images/readme/404-page-mobile.png)
+![404 Page on tablet screens](assets/images/readme/404-page-tablet.png)
 
 </details>
 
 ## Features
-This web application is made up of a single HTML page with a Javascript file and CSS stylesheet.
+This web application is made up of a two HTML pages with a Javascript file and CSS stylesheet.
 
-The use of a header and nav bar was initially considered for this project; however, seeing as the web application was being designed all on one HTML page, and the aim was to make the user feel like they are using a slick and professional web app, it was decided to omit these types of features from this first version of the project. 
+The use of a header and nav bar was initially considered for this project; however, seeing as the main content of the web application was being designed all on one HTML page, and the aim was to make the user feel like they are using a slick and professional web app, it was decided to omit these types of features from this first version of the project. 
 
-A favicon of a seedling is used for the HTML page:
+A favicon of a seedling is used for both HTML pages:
 
 ![Favicon of a Seedling](assets/images/readme/favicon.png)
 
+### Index.html
 Only one of two sections is displayed to the user at any given time: the information gathering section or the results section. When a user first visits or reloads the page, they are presented with the information section only.
 
 ### Information Section
@@ -200,6 +222,11 @@ A button to send to user back to the previous application state is presented at 
 ![Recalculate Button](assets/images/readme/results-buttons.png)
 
 When returning the user to the information section, this button does not clear the input fields because of the possibility that the user may want to use the same bed size to get results for a different type of vegetable.
+
+### 404 Page
+The 404 page was added just in case a user tries to navigate to a non-existent address from the web application, even though there are no clickable internal links in index.html.
+
+![404 Page viewed on a tablet](assets/images/readme/404-page-tablet.png)
 
 ### Javascript
 #### Validation
@@ -303,6 +330,8 @@ Google Fonts - For imported fonts used on the website.
 
 [ScreenToGif](https://www.screentogif.com/) - To create gif files for this README.
 
+Adobe Photoshop 2020 - To crop and resize images.
+
 [TinyPNG](https://tinypng.com/) - To compress images.
 
 Shutter Encoder  - To convert images to .webp format.
@@ -377,102 +406,118 @@ Calculate Button | When the user correctly fills out the size input fields and s
 | Contact Us Link #1 | When clicked, the user is redirected to an email app with the email address populated in the To field | Link clicked | Email app opened with email in To field | Pass |
 | Recalculate Button | When clicked, the results section is hidden and the information section displayed, with the user's previous inputs still present in their respective fields. | Button clicked. | The results section is hidden and the information section displayed again with the user's previous inputs still present in their respective fields. | Pass |
 | Contact Us Link #2 | When clicked, the user is redirected to an email app with the email address populated in the To field | Link clicked | Email app opened with email in To field | Pass |
+| 404 Page | After page loads, the user is redirected to index.html after 10 seconds. | Page observed for more than 10 seconds. | 404 page redirects to index.html after 10 seconds. | Pass |
 
 ### Automated Testing
 [W3C](https://validator.w3.org/) was used to validate the HTML and CSS files. [JSHint](https://jshint.com/) was used to validate the Javascript file.
-- [index.html](assets/images/readme/w3c-index.png) - Passed. Five info messages are shown for the `<img/>` elements: "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values."
-- [style.css](assets/images/readme/w3c-style.png) - Passed with four [warnings](assets/images/readme/w3c-style-warnings.png) about vendor elements. These are included to remove the up and down arrows in the number input fields in the information section. 
-- [script.js](assets/images/readme/jshint-metrics.png) - Passed with no warnings.
+- [index.html](assets/images/readme/testing/w3c-index.png) - Passed. Five info messages are shown for the `<img/>` elements: "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values."
+- [404.html](assets/images/readme/testing/w3c-404.png)
+- [style.css](assets/images/readme/testing/w3c-style.png) - Passed with four [warnings](assets/images/readme/testing/w3c-style-warnings.png) about vendor elements. These are included to remove the up and down arrows in the number input fields in the information section. 
+- [script.js](assets/images/readme/testing/jshint-metrics.png) - Passed with no warnings.
 
 ### Lighthouse Testing
 The Lighthouse feature in Chrome Developer Tools was used to test the performance, accessibility, best practices, and search engine optmisation qualities of the web application.
 
-#### Desktop Tests
-All tests in dekstop mode were satisfactory with scores between 90 and 100.
+#### Index Page
+The desktop and mobile tests for the index page were excellent with all scores between 90 and 100.
 
-Index page:
+Desktop Test:
 
 ![Lighthouse Test - Desktop index.html](assets/images/readme/testing/lighthouse-desktop-index.png)
 
-404 page:
-
-![Lighthouse Test - Desktop 404.html]()
-
-#### Mobile Tests
-All tests in mobile mode were satisfactory with scores between 90 and 100.
-
-Index page:
+Mobile Test:
 
 ![Lighthouse Test - Mobile index.html](assets/images/readme/testing/lighthouse-mobile-index.png)
 
-404 page:
+#### 404 Page
+The desktop and mobile performance, best practices, and search engine optimisation tests for the 404 page were excellent with scores between 99 and 100.
 
-![Lighthouse Test - Mobile 404.html]()
+The accessibility test had a satisfactory score of 84. This score could be higher if not for the presence of an automatic redirect on the page; however, since this is an intentional feature to bring the user back to the home page, the results overall are very acceptable.
+
+Desktop Test:
+
+![Lighthouse Test - Desktop 404.html](assets/images/readme/testing/lighthouse-desktop-404.png)
+
+Mobile Test:
+
+![Lighthouse Test - Mobile 404.html](assets/images/readme/testing/lighthouse-mobile-404.png)
 
 ### Accessibility Testing
 [Wave](https://wave.webaim.org/) was used to check the web application for errors and issues associated with accessibility.
 The results for each page are shown below.
 
 #### Index.html
+The page passed with no errors.
+
 ![Results of Wave test for index.html](assets/images/readme/testing/wave-test.png)
 
 - There is one alert for a redundant link. This is the email link in the second footer. There are two links and two footers due to the different layout of the content on mobile screens and larger screens.
 
-    ![Wave alerts for redundant link](assets/images/readme/testing/redundant-link.png)
+    ![Wave alerts for redundant link on index page](assets/images/readme/testing/redundant-link.png)
 
 - There are ten alerts for justified paragraph text. The paragraphs look more presentable when using this text alignment style, and the negative impat on readability that can sometimes be associated with this stlye ("varying word/letter spacing and 'rivers of white' that flow through the text") were not observed in the web application.
 
-    ![Wave alerts for justified text](assets/images/readme/testing/justified-text.png)
+    ![Wave alerts for justified text for index page](assets/images/readme/testing/justified-text.png)
 
 - There was initially an alert for a missing fieldset around the group of radio buttons. It was determined that the purpose of the radio buttons was explained by the heading of "Vegetable Picker", so the fieldset was omitted. To satisfy accessibility requirements, the parent div was given the attributes `role="radiogroup"` and `aria-label="Vegetable Picker` to aid screen reader users. The alert no longer appears for the current version of the web application.
 
-    ![Wave alert for missing fieldset](assets/images/readme/testing/missing-fieldset.png)
+    ![Wave alert for missing fieldset on index page](assets/images/readme/testing/missing-fieldset.png)
 
 - To improve accessibilty and not sacrifice the existing code structure, the use of `aria-labelledby` was utilised for each radio button to make sure users of screen readers would know which button they were interacting with. 
 
 #### 404.html
-![Results of Wave test for 404.html]()
+There was one error found.
+
+![Results of Wave test for 404.html](assets/images/readme/testing/wave-test-404.png)
+
+- Wave flagged the 10 second automatic redirect as an error on this page. This is an intended design feature and adds to the user experience as there are no other links or content on this page for them to interact with. This error was therefore not regarded as a failing point for the page's Wave test.
+    
+    ![Redirect error for 404 page](assets/images/readme/testing/wave-redirect.png)
+
+- There is one alert for justified text but as explained above in the index page section, this is considered a positive design choice for the user experience.
+
+    ![Justified text alert for 404 page](assets/images/readme/testing/wave-404-text.png)
 
 ## Bugs
 ### Known Bugs
 Note: Not all known bugs are present in the final version of the website.
 | # | Bug | Image | Plan to Solve |
 | --- | --- | --- | --- |
-| 1 | On the first page load or after a cache refresh, text wrapped in `<b>` tags is shown in a default font for ~32 milliseconds. (Note: the frames showing the default text have had time added to them just for the purposes of showing the effect in this gif file)| ![Strong tags bug](assets/images/bugs/b-bug.gif) | This issue can be elimitated by removing the `<b>` tags around the text. It seems to be an issue with the browser loading the bold version of the Alegreya Sans font. I tried directly adding the font weight via CSS stlying but the issue persisted. It was decided that the bold style did not add enough value to the web appliction compared to the delay in the font loading which did detract from the user experience. The `<b>` tags were therefore removed from the final version of the site.|
+| 1 | On the first page load or after a cache refresh, text wrapped in `<b>` tags is shown in a default font for ~32 milliseconds. (Note: the frames showing the default text have had time added to them just for the purposes of showing the effect in this gif file)| ![Strong tags bug](assets/images/readme/bugs/b-bug.gif) | This issue can be elimitated by removing the `<b>` tags around the text. It seems to be an issue with the browser loading the bold version of the Alegreya Sans font. I tried directly adding the font weight via CSS stlying but the issue persisted. It was decided that the bold style did not add enough value to the web appliction compared to the delay in the font loading which did detract from the user experience. The `<b>` tags were therefore removed from the final version of the site.|
 
 ### Solved Bugs
 | # | Bug | Image | Solution |
 | --- | --- | --- | --- |
-| 1 | When small mobile devices were rotated, the blue background gradient of the H1 heading did not fill the new screen width. | ![Blue gradient bug](assets/images/bugs/galaxy-fold-bug.png) | The h1 width style was changed from `width: 100%;` to `width: 100vw;` to solve this issue. |
-| 2a | When large mobile devices and tablets were rotated, the background image did not fill the full length of the device. | ![Background image bug on large mobiles](assets/images/bugs/large-mobile-bug.png) | The removal of `background-size: cover` fixed this bug. |
-| 2b | On large tablets, the fix for Bug 2a caused the background image to not fill the full length of the device, where before it did. | ![Background image bug on large tablets](assets/images/bugs/large-tablet-bug.png) | The reinsertion of `background-size: cover` combined with the addition of `background-attachment: fixed;` fixed both bug 2a and 2b. |
-| 3 | On screens where the user has to scroll down to click the calculate button, the results section wass loaded with the content already scrolled down. | ![Mobile scrolling bug](assets/images/bugs/scrolling-bug.gif) | The method `window.scrollTo(0,0);` was added to the code for the Calculate and Recalculate buttons after research [on Stack Overflow](#Credits). |
-| 4 | On the Mozila Firefox browser, the vegetable radio buttons were still partly visible even with their CSS styles of `width: 0px;` and `height: 0px`. | ![Mozilla Firefox radio buttons](assets/images/bugs/mozilla-buttons.png) | A solution [was found](#Credits) on StackOverflow to add `opacity: 0;` to the elements which resolved the issue and did not cause any new issues on other browsers. |  
+| 1 | When small mobile devices were rotated, the blue background gradient of the H1 heading did not fill the new screen width. | ![Blue gradient bug](assets/images/readme/bugs/galaxy-fold-bug.png) | The h1 width style was changed from `width: 100%;` to `width: 100vw;` to solve this issue. |
+| 2a | When large mobile devices and tablets were rotated, the background image did not fill the full length of the device. | ![Background image bug on large mobiles](assets/images/readme/bugs/large-mobile-bug.png) | The removal of `background-size: cover` fixed this bug. |
+| 2b | On large tablets, the fix for Bug 2a caused the background image to not fill the full length of the device, where before it did. | ![Background image bug on large tablets](assets/images/readme/bugs/large-tablet-bug.png) | The reinsertion of `background-size: cover` combined with the addition of `background-attachment: fixed;` fixed both bug 2a and 2b. |
+| 3 | On screens where the user has to scroll down to click the calculate button, the results section wass loaded with the content already scrolled down. | ![Mobile scrolling bug](assets/images/readme/bugs/scrolling-bug.gif) | The method `window.scrollTo(0,0);` was added to the code for the Calculate and Recalculate buttons after research [on Stack Overflow](#Credits). |
+| 4 | On the Mozila Firefox browser, the vegetable radio buttons were still partly visible even with their CSS styles of `width: 0px;` and `height: 0px`. | ![Mozilla Firefox radio buttons](assets/images/readme/bugs/mozilla-buttons.png) | A solution [was found](#Credits) on StackOverflow to add `opacity: 0;` to the elements which resolved the issue and did not cause any new issues on other browsers. |  
 
 ## Credits
 ### Code Used
-The HTML code used to redirect the 404 page back to index.html was taken from my first portfolio project.
+The HTML code used to redirect the 404 page back to index.html was taken from my first portfolio project:
 - [GitHub - West Cork Beekeeping, thank-you.html](https://github.com/simonhw/beekeeping/blob/main/thank-you.html)
 
-CSS code to solve Bugs 2a and 2b were found on a Stack Overflow post.
+CSS code to solve Bugs 2a and 2b were found on a Stack Overflow post:
 - [Background Cover not working on Mobile Devices](https://stackoverflow.com/questions/36854417/background-cover-not-working-on-mobile-devices)
 
-CSS code to add the inner green border over the images in the vegetable picker radio group was found on a Stack Overflow post.
+CSS code to add the inner green border over the images in the vegetable picker radio group was found on a Stack Overflow post:
 - [Stack Overflow - Inner border over images with CSS](https://stackoverflow.com/questions/19159977/inner-border-over-images-with-css) 
 
-CSS code to remove the up and down arrows in the size input fields was found on a Stack Overflow post.
+CSS code to remove the up and down arrows in the size input fields was found on a Stack Overflow post:
 - [Stack Overflow - Can I hide the HTML5 number input's spin box](https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box)
 
-The Javascript method `window.scrollTo();` used to scroll the window to specified x,y coordinates was found on Stack Overflow.
+The Javascript method `window.scrollTo();` used to scroll the window to specified x,y coordinates was found on Stack Overflow:
 - [Stack Overflow - Scroll to the top of a page using Javascript](https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript)
 
-CSS code to hide radio buttons without disabling them completely was found on Stack Overflow.
+CSS code to hide radio buttons without disabling them completely was found on Stack Overflow:
 - [Stack Overflow - Hide check radio buttons with CSS](https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css)
 
-HTML code to ensure accessibility of the radio buttons while having an `<img/>` element instead of text as the child of the input's `<label>` was found on a Stack Overflow post.
+HTML code to ensure accessibility of the radio buttons while having an `<img/>` element instead of text as the child of the input's `<label>` was found on a Stack Overflow post:
 - [Stack Overflow - Accessibility: How to use multiple LABEL elements for one INPUT item correctly (via ARIA, etc.)?](https://stackoverflow.com/questions/60240404/accessibility-how-to-use-multiple-label-elements-for-one-input-item-correctly)
 
-HTML code to ensure accessibility of the radio button group as a whole without using a fieldset and legend was found on Stack Overflow.
+HTML code to ensure accessibility of the radio button group as a whole without using a fieldset and legend was found on Stack Overflow:
 - [Stack Overflow - How to group form inputs accessibly without a fieldset?](https://stackoverflow.com/questions/48265742/how-to-group-form-inputs-accessibly-without-a-fieldset )
 
 ### Content
@@ -490,24 +535,9 @@ All images used were foind on [Pexels](https://www.pexels.com/) and [Unsplash](h
 - Garlic Image: [Photography of garlic on wooden table](https://www.pexels.com/photo/photography-of-garlic-on-wooden-table-630766/)
 - Parsnips Image: [A pile of freshly dug up turnips sitting next to each other](https://unsplash.com/photos/a-pile-of-freshly-dug-up-turnips-sitting-next-to-each-other-4kgiiENVABI)
 - Turnips Image: [White turnips](https://unsplash.com/photos/white-turnips-jzqyx7vfmpI)
-- 404 Background Image: [Delicate tree branch with wilted leaf and raindrops](https://www.pexels.com/photo/delicate-tree-branch-with-wilted-leaf-and-raindrops-3601794/)
 
 ## Acknowledgements
 I would like to acknowledge the following people:
 - My CI Mentor [Graeme Taylor](https://github.com/G-Taylor) who was a fantastic support throughout my second portfolio project.
 - [Creating Your First README - Kera Cudmore](https://github.com/kera-cudmore/readme-examples)
 - Robin Hublard for his proof-reading and encouragement. 
-
-### To Do list and notes
-
-404 with redirect, credit previous project
-
-lighthouse tests
-
-wave tests for new pages
-
-table of contents
-
-spell check all files
-
-fix horixontal scroll !!!!
