@@ -94,7 +94,7 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 - On wider screens, a blurred background image is inserted to break up the extra white space and also to focus the user's attention on the input fields in the centre of the page. The blue gradient is removed from the H1 heading.
 - To utilise the extra horizontal space, the Vegetable Bed Size input fields are reoriented into a row, and images of vegetables replace the simple radio buttons in the Vegetable Picker div. 
 - Likewise in the Results section, the image of the chosen vegetable is no longer underneath the planting details but is presented alongside that content.
-
+- The 404 page on mobile consists of the H1 heading and explanatory text, but on screens wider than 786px, a background image is used and the text styled differently to make good use of the extra screen space.
 <details><summary>The web application viewed on the Galaxy Fold</summary>
 
 ![A gif showing the web application viewed on the Galaxy Fold](assets/images/readme/mobile-screen.gif)
@@ -118,6 +118,13 @@ Wireframes were created for this website for mobile, tablet and desktop screen s
 
 ![Vegetable Card on mobile screens](assets/images/readme/vegetable-card-mobile.png)
 ![Vegetable Card on tablet screens](assets/images/readme/vegetable-card-tablet.png)
+
+</details>
+
+<details><summary>Differences in the 404 Page on mobile screens and larger sizes</summary>
+
+![Vegetable Card on mobile screens](assets/images/readme/404-page-mobile.png)
+![Vegetable Card on tablet screens](assets/images/readme/404-page-tablet.png)
 
 </details>
 
@@ -502,3 +509,5 @@ wave tests for new pages
 table of contents
 
 spell check all files
+
+fix horixontal scroll !!!!
