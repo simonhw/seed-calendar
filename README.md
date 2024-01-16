@@ -29,7 +29,7 @@ Live website on GitHub Pages: [Seed Planner](https://simonhw.github.io/seed-plan
 
 ## User Experience
 ### Initial Discussion
-The purpose of the web application is offer users with medium to large sized gardens a way to preview or prepare for the planting of vegetable crops in a way that best utilises space for maximum harvest yield.
+The purpose of the web application is to offer users with medium to large sized gardens a tool to preview or prepare for the planting of vegetable crops in a way that best utilises space for maximum harvest yield.
 
 ### User Stories
 #### First-time Visitor Goals
@@ -37,7 +37,7 @@ The purpose of the web application is offer users with medium to large sized gar
 * To interact with the input fields without confusion as to their purpose.
 * To learn important information about the vegetables they wish to plant.
 #### Returning Visitor Goals
-* To be able to reproduce previous results
+* To be able to reproduce previous results.
 * To reference specific planting information for certain vegetables.
 #### Frequent Visitor Goals
 * To check for updates and improvements to the web application.
@@ -61,7 +61,7 @@ Two imported Google Fonts were used for this web application:
 ![Alegreya Sans font 700 weight](assets/images/readme/alegreya-sans-700.png)
 
 Diphylleia was chosen as it evoked thoughts of nature and calming emotions due to its gentle design.
-Alegreya Sans was used for the main text content of the web applicaiton as it proved to be more readable when compared to Diphylleia. 
+Alegreya Sans was used for the main text content of the web application as it proved to be more readable when compared to Diphylleia. 
 
 ### Imagery
 The images used for the web application have perspectives low to the ground, at the level of the plants being planted and grown. These images were chosen as they reflect the desire of the user who wishes to plan their vegetable bed and get down to work in the soil themselves.
