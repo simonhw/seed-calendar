@@ -89,6 +89,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .vegetable-picker > div {
     display: flex;
+    justify-content: center;
+    width: 100vw;
 }
 
 .radio-under {
@@ -159,7 +161,6 @@ li {
 /* FOOTER STYLES */
 footer {
     font-family: Diphylleia;
-    padding: 10px;
     margin: 0px 10px 10px;
     width: 100%;
 }
