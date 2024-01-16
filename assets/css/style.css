@@ -263,8 +263,8 @@ footer a {
     /* 404 Section Syles on tablets and larger screens */
     .body-404 {
         color: white;
-        background-image: url(../images/leaf-404-2.webp);
-        background-position-y: center;
+        /*background-image: url(../images/leaf-404-2.webp);*/
+        /*background-position-y: center;*/
     }
 
     .body-404, #section-404 {
