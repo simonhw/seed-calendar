@@ -259,4 +259,19 @@ footer a {
     #vegetable-image {
         width: 160px;
     }
+
+    /* 404 Section Syles on tablets and larger screens */
+    .body-404 {
+        color: white;
+        height: 100%;
+        background-image: url(../images/leaf-404.webp);
+    }
+
+    .body-404 h1, .body-404 h2, .body-404 p {
+        text-shadow: black 2px 2px 5px, black -2px -2px 5px, black 2px -2px 5px, black -2px 2px 5px;;
+    }
+
+    .body-404 h2 {
+        font-size: xx-large;
+    }
 }
