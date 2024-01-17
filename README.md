@@ -234,6 +234,7 @@ The web application uses custom validation to more specifically guide the user w
     ![Alert when all fields are left blank](assets/images/readme/alert-one.png)
 
 - If the user tries to use length or width values that are less than 1 or greater than 20, they are reminded of the limits. When this alert is dismissed, the two input fields are cleared using `clearSizeInputs();` to make it easier for the user to put in new values:
+
     ![Alert when invalid sizes inputted](assets/images/readme/alert-two.png)
 
 - If the user does not select any vegetable, they are reminded that this is a required input before proceeding:
